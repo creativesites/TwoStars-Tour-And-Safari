@@ -99,6 +99,7 @@ final class TourMeta implements Service
 			</p>
 
 			<?php $definitions = self::get_manager_field_definitions(); ?>
+			<?php $this->render_field($post->ID, '_twostars_tour_bokun_url', $definitions['_twostars_tour_bokun_url']); ?>
 			<?php $this->render_field($post->ID, '_twostars_tour_calendly_event_url', $definitions['_twostars_tour_calendly_event_url']); ?>
 			<?php $this->render_field($post->ID, '_twostars_tour_booking_cta_label', $definitions['_twostars_tour_booking_cta_label']); ?>
 			<?php $this->render_field($post->ID, '_twostars_tour_booking_notes', $definitions['_twostars_tour_booking_notes']); ?>
@@ -237,6 +238,50 @@ final class TourMeta implements Service
 				'label' => __('SEO Focus Topic', 'twostars-platform'),
 				'type'  => 'text',
 			],
+			'_twostars_tour_hook' => [
+				'label' => __('One-line Hook', 'twostars-platform'),
+				'type'  => 'text',
+			],
+			'_twostars_tour_price_note' => [
+				'label' => __('Price Note (children, currency)', 'twostars-platform'),
+				'type'  => 'text',
+			],
+			'_twostars_tour_cancellation' => [
+				'label' => __('Cancellation Summary', 'twostars-platform'),
+				'type'  => 'text',
+			],
+			'_twostars_tour_departure_times' => [
+				'label' => __('Departure Times', 'twostars-platform'),
+				'type'  => 'text',
+			],
+			'_twostars_tour_itinerary' => [
+				'label' => __('Itinerary (one stop per line: Time | Title | Description)', 'twostars-platform'),
+				'type'  => 'textarea',
+			],
+			'_twostars_tour_what_to_bring' => [
+				'label' => __('What To Bring (one item per line)', 'twostars-platform'),
+				'type'  => 'textarea',
+			],
+			'_twostars_tour_notes' => [
+				'label' => __('Tour-specific Notes (one per line)', 'twostars-platform'),
+				'type'  => 'textarea',
+			],
+			'_twostars_tour_faqs' => [
+				'label' => __('FAQs (one per line: Question | Answer)', 'twostars-platform'),
+				'type'  => 'textarea',
+			],
+			'_twostars_tour_meeting_point' => [
+				'label' => __('Pickup / Meeting Point Details', 'twostars-platform'),
+				'type'  => 'textarea',
+			],
+			'_twostars_tour_map_embed_url' => [
+				'label' => __('Google Maps Embed URL', 'twostars-platform'),
+				'type'  => 'url',
+			],
+			'_twostars_tour_bokun_url' => [
+				'label' => __('Bokun Booking Widget URL (iframe src)', 'twostars-platform'),
+				'type'  => 'url',
+			],
 			'_twostars_tour_calendly_event_url' => [
 				'label' => __('Legacy External Event URL', 'twostars-platform'),
 				'type'  => 'url',
@@ -273,6 +318,16 @@ final class TourMeta implements Service
 					'_twostars_tour_includes',
 					'_twostars_tour_excludes',
 					'_twostars_tour_seo_focus_topic',
+					'_twostars_tour_hook',
+					'_twostars_tour_price_note',
+					'_twostars_tour_cancellation',
+					'_twostars_tour_departure_times',
+					'_twostars_tour_itinerary',
+					'_twostars_tour_what_to_bring',
+					'_twostars_tour_notes',
+					'_twostars_tour_faqs',
+					'_twostars_tour_meeting_point',
+					'_twostars_tour_map_embed_url',
 				]
 			)
 		);

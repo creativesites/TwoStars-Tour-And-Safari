@@ -51,7 +51,46 @@ final class TourData
 			'calendly_event_url'  => esc_url_raw((string) get_post_meta($tour_id, '_twostars_tour_calendly_event_url', true)),
 			'booking_cta_label'   => (string) get_post_meta($tour_id, '_twostars_tour_booking_cta_label', true),
 			'booking_notes'       => (string) get_post_meta($tour_id, '_twostars_tour_booking_notes', true),
+			'hook'                => (string) get_post_meta($tour_id, '_twostars_tour_hook', true),
+			'price_note'          => (string) get_post_meta($tour_id, '_twostars_tour_price_note', true),
+			'cancellation'        => (string) get_post_meta($tour_id, '_twostars_tour_cancellation', true),
+			'departure_times'     => (string) get_post_meta($tour_id, '_twostars_tour_departure_times', true),
+			'itinerary'           => (string) get_post_meta($tour_id, '_twostars_tour_itinerary', true),
+			'what_to_bring'       => (string) get_post_meta($tour_id, '_twostars_tour_what_to_bring', true),
+			'notes'               => (string) get_post_meta($tour_id, '_twostars_tour_notes', true),
+			'faqs'                => (string) get_post_meta($tour_id, '_twostars_tour_faqs', true),
+			'meeting_point'       => (string) get_post_meta($tour_id, '_twostars_tour_meeting_point', true),
+			'map_embed_url'       => esc_url_raw((string) get_post_meta($tour_id, '_twostars_tour_map_embed_url', true)),
+			'bokun_url'           => esc_url_raw((string) get_post_meta($tour_id, '_twostars_tour_bokun_url', true)),
 		];
+	}
+
+	/**
+	 * Split a textarea meta value into trimmed non-empty lines.
+	 *
+	 * @return array<int, string>
+	 */
+	public static function lines(string $value): array
+	{
+		return array_values(array_filter(array_map('trim', preg_split('/\r\n|\r|\n/', $value) ?: [])));
+	}
+
+	/**
+	 * Parse "A | B | C" lines into arrays of up to $parts trimmed cells.
+	 *
+	 * @return array<int, array<int, string>>
+	 */
+	public static function rows(string $value, int $parts): array
+	{
+		return array_map(
+			static fn(string $line): array => array_pad(array_map('trim', explode('|', $line, $parts)), $parts, ''),
+			self::lines($value)
+		);
+	}
+
+	public static function format_nad(float $amount): string
+	{
+		return 'N$' . number_format($amount, 0, '.', ',');
 	}
 
 	public static function get_booking_url(int $tour_id): string

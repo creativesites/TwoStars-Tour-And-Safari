@@ -164,13 +164,33 @@
     });
   }
 
+  function initEventTracking() {
+    document.addEventListener('click', function (event) {
+      var target = event.target.closest ? event.target.closest('[data-twostars-event]') : null;
+
+      if (!target) {
+        return;
+      }
+
+      var name = target.getAttribute('data-twostars-event');
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: name, page_path: window.location.pathname });
+
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', name, { page_path: window.location.pathname });
+      }
+    });
+  }
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function () {
       initMobileNav();
       initGalleryLightbox();
+      initEventTracking();
     });
   } else {
     initMobileNav();
     initGalleryLightbox();
+    initEventTracking();
   }
 })();
