@@ -1,0 +1,187 @@
+.twostars-destinations-grid-section {
+  width: 100%;
+  padding: var(--spacing-section) 5%;
+}
+
+.twostars-destinations-grid-section__header {
+  width: min(100%, 920px);
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.twostars-destinations-grid-section__label {
+  margin: 0 0 1rem;
+  color: var(--color-sunset-orange);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.twostars-destinations-grid-section__title {
+  margin: 0;
+  color: var(--color-deep-night);
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.12;
+}
+
+.twostars-destinations-grid-section__intro {
+  max-width: 760px;
+  margin: 1.2rem auto 0;
+  color: rgba(16, 28, 46, 0.82);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.82;
+}
+
+.twostars-destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  width: min(100%, var(--content-max));
+  margin: 0 auto;
+}
+
+.twostars-destinations-grid__card {
+  overflow: hidden;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 18px 44px rgba(16, 28, 46, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.twostars-destinations-grid__card:hover,
+.twostars-destinations-grid__card:focus-within {
+  transform: translateY(-8px);
+  box-shadow: 0 26px 56px rgba(16, 28, 46, 0.14);
+}
+
+.twostars-destinations-grid__media {
+  height: 260px;
+  overflow: hidden;
+}
+
+.twostars-destinations-grid__media img,
+.twostars-destinations-grid__placeholder {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.twostars-destinations-grid__placeholder {
+  background:
+    radial-gradient(circle at 24% 20%, rgba(201, 163, 123, 0.34), transparent 28%),
+    linear-gradient(135deg, #efe3d3 0%, #b89368 100%);
+}
+
+.twostars-destinations-grid__body {
+  padding: 2rem;
+}
+
+.twostars-destinations-grid__eyebrow {
+  margin: 0 0 0.7rem;
+  color: var(--coastal-cyan);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.twostars-destinations-grid__body h2 {
+  margin: 0 0 0.9rem;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.twostars-destinations-grid__body h2 a {
+  color: var(--navy-primary);
+  text-decoration: none;
+}
+
+.twostars-destinations-grid__body p {
+  margin: 0 0 1rem;
+  color: rgba(16, 28, 46, 0.82);
+  font-family: var(--font-body);
+  font-size: 0.97rem;
+  line-height: 1.75;
+}
+
+.twostars-destinations-grid__meta {
+  margin-bottom: 1rem;
+  color: rgba(16, 28, 46, 0.64);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.twostars-destinations-grid__related {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.35rem;
+  color: rgba(16, 28, 46, 0.72);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+}
+
+.twostars-destinations-grid__related span {
+  width: 100%;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.twostars-destinations-grid__related em {
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(27, 58, 107, 0.08);
+  color: var(--navy-primary);
+  font-style: normal;
+}
+
+.twostars-destinations-grid__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--coastal-cyan);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.twostars-destinations-grid__link:hover,
+.twostars-destinations-grid__link:focus-visible {
+  color: var(--adventure-orange);
+}
+
+@media (max-width: 968px) {
+  .twostars-destinations-grid-section {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .twostars-destinations-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .twostars-destinations-grid-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .twostars-destinations-grid {
+    grid-template-columns: 1fr;
+  }
+}

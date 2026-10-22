@@ -1,0 +1,115 @@
+/* =====================================================================
+   Gallery CTA Widget — gallery-cta.css
+   Navy gradient CTA strip matching the about-cta pattern.
+   ===================================================================== */
+
+.twostars-gallery-cta {
+  padding: 7rem 5%;
+  background: linear-gradient(135deg, #1B3A6B 0%, #0D1B2A 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Inner ────────────────────────────────────────────────────────── */
+.twostars-gallery-cta__inner {
+  width: min(100%, 1200px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .twostars-gallery-cta__inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+}
+
+/* ── Content ─────────────────────────────────────────────────────── */
+.twostars-gallery-cta__title {
+  margin: 0 0 1rem;
+  color: #FFFFFF;
+  font-family: var(--font-display, 'Cormorant Garamond', Georgia, serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  line-height: 1.12;
+}
+
+.twostars-gallery-cta__text {
+  margin: 0 0 2.5rem;
+  max-width: 640px;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  font-size: 1.02rem;
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+.twostars-gallery-cta__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .twostars-gallery-cta__buttons {
+    justify-content: center;
+  }
+
+  .twostars-gallery-cta__text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ── Trust items ─────────────────────────────────────────────────── */
+.twostars-gallery-cta__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 2rem 2.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .twostars-gallery-cta__trust {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+}
+
+.twostars-gallery-cta__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  font-size: 0.88rem;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.twostars-gallery-cta__trust-icon {
+  flex-shrink: 0;
+  color: #00B4D8;
+}
+
+.twostars-gallery-cta__trust-svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ── Responsive ───────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .twostars-gallery-cta {
+    padding: 5rem 5%;
+  }
+}

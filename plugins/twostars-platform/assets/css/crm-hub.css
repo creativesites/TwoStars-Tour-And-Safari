@@ -1,0 +1,684 @@
+.twostars-crm-hub {
+  --crm-shell: linear-gradient(180deg, #fbf7f0 0%, #f3ede4 100%);
+  --crm-card: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 242, 233, 0.98));
+  --crm-card-strong: linear-gradient(180deg, #fffdf8 0%, #f7efe2 100%);
+  --crm-card-overlay: rgba(255, 255, 255, 0.72);
+  --crm-ink: #102133;
+  --crm-muted: rgba(16, 33, 51, 0.68);
+  --crm-stroke: rgba(16, 33, 51, 0.08);
+  --crm-warm: #d5a36f;
+  --crm-cool: #234866;
+  --crm-green: #2c6f57;
+  --crm-alert: #a34b32;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.twostars-crm-hub__hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.twostars-crm-hub__hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -6rem -7rem auto;
+  width: 18rem;
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(212, 165, 116, 0.22), rgba(212, 165, 116, 0));
+  pointer-events: none;
+}
+
+.twostars-crm-hub__hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.04), transparent 34%),
+    radial-gradient(circle at 18% 20%, rgba(255, 255, 255, 0.08), transparent 18%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.twostars-crm-hub__hero-ribbon {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1.1rem;
+}
+
+.twostars-crm-hub__hero-ribbon-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.2rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff8ef;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.twostars-crm-hub__hero-actions {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.twostars-crm-hub__hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.twostars-crm-hub__hero-stat {
+  padding: 1rem 1.05rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+}
+
+.twostars-crm-hub__hero-stat span {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(246, 239, 230, 0.62);
+}
+
+.twostars-crm-hub__hero-stat strong {
+  display: block;
+  font: 600 1.75rem/1.05 "Cormorant Garamond", Georgia, serif;
+  color: #fff8ef;
+}
+
+.twostars-crm-hub__hero-stat p {
+  margin: 0.2rem 0 0;
+  color: rgba(246, 239, 230, 0.74);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.twostars-crm-hub__metrics {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.twostars-crm-hub__metric {
+  display: grid;
+  gap: 0.55rem;
+  padding: 1.15rem 1.2rem;
+  border-radius: 22px;
+  border: 1px solid var(--crm-stroke);
+  background: var(--crm-card);
+  box-shadow: 0 18px 44px rgba(16, 33, 51, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.twostars-crm-hub__metric::after {
+  content: "";
+  position: absolute;
+  inset: auto -2rem -2.5rem auto;
+  width: 7rem;
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(213, 163, 111, 0.18), transparent 70%);
+  pointer-events: none;
+}
+
+.twostars-crm-hub__metric-accent {
+  width: 3.1rem;
+  height: 0.28rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--crm-warm), #f0d2a9);
+}
+
+.twostars-crm-hub__metric-label {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(16, 33, 51, 0.58);
+}
+
+.twostars-crm-hub__metric-value {
+  font: 600 2.1rem/0.95 "Cormorant Garamond", Georgia, serif;
+  color: var(--crm-ink);
+}
+
+.twostars-crm-hub__metric-copy {
+  color: var(--crm-muted);
+  line-height: 1.55;
+}
+
+.twostars-crm-hub__workspace {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1.4fr) minmax(320px, 0.85fr);
+}
+
+.twostars-crm-hub__panel {
+  display: grid;
+  gap: 1rem;
+  padding: 1.25rem 1.3rem;
+  border: 1px solid var(--crm-stroke);
+  border-radius: 24px;
+  background: var(--crm-card);
+  box-shadow: 0 18px 48px rgba(16, 33, 51, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.twostars-crm-hub__panel--warm {
+  background:
+    radial-gradient(circle at top right, rgba(213, 163, 111, 0.14), transparent 28%),
+    var(--crm-card-strong);
+}
+
+.twostars-crm-hub__panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.28), transparent 22%);
+  pointer-events: none;
+}
+
+.twostars-crm-hub__panel-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.twostars-crm-hub__panel-head h2,
+.twostars-crm-hub__column-head h3 {
+  margin: 0 0 0.2rem;
+  font: 600 1.55rem/1.05 "Cormorant Garamond", Georgia, serif;
+  color: var(--crm-ink);
+}
+
+.twostars-crm-hub__panel-head p,
+.twostars-crm-hub__column-head p {
+  margin: 0;
+  color: var(--crm-muted);
+  line-height: 1.55;
+}
+
+.twostars-crm-hub__queue {
+  display: grid;
+  gap: 0.95rem;
+}
+
+.twostars-crm-hub__queue-card,
+.twostars-crm-hub__contact-card,
+.twostars-crm-hub__board-card {
+  display: grid;
+  gap: 0.85rem;
+  padding: 1rem 1.05rem;
+  border-radius: 20px;
+  border: 1px solid rgba(16, 33, 51, 0.08);
+  background: var(--crm-card-overlay);
+  backdrop-filter: blur(8px);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.twostars-crm-hub__queue-card:hover,
+.twostars-crm-hub__contact-card:hover,
+.twostars-crm-hub__board-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(16, 33, 51, 0.08);
+  border-color: rgba(16, 33, 51, 0.12);
+}
+
+.twostars-crm-hub__queue-card.is-overdue,
+.twostars-crm-hub__board-card.is-overdue {
+  border-color: rgba(163, 75, 50, 0.25);
+  box-shadow: inset 0 0 0 1px rgba(163, 75, 50, 0.1);
+}
+
+.twostars-crm-hub__queue-layout,
+.twostars-crm-hub__contact-identity,
+.twostars-crm-hub__board-head {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.85rem;
+  align-items: start;
+}
+
+.twostars-crm-hub__queue-main {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.twostars-crm-hub__avatar {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.24), transparent 36%),
+    linear-gradient(135deg, #17324b, #406684);
+  color: #fff8ef;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.twostars-crm-hub__avatar--small {
+  width: 2.4rem;
+  font-size: 0.74rem;
+}
+
+.twostars-crm-hub__queue-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.9rem;
+  align-items: start;
+}
+
+.twostars-crm-hub__contact-head {
+  display: grid;
+  gap: 0.7rem;
+  align-content: start;
+}
+
+.twostars-crm-hub__queue-head h3,
+.twostars-crm-hub__contact-head h3,
+.twostars-crm-hub__board-card h4 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.35;
+  color: var(--crm-ink);
+}
+
+.twostars-crm-hub__subtle {
+  color: var(--crm-muted);
+  line-height: 1.55;
+}
+
+.twostars-crm-hub__narrative {
+  margin: 0;
+  color: rgba(16, 33, 51, 0.82);
+  line-height: 1.65;
+}
+
+.twostars-crm-hub__meta,
+.twostars-crm-hub__contact-meta,
+.twostars-crm-hub__market-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.twostars-crm-hub__contact-identity {
+  min-width: 0;
+  align-items: center;
+}
+
+.twostars-crm-hub__contact-identity > div {
+  display: grid;
+  gap: 0.18rem;
+  min-width: 0;
+}
+
+.twostars-crm-hub__contact-meta {
+  display: flex;
+  justify-content: flex-start;
+  justify-self: start;
+  align-self: start;
+  min-width: 0;
+  width: auto;
+  max-width: none;
+  margin-left: calc(3rem + 0.85rem);
+  padding-top: 0.05rem;
+}
+
+.twostars-crm-hub__contact-head h3,
+.twostars-crm-hub__contact-head .twostars-crm-hub__subtle {
+  overflow-wrap: anywhere;
+}
+
+.twostars-crm-hub__contact-meta .twostars-crm-hub__pill {
+  flex: 0 0 auto;
+}
+
+.twostars-crm-hub__pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 1.65rem;
+  max-width: 100%;
+  padding: 0.22rem 0.58rem;
+  border-radius: 999px;
+  background: rgba(16, 33, 51, 0.06);
+  color: #1e374d;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.twostars-crm-hub__pill.is-priority-high,
+.twostars-crm-hub__pill.is-priority-urgent,
+.twostars-crm-hub__pill.is-alert {
+  background: rgba(163, 75, 50, 0.12);
+  color: #8f3e2a;
+}
+
+.twostars-crm-hub__pill.is-stage-booking {
+  background: rgba(35, 72, 102, 0.1);
+  color: var(--crm-cool);
+}
+
+.twostars-crm-hub__pill.is-stage-qualified {
+  background: rgba(44, 111, 87, 0.12);
+  color: #245e49;
+}
+
+.twostars-crm-hub__pill.is-neutral {
+  background: rgba(212, 165, 116, 0.15);
+  color: #8f6433;
+}
+
+.twostars-crm-hub__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.twostars-crm-hub__actions .button.button-small {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  padding: 0.42rem 0.82rem;
+  border-radius: 999px;
+  border: 1px solid rgba(16, 33, 51, 0.1);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(240, 233, 222, 0.94));
+  color: var(--crm-ink);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 18px rgba(16, 33, 51, 0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.twostars-crm-hub__actions .button.button-small:first-child {
+  border-color: rgba(23, 50, 75, 0.14);
+  background: linear-gradient(135deg, #17324b, #3a6484);
+  color: #fff8ef;
+  box-shadow: 0 12px 24px rgba(23, 50, 75, 0.2);
+}
+
+.twostars-crm-hub__actions .button.button-small:hover,
+.twostars-crm-hub__actions .button.button-small:focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(16, 33, 51, 0.18);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(234, 224, 210, 0.98));
+  box-shadow: 0 12px 22px rgba(16, 33, 51, 0.12);
+}
+
+.twostars-crm-hub__actions .button.button-small:first-child:hover,
+.twostars-crm-hub__actions .button.button-small:first-child:focus-visible {
+  background: linear-gradient(135deg, #203f5b, #476f90);
+  border-color: transparent;
+  box-shadow: 0 16px 28px rgba(23, 50, 75, 0.24);
+}
+
+.twostars-crm-hub__actions .button.button-small.twostars-crm-hub__button--danger,
+.twostars-crm-hub__actions .button.button-small.twostars-crm-hub__button--danger:first-child {
+  border-color: rgba(163, 75, 50, 0.18);
+  background: linear-gradient(180deg, rgba(255, 248, 245, 0.98), rgba(245, 224, 215, 0.98));
+  color: #8f3e2a;
+  box-shadow: 0 10px 22px rgba(163, 75, 50, 0.12);
+}
+
+.twostars-crm-hub__actions .button.button-small.twostars-crm-hub__button--danger:hover,
+.twostars-crm-hub__actions .button.button-small.twostars-crm-hub__button--danger:focus-visible,
+.twostars-crm-hub__actions .button.button-small.twostars-crm-hub__button--danger:first-child:hover,
+.twostars-crm-hub__actions .button.button-small.twostars-crm-hub__button--danger:first-child:focus-visible {
+  border-color: rgba(163, 75, 50, 0.28);
+  background: linear-gradient(180deg, rgba(255, 252, 250, 1), rgba(243, 214, 202, 1));
+  color: #7b301f;
+  box-shadow: 0 14px 26px rgba(163, 75, 50, 0.16);
+}
+
+.twostars-crm-hub__side-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.twostars-crm-hub__signal-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.twostars-crm-hub__signal-list li,
+.twostars-crm-hub__market-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.8rem 0.9rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(16, 33, 51, 0.07);
+}
+
+.twostars-crm-hub__signal-list strong,
+.twostars-crm-hub__market-item strong {
+  color: var(--crm-ink);
+}
+
+.twostars-crm-hub__signal-list span,
+.twostars-crm-hub__market-item span {
+  color: var(--crm-muted);
+}
+
+.twostars-crm-hub__signal-list b,
+.twostars-crm-hub__market-item b {
+  font: 600 1.35rem/1 "Cormorant Garamond", Georgia, serif;
+  color: var(--crm-cool);
+}
+
+.twostars-crm-hub__pipeline {
+  display: grid;
+  gap: 1rem;
+}
+
+.twostars-crm-hub__pipeline-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.twostars-crm-hub__column {
+  display: grid;
+  gap: 0.9rem;
+  min-width: 0;
+  padding: 1rem;
+  border-radius: 24px;
+  border: 1px solid rgba(16, 33, 51, 0.08);
+  background: var(--crm-shell);
+  position: relative;
+  overflow: hidden;
+}
+
+.twostars-crm-hub__column::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 0.32rem;
+  background: rgba(16, 33, 51, 0.08);
+}
+
+.twostars-crm-hub__column--fresh::before {
+  background: linear-gradient(180deg, #d5a36f, #edc38d);
+}
+
+.twostars-crm-hub__column--working::before {
+  background: linear-gradient(180deg, #2c6f57, #67a58b);
+}
+
+.twostars-crm-hub__column--booking::before {
+  background: linear-gradient(180deg, #234866, #4f7798);
+}
+
+.twostars-crm-hub__column--closed::before {
+  background: linear-gradient(180deg, #5f6570, #9da6b3);
+}
+
+.twostars-crm-hub__column-head {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.twostars-crm-hub__column-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.3rem;
+  min-height: 2.3rem;
+  padding: 0 0.65rem;
+  border-radius: 999px;
+  background: rgba(16, 33, 51, 0.08);
+  color: var(--crm-ink);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.twostars-crm-hub__column-body {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.twostars-crm-hub__board-card p,
+.twostars-crm-hub__contact-card p {
+  margin: 0;
+}
+
+.twostars-crm-hub__board-card footer,
+.twostars-crm-hub__contact-card footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+  color: var(--crm-muted);
+}
+
+.twostars-crm-hub__contacts-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.twostars-crm-hub__contact-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 0.35rem;
+  border-top: 1px solid rgba(16, 33, 51, 0.08);
+  color: var(--crm-muted);
+  font-size: 0.82rem;
+}
+
+.twostars-crm-hub__empty {
+  display: grid;
+  place-items: center;
+  min-height: 180px;
+  padding: 1.25rem;
+  border: 1px dashed rgba(16, 33, 51, 0.14);
+  border-radius: 20px;
+  color: var(--crm-muted);
+  text-align: center;
+}
+
+@media (max-width: 1240px) {
+  .twostars-crm-hub__workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .twostars-crm-hub__pipeline-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 960px) {
+  .twostars-crm-hub__hero-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .twostars-crm-hub__hero-ribbon {
+    display: grid;
+  }
+
+  .twostars-crm-hub__pipeline-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .twostars-crm-hub__panel-head,
+  .twostars-crm-hub__queue-head {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .twostars-crm-hub__contact-meta {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 782px) {
+  .twostars-crm-hub {
+    gap: 1rem;
+  }
+
+  .twostars-crm-hub__panel,
+  .twostars-crm-hub__metric {
+    padding: 1rem;
+    border-radius: 20px;
+  }
+
+  .twostars-crm-hub__queue-layout,
+  .twostars-crm-hub__contact-identity,
+  .twostars-crm-hub__board-head {
+    grid-template-columns: 1fr;
+  }
+
+  .twostars-crm-hub__contact-meta {
+    margin-left: 0;
+    padding-top: 0;
+  }
+
+  .twostars-crm-hub__avatar,
+  .twostars-crm-hub__avatar--small {
+    width: 2.6rem;
+  }
+
+  .twostars-crm-hub__actions {
+    display: grid;
+  }
+
+  .twostars-crm-hub__actions .button.button-small,
+  .twostars-crm-hub__hero-actions .button {
+    width: 100%;
+    justify-content: center;
+  }
+}

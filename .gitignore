@@ -1,0 +1,36 @@
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# WordPress core-managed dirs and runtime data
+/index.php
+/uploads/
+/upgrade/
+/upgrade-temp-backup/
+/updraft/
+/cache/
+/debug.log
+/advanced-cache.php
+/object-cache.php
+/db.php
+/mu-plugins/
+/languages/
+/wflogs/
+
+# Plugins: track only Two Stars plugins
+/plugins/*
+!/plugins/twostars-elementor-widgets/
+!/plugins/twostars-platform/
+
+# Themes: track only the Two Stars theme
+/themes/*
+!/themes/twostars-theme/
+
+# Dependencies, build output, archives, env
+node_modules/
+vendor/
+*.zip
+*.log
+.env
+.env.*

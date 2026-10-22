@@ -1,0 +1,34 @@
+/*
+Theme Name: Two Stars Theme
+Theme URI: https://twostars.local
+Author: Codex
+Description: Custom classic theme for Two Stars Tour and Safari, built for Elementor compatibility.
+Version: 0.1.0
+Requires at least: 6.5
+Tested up to: 6.8
+Requires PHP: 8.1
+Text Domain: twostars-theme
+*/
+
+:root {
+  --twostars-color-sand: #d4a373;
+  --twostars-color-dune: #ff6b35;
+  --twostars-color-earth: #1b3a6b;
+  --twostars-color-forest: #00b4d8;
+  --twostars-color-night: #0d1b2a;
+  --twostars-color-cloud: #f7ede2;
+  --twostars-color-white: #ffffff;
+  --twostars-color-navy-primary: #1b3a6b;
+  --twostars-color-cyan-soft: #90e0ef;
+  --twostars-color-gold: #f4a460;
+  --twostars-shadow-soft: 0 22px 54px rgba(13, 27, 42, 0.14);
+  --twostars-shadow-hard: 0 28px 70px rgba(13, 27, 42, 0.22);
+  --twostars-radius-lg: 28px;
+  --twostars-radius-md: 18px;
+  --twostars-radius-sm: 10px;
+  --twostars-content-width: 1280px;
+  --twostars-font-display: "Cormorant Garamond", serif;
+  --twostars-font-heading: "Cormorant Garamond", serif;
+  --twostars-font-body: "Montserrat", sans-serif;
+  --twostars-font-ui: "Montserrat", sans-serif;
+}

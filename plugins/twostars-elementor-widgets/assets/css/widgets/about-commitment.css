@@ -1,0 +1,96 @@
+.twostars-about-commitment {
+  width: 100%;
+  padding: var(--spacing-section) 5%;
+  background: linear-gradient(180deg, #f7ede2 0%, #efe3d3 100%);
+}
+
+.twostars-about-commitment__inner {
+  width: min(100%, 1200px);
+  margin: 0 auto;
+}
+
+.twostars-about-commitment__title {
+  margin: 0 0 4rem;
+  color: var(--color-deep-night);
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 3.6rem);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.twostars-about-commitment__grid {
+  display: grid;
+  gap: 2rem 3rem;
+}
+
+.twostars-about-commitment__grid--cols-1 {
+  grid-template-columns: 1fr;
+}
+
+.twostars-about-commitment__grid--cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.twostars-about-commitment__item {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.twostars-about-commitment__icon {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  background: rgba(27, 58, 107, 0.08);
+  color: var(--navy-primary);
+}
+
+.twostars-about-commitment__icon-svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.twostars-about-commitment__content h3 {
+  margin: 0 0 0.7rem;
+  color: var(--navy-primary);
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.twostars-about-commitment__content p {
+  margin: 0;
+  color: rgba(16, 28, 46, 0.82);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.82;
+}
+
+@media (max-width: 968px) {
+  .twostars-about-commitment {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .twostars-about-commitment__grid--cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .twostars-about-commitment {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .twostars-about-commitment__grid--cols-2 {
+    grid-template-columns: 1fr;
+  }
+}

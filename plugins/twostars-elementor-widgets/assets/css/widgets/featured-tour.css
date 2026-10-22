@@ -1,0 +1,272 @@
+.twostars-featured-tour {
+  display: block;
+  width: 100%;
+  max-width: none;
+  padding: 0 5% var(--spacing-section);
+  margin: 0;
+  overflow: visible;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.twostars-featured-tour__shell {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(360px, 0.98fr) minmax(0, 1.02fr);
+  gap: 0;
+  overflow: hidden;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #0f1b28 0%, #152536 100%);
+  box-shadow: 0 32px 100px rgba(16, 28, 46, 0.14);
+}
+
+.twostars-featured-tour__media {
+  position: relative;
+  overflow: hidden;
+  min-height: 640px;
+  background: transparent;
+}
+
+.twostars-featured-tour__media img,
+.twostars-featured-tour__placeholder {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.03);
+  transition: transform 0.6s ease;
+}
+
+.twostars-featured-tour__placeholder {
+  background: linear-gradient(135deg, rgba(27, 58, 107, 0.28) 0%, rgba(212, 165, 116, 0.26) 100%);
+}
+
+.twostars-featured-tour:hover .twostars-featured-tour__media img,
+.twostars-featured-tour:focus-within .twostars-featured-tour__media img {
+  transform: scale(1.08);
+}
+
+.twostars-featured-tour__media-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(7, 11, 16, 0.78) 0%, rgba(7, 11, 16, 0.18) 48%, rgba(7, 11, 16, 0.02) 100%),
+    linear-gradient(to right, rgba(7, 11, 16, 0.32) 0%, rgba(7, 11, 16, 0) 55%);
+}
+
+.twostars-featured-tour__media-card {
+  position: absolute;
+  left: 1.5rem;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 1;
+  padding: 1.35rem 1.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(12, 21, 31, 0.88) 0%, rgba(12, 21, 31, 0.94) 100%);
+  box-shadow: 0 18px 48px rgba(7, 11, 16, 0.28);
+}
+
+.twostars-featured-tour__media-eyebrow {
+  margin: 0 0 0.55rem;
+  color: #d4a574;
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.twostars-featured-tour__media-summary {
+  margin: 0;
+  color: rgba(245, 237, 224, 0.9);
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.22;
+}
+
+.twostars-featured-tour__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3.4rem 3rem;
+  background:
+    radial-gradient(circle at top right, rgba(212, 165, 116, 0.18) 0%, rgba(212, 165, 116, 0) 28%),
+    linear-gradient(180deg, #f8f1e7 0%, #fbf8f2 100%);
+}
+
+.twostars-featured-tour__label {
+  margin: 0 0 0.95rem;
+  color: var(--color-sunset-orange);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.twostars-featured-tour__header {
+  max-width: 680px;
+}
+
+.twostars-featured-tour__title {
+  margin: 0;
+  color: var(--color-deep-navy);
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.3vw, 3rem);
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+.twostars-featured-tour__intro {
+  margin: 1.2rem 0 0;
+  color: var(--color-navy-primary);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.twostars-featured-tour__excerpt {
+  max-width: 700px;
+  margin: 1.15rem 0 0;
+  color: rgba(13, 27, 42, 0.74);
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  line-height: 1.82;
+}
+
+.twostars-featured-tour__route {
+  margin-top: 1.6rem;
+}
+
+.twostars-featured-tour__route-label {
+  margin: 0 0 0.85rem;
+  color: rgba(13, 27, 42, 0.5);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.twostars-featured-tour__destinations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.twostars-featured-tour__destination-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  background: rgba(27, 58, 107, 0.07);
+  color: var(--color-navy-primary);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.twostars-featured-tour__meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin: 1.8rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.twostars-featured-tour__meta li {
+  display: grid;
+  gap: 0.25rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(27, 58, 107, 0.08);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.twostars-featured-tour__meta span {
+  color: rgba(13, 27, 42, 0.55);
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.twostars-featured-tour__meta strong {
+  color: var(--color-deep-navy);
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+.twostars-featured-tour__note {
+  margin-top: 1.5rem;
+  padding: 1.1rem 1.2rem 1.15rem;
+  border-left: 3px solid rgba(212, 165, 116, 0.85);
+  border-radius: 0 16px 16px 0;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.twostars-featured-tour__note p {
+  margin: 0;
+  color: rgba(13, 27, 42, 0.72);
+  font-family: var(--font-body);
+  font-size: 0.94rem;
+  line-height: 1.78;
+}
+
+.twostars-featured-tour__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.twostars-featured-tour__actions .twostars-safari-button--ghost{
+  color: var(--color-navy-primary)
+}
+@media (max-width: 1024px) {
+  .twostars-featured-tour__shell {
+    grid-template-columns: 1fr;
+  }
+
+  .twostars-featured-tour__media {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 640px) {
+  .twostars-featured-tour {
+    padding: 0 1.5rem 5rem;
+  }
+
+  .twostars-featured-tour__content {
+    padding: 2rem 1.5rem 2.2rem;
+  }
+
+  .twostars-featured-tour__meta {
+    grid-template-columns: 1fr;
+  }
+
+  .twostars-featured-tour__media {
+    min-height: 360px;
+  }
+
+  .twostars-featured-tour__media-card {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    padding: 1rem 1.05rem;
+  }
+
+  .twostars-featured-tour__actions .twostars-safari-button {
+    width: 100%;
+  }
+}

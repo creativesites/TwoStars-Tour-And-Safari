@@ -1,0 +1,167 @@
+.twostars-crm-dashboard {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.twostars-crm-cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.twostars-crm-card,
+.twostars-crm-panel {
+  padding: 1rem 1.2rem;
+  border: 1px solid #dcdcde;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.twostars-crm-card span {
+  display: block;
+  color: #50575e;
+}
+
+.twostars-crm-card strong {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 1.6rem;
+}
+
+.twostars-crm-panels {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.twostars-crm-filters {
+  display: grid;
+  gap: 1rem;
+}
+
+.twostars-crm-filter-grid,
+.twostars-crm-detail-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.twostars-crm-filter-grid label {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.twostars-crm-filter-grid input,
+.twostars-crm-filter-grid select {
+  width: 100%;
+}
+
+.twostars-admin-table {
+  margin-top: 0.75rem;
+}
+
+.twostars-crm-list {
+  display: grid;
+  gap: 0.9rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.twostars-crm-list li {
+  display: grid;
+  gap: 0.2rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid #f0f0f1;
+}
+
+.twostars-crm-list li:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.twostars-crm-chat-history {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.twostars-crm-chat-thread {
+  display: grid;
+  gap: 0.9rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid #e0dfdc;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #fff, #faf7f1);
+}
+
+.twostars-crm-chat-thread__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: start;
+}
+
+.twostars-crm-chat-thread__head p {
+  margin: 0.3rem 0 0;
+  color: #50575e;
+  line-height: 1.55;
+}
+
+.twostars-crm-chat-thread__messages {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.twostars-crm-chat-thread__message {
+  display: grid;
+  gap: 0.35rem;
+  max-width: 88%;
+}
+
+.twostars-crm-chat-thread__message.is-user {
+  margin-left: auto;
+}
+
+.twostars-crm-chat-thread__role {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7b7f86;
+}
+
+.twostars-crm-chat-thread__message.is-user .twostars-crm-chat-thread__role {
+  text-align: right;
+}
+
+.twostars-crm-chat-thread__bubble {
+  padding: 0.85rem 0.95rem;
+  border-radius: 16px;
+  line-height: 1.6;
+}
+
+.twostars-crm-chat-thread__message.is-assistant .twostars-crm-chat-thread__bubble {
+  background: #fff;
+  border: 1px solid #e1e4e8;
+  color: #1d2327;
+}
+
+.twostars-crm-chat-thread__message.is-user .twostars-crm-chat-thread__bubble {
+  background: linear-gradient(135deg, #1b3a6b, #385887);
+  color: #fff;
+}
+
+@media (max-width: 960px) {
+  .twostars-crm-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .twostars-crm-chat-thread__head {
+    display: grid;
+  }
+
+  .twostars-crm-chat-thread__message {
+    max-width: 100%;
+  }
+}

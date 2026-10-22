@@ -1,0 +1,238 @@
+/* =====================================================================
+   Gallery Reviews Widget — gallery-reviews.css
+   Light & Airy bright review card grid for the gallery page.
+   ===================================================================== */
+
+.twostars-gallery-reviews {
+    padding: 8rem 5%;
+    background: var(--color-sand, #F7EDE2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* subtle decorative star shapes */
+.twostars-gallery-reviews::before,
+.twostars-gallery-reviews::after {
+    content: '★';
+    position: absolute;
+    color: #D4A373;
+    opacity: 0.12;
+    font-size: 180px;
+    pointer-events: none;
+    line-height: 1;
+}
+
+.twostars-gallery-reviews::before {
+    top: -40px;
+    left: 2%;
+    transform: rotate(-15deg);
+}
+
+.twostars-gallery-reviews::after {
+    bottom: -40px;
+    right: 2%;
+    transform: rotate(15deg);
+}
+
+/* ── Inner ────────────────────────────────────────────────────────── */
+.twostars-gallery-reviews__inner {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 1400px);
+    margin: 0 auto;
+}
+
+/* ── Header ───────────────────────────────────────────────────────── */
+.twostars-gallery-reviews__header {
+    text-align: center;
+    margin-bottom: 4.5rem;
+}
+
+.twostars-gallery-reviews__eyebrow {
+    display: inline-block;
+    margin: 0 0 1rem;
+    color: #D4A373;
+    font-family: var(--font-body, 'Montserrat', sans-serif);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+.twostars-gallery-reviews__title {
+    margin: 0 0 1.25rem;
+    color: #0D1B2A;
+    font-family: var(--font-display, 'Cormorant Garamond', Georgia, serif);
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    font-weight: 500;
+    line-height: 1.12;
+}
+
+.twostars-gallery-reviews__intro {
+    margin: 0 auto 1.5rem;
+    max-width: 680px;
+    color: rgba(13, 27, 42, 0.75);
+    font-family: var(--font-body, 'Montserrat', sans-serif);
+    font-size: clamp(1rem, 1.5vw, 1.1rem);
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+/* ── Summary bar ─────────────────────────────────────────────────── */
+.twostars-gallery-reviews__summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    border: 1px solid rgba(212, 163, 115, 0.35);
+    border-radius: 999px;
+    background: #FFFFFF;
+    box-shadow: 0 4px 20px rgba(13, 27, 42, 0.04);
+}
+
+.twostars-gallery-reviews__stars {
+    color: #D4A373;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+}
+
+.twostars-gallery-reviews__count {
+    color: rgba(13, 27, 42, 0.85);
+    font-family: var(--font-body, 'Montserrat', sans-serif);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* ── Grid ────────────────────────────────────────────────────────── */
+.twostars-gallery-reviews__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+@media (max-width: 1024px) {
+    .twostars-gallery-reviews__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .twostars-gallery-reviews__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── Card ────────────────────────────────────────────────────────── */
+.twostars-gallery-reviews__card {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 2rem;
+    background: #FFFFFF;
+    border: 1px solid rgba(13, 27, 42, 0.04);
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(13, 27, 42, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.twostars-gallery-reviews__card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(13, 27, 42, 0.08);
+    border-color: rgba(212, 163, 115, 0.4);
+}
+
+.twostars-gallery-reviews__card-rating {
+    margin: 0 0 1.25rem;
+    color: #D4A373;
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+}
+
+.twostars-gallery-reviews__card-quote {
+    flex-grow: 1;
+    margin: 0 0 2rem;
+    padding: 0;
+    border: none;
+    color: #0D1B2A;
+    font-family: var(--font-display, 'Cormorant Garamond', Georgia, serif);
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.twostars-gallery-reviews__card-guest {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(13, 27, 42, 0.08);
+}
+
+.twostars-gallery-reviews__card-name {
+    color: #0D1B2A;
+    font-family: var(--font-body, 'Montserrat', sans-serif);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.twostars-gallery-reviews__card-meta {
+    color: rgba(13, 27, 42, 0.6);
+    font-family: var(--font-body, 'Montserrat', sans-serif);
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+/* ── Actions ─────────────────────────────────────────────────────── */
+.twostars-gallery-reviews__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.twostars-gallery-reviews__actions .twostars-safari-button--ghost {
+    color: #0D1B2A;
+}
+
+/* ── Responsive ───────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .twostars-gallery-reviews {
+        padding: 6rem 5%;
+    }
+
+    .twostars-gallery-reviews__header {
+        margin-bottom: 3rem;
+    }
+}
+
+/* ── Reduced motion ───────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+    .twostars-gallery-reviews__card {
+        transition: none;
+    }
+}
+
+/* Footer with Load More */
+.twostars-gallery-reviews__footer {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+#load-more-reviews {
+    min-width: 220px;
+}
+
+/* Optional: Loading state */
+#load-more-reviews.is-loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+#load-more-reviews.is-loading::after {
+    content: " •••";
+}

@@ -1,0 +1,180 @@
+<?php
+declare(strict_types=1);
+
+namespace TwoStars\ElementorWidgets\Widgets;
+
+use Elementor\Controls_Manager;
+use Elementor\Repeater;
+
+final class FaqHeroWidget extends FaqPageWidgetBase
+{
+	public function get_name(): string
+	{
+		return 'twostars-faq-hero';
+	}
+
+	public function get_title(): string
+	{
+		return __('FAQ Hero', 'twostars-elementor-widgets');
+	}
+
+	public function get_icon(): string
+	{
+		return 'eicon-help-o';
+	}
+
+	protected function register_controls(): void
+	{
+		$this->register_page_source_controls();
+
+		$this->start_controls_section(
+			'content_section',
+			[
+				'label' => __('Content', 'twostars-elementor-widgets'),
+			]
+		);
+
+		$this->add_control('background_image', ['label' => __('Background Image', 'twostars-elementor-widgets'), 'type' => Controls_Manager::MEDIA]);
+		$this->add_control('label', ['label' => __('Eyebrow Text', 'twostars-elementor-widgets'), 'type' => Controls_Manager::TEXT, 'default' => __('Planning Support', 'twostars-elementor-widgets')]);
+		$this->add_control('headline_text', ['label' => __('Headline Text', 'twostars-elementor-widgets'), 'type' => Controls_Manager::TEXT, 'default' => __("Questions Before\nYou Book", 'twostars-elementor-widgets')]);
+		$this->add_control('highlight_phrase', ['label' => __('Highlight Phrase', 'twostars-elementor-widgets'), 'type' => Controls_Manager::TEXT, 'default' => __('Before', 'twostars-elementor-widgets')]);
+		$this->add_control('subheadline_text', ['label' => __('Excerpt Text', 'twostars-elementor-widgets'), 'type' => Controls_Manager::TEXTAREA, 'default' => __('Clear answers on pickups, private options, what is included, and how Two Stars operates from Walvis Bay and Swakopmund.', 'twostars-elementor-widgets')]);
+		$this->add_control('primary_cta_text', ['label' => __('Primary CTA Text', 'twostars-elementor-widgets'), 'type' => Controls_Manager::TEXT, 'default' => __('View Tours', 'twostars-elementor-widgets')]);
+		$this->add_control('primary_cta_link', ['label' => __('Primary CTA Link', 'twostars-elementor-widgets'), 'type' => Controls_Manager::URL, 'default' => ['url' => home_url('/tours/')]]);
+		$this->add_control('secondary_cta_text', ['label' => __('Secondary CTA Text', 'twostars-elementor-widgets'), 'type' => Controls_Manager::TEXT, 'default' => __('Contact Us', 'twostars-elementor-widgets')]);
+		$this->add_control('secondary_cta_link', ['label' => __('Secondary CTA Link', 'twostars-elementor-widgets'), 'type' => Controls_Manager::URL, 'default' => ['url' => home_url('/contact/')]]);
+		$this->add_control(
+			'overlay_opacity',
+			[
+				'label'      => __('Overlay Opacity', 'twostars-elementor-widgets'),
+				'type'       => Controls_Manager::SLIDER,
+				'size_units' => ['%'],
+				'range'      => [
+					'%' => [
+						'min' => 0,
+						'max' => 100,
+					],
+				],
+				'default'    => [
+					'unit' => '%',
+					'size' => 52,
+				],
+			]
+		);
+
+		$repeater = new Repeater();
+		$repeater->add_control('value', ['label' => __('Stat Value', 'twostars-elementor-widgets'), 'type' => Controls_Manager::TEXT, 'default' => __('5', 'twostars-elementor-widgets')]);
+		$repeater->add_control('label', ['label' => __('Stat Label', 'twostars-elementor-widgets'), 'type' => Controls_Manager::TEXT, 'default' => __('Current Tours', 'twostars-elementor-widgets')]);
+		$this->add_control(
+			'stats',
+			[
+				'label'       => __('Stats', 'twostars-elementor-widgets'),
+				'type'        => Controls_Manager::REPEATER,
+				'fields'      => $repeater->get_controls(),
+				'title_field' => '{{{ value }}}',
+				'default'     => [
+					['value' => __('5', 'twostars-elementor-widgets'), 'label' => __('Current Tours', 'twostars-elementor-widgets')],
+					['value' => __('2', 'twostars-elementor-widgets'), 'label' => __('Pickup Zones', 'twostars-elementor-widgets')],
+					['value' => __('3', 'twostars-elementor-widgets'), 'label' => __('Payment Methods', 'twostars-elementor-widgets')],
+				],
+			]
+		);
+		$this->end_controls_section();
+	}
+
+	protected function render(): void
+	{
+		$page = $this->resolve_page_post();
+		$settings = $this->get_settings_for_display();
+
+		if (! $page) {
+			return;
+		}
+
+		$image_id = ! empty($settings['background_image']['id']) ? absint($settings['background_image']['id']) : get_post_thumbnail_id($page->ID);
+		$title = trim((string) ($settings['headline_text'] ?? ''));
+		$excerpt = trim((string) ($settings['subheadline_text'] ?? ''));
+		$highlight_phrase = trim((string) ($settings['highlight_phrase'] ?? ''));
+		$stats = is_array($settings['stats'] ?? null) ? $settings['stats'] : [];
+		if ($title === '') {
+			$title = get_the_title($page);
+		}
+		if ($excerpt === '') {
+			$excerpt = get_the_excerpt($page);
+		}
+		$overlay_size = isset($settings['overlay_opacity']['size']) ? (float) $settings['overlay_opacity']['size'] : 52.0;
+		$overlay_alpha = max(0.0, min(1.0, $overlay_size / 100));
+		?>
+		<section class="twostars-faq-hero" style="<?php echo esc_attr($this->build_inline_vars(['--twostars-faq-overlay-opacity' => (string) $overlay_alpha])); ?>">
+			<div class="twostars-faq-hero__media">
+				<?php if ($image_id > 0) : ?>
+					<?php echo wp_get_attachment_image($image_id, 'full', false, ['class' => 'twostars-faq-hero__image', 'loading' => 'eager']); ?>
+				<?php else : ?>
+					<div class="twostars-faq-hero__image twostars-faq-hero__image--placeholder"></div>
+				<?php endif; ?>
+			</div>
+			<div class="twostars-faq-hero__grain"></div>
+			<div class="twostars-faq-hero__overlay"></div>
+			<div class="twostars-faq-hero__content">
+				<div class="twostars-faq-hero__left">
+					<div class="twostars-faq-hero__copy">
+						<p class="twostars-faq-hero__label" data-twostars-animate="fade-in-up"><?php echo esc_html((string) ($settings['label'] ?? '')); ?></p>
+						<h1 class="twostars-faq-hero__title" data-twostars-animate="fade-in-up" style="--twostars-delay:0.12s;"><?php echo $this->highlight_title($title, $highlight_phrase); ?></h1>
+					</div>
+					<div class="twostars-faq-hero__actions" data-twostars-animate="fade-in-up" style="--twostars-delay:0.24s;">
+						<?php if (! empty($settings['primary_cta_text']) && ! empty($settings['primary_cta_link']['url'])) : ?>
+							<a class="twostars-faq-hero__primary" <?php echo $this->link_attributes((array) $settings['primary_cta_link']); ?>>
+								<?php echo esc_html((string) $settings['primary_cta_text']); ?>
+							</a>
+						<?php endif; ?>
+						<?php if (! empty($settings['secondary_cta_text']) && ! empty($settings['secondary_cta_link']['url'])) : ?>
+							<a class="twostars-faq-hero__secondary" <?php echo $this->link_attributes((array) $settings['secondary_cta_link']); ?>>
+								<?php echo esc_html((string) $settings['secondary_cta_text']); ?>
+							</a>
+						<?php endif; ?>
+					</div>
+				</div>
+				<div class="twostars-faq-hero__right" data-twostars-animate="fade-in-up" style="--twostars-delay:0.36s;">
+					<p class="twostars-faq-hero__excerpt"><?php echo esc_html($excerpt); ?></p>
+					<?php if ($stats !== []) : ?>
+						<div class="twostars-faq-hero__stats">
+							<?php foreach ($stats as $item) : ?>
+								<div class="twostars-faq-hero__stat">
+									<strong class="twostars-faq-hero__stat-value"><?php echo esc_html((string) ($item['value'] ?? '')); ?></strong>
+									<span class="twostars-faq-hero__stat-label"><?php echo nl2br(esc_html((string) ($item['label'] ?? ''))); ?></span>
+								</div>
+							<?php endforeach; ?>
+						</div>
+					<?php endif; ?>
+				</div>
+			</div>
+			<div class="twostars-faq-hero__scroll" data-twostars-animate="fade-in-up" style="--twostars-delay:0.48s;" aria-hidden="true">
+				<span class="twostars-faq-hero__scroll-line"></span>
+			</div>
+		</section>
+		<?php
+	}
+
+	private function highlight_title(string $title, string $highlight_phrase): string
+	{
+		$title = trim($title);
+		$highlight_phrase = trim($highlight_phrase);
+
+		if ($title === '') {
+			return '';
+		}
+
+		if ($highlight_phrase === '' || stripos($title, $highlight_phrase) === false) {
+			return nl2br(esc_html($title));
+		}
+
+		$offset = (int) stripos($title, $highlight_phrase);
+		$before = substr($title, 0, $offset);
+		$match = substr($title, $offset, strlen($highlight_phrase));
+		$after = substr($title, $offset + strlen($highlight_phrase));
+
+		return nl2br(esc_html($before))
+			. '<em>' . esc_html($match) . '</em>'
+			. nl2br(esc_html($after));
+	}
+}

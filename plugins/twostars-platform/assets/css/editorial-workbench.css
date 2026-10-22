@@ -1,0 +1,97 @@
+.twostars-editorial-workbench {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.twostars-editorial-workbench__intro {
+  padding: 1.25rem 1.5rem;
+  border: 1px solid rgba(201, 163, 95, 0.3);
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(26, 20, 16, 0.98), rgba(92, 64, 51, 0.94));
+  color: #f5f1e8;
+}
+
+.twostars-editorial-workbench__intro h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.twostars-editorial-workbench__intro p {
+  margin: 0;
+  max-width: 68rem;
+}
+
+.twostars-editorial-workbench__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 1.25rem;
+}
+
+.twostars-editorial-field {
+  display: grid;
+  gap: 0.45rem;
+  align-content: start;
+}
+
+.twostars-editorial-field--textarea:last-child,
+.twostars-editorial-field:nth-last-child(1) {
+  grid-column: 1 / -1;
+}
+
+.twostars-editorial-field label {
+  font-weight: 600;
+}
+
+.twostars-editorial-field input,
+.twostars-editorial-field select,
+.twostars-editorial-field textarea {
+  width: 100%;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid rgba(92, 64, 51, 0.18);
+  border-radius: 12px;
+  background: #fffdf8;
+}
+
+.twostars-editorial-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.twostars-editorial-field .description {
+  margin: 0;
+  color: #6b6257;
+}
+
+.twostars-editorial-guidance p {
+  margin: 0 0 1rem;
+}
+
+.twostars-editorial-guidance__list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.twostars-editorial-guidance__list li {
+  margin-bottom: 0.5rem;
+}
+
+body.post-type-tour #twostars-editorial-workbench .inside,
+body.post-type-destination #twostars-editorial-workbench .inside,
+body.post-type-faq #twostars-editorial-workbench .inside,
+body.post-type-testimonial #twostars-editorial-workbench .inside,
+body.post-type-team_member #twostars-editorial-workbench .inside,
+body.post-type-post #twostars-editorial-workbench .inside,
+body.post-type-page #twostars-editorial-workbench .inside {
+  background: #fbf7ee;
+}
+
+@media (max-width: 1100px) {
+  .twostars-editorial-workbench__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .twostars-editorial-field--textarea:last-child,
+  .twostars-editorial-field:nth-last-child(1) {
+    grid-column: auto;
+  }
+}

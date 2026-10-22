@@ -1,0 +1,306 @@
+/* =====================================================================
+   Testimonials Hero Widget — testimonials-hero.css
+   Cinematic full-height hero matching gallery-hero.css structure.
+   ===================================================================== */
+
+.twostars-testimonials-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 85vh;
+  overflow: hidden;
+  background: var(--deep-navy, #101C2E);
+}
+
+@media (max-width: 1024px) {
+  .twostars-testimonials-hero { min-height: 65vh; }
+}
+
+@media (max-width: 768px) {
+  .twostars-testimonials-hero { min-height: 50vh; }
+}
+
+/* ── Media layer ──────────────────────────────────────────────────── */
+.twostars-testimonials-hero__media {
+  position: absolute;
+  inset: -10%;
+  overflow: hidden;
+}
+
+.twostars-testimonials-hero__image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1);
+  animation: twostars-testimonials-hero-kenburns 25s ease-in-out infinite alternate;
+}
+
+.twostars-testimonials-hero--parallax .twostars-testimonials-hero__image {
+  animation-duration: 35s;
+}
+
+@keyframes twostars-testimonials-hero-kenburns {
+  0%   { transform: scale(1)    translate(0, 0);     }
+  100% { transform: scale(1.1)  translate(-1%, 1%);  }
+}
+
+.twostars-testimonials-hero__image--placeholder {
+  background:
+    radial-gradient(circle at 30% 60%, rgba(201, 163, 123, 0.28), transparent 40%),
+    radial-gradient(circle at 78% 22%, rgba(95, 158, 168, 0.18), transparent 32%),
+    linear-gradient(160deg, var(--deep-navy, #101C2E) 0%, var(--navy-primary, #1B3A6B) 60%, var(--deep-navy, #101C2E) 100%);
+  animation: none;
+}
+
+/* ── Grain ────────────────────────────────────────────────────────── */
+.twostars-testimonials-hero__grain {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeBlend in='SourceGraphic' mode='overlay'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Overlay ──────────────────────────────────────────────────────── */
+.twostars-testimonials-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(16, 28, 46, calc(var(--twostars-hero-overlay, 0.50) * 0.7));
+  background-image:
+    radial-gradient(ellipse at center, rgba(16, 28, 46, calc(var(--twostars-hero-overlay, 0.50) * 0.6)) 0%, rgba(16, 28, 46, calc(var(--twostars-hero-overlay, 0.50) * 1.6)) 100%),
+    linear-gradient(to bottom, transparent 50%, rgba(16, 28, 46, calc(var(--twostars-hero-overlay, 0.50) * 1.8)) 100%);
+  z-index: 2;
+}
+
+/* ── Content layer ────────────────────────────────────────────────── */
+.twostars-testimonials-hero__content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 7rem 5%;
+  box-sizing: border-box;
+}
+
+.twostars-testimonials-hero__inner {
+  width: min(100%, 1024px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ── Eyebrow ──────────────────────────────────────────────────────── */
+.twostars-testimonials-hero__eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.twostars-testimonials-hero__eyebrow::before,
+.twostars-testimonials-hero__eyebrow::after {
+  content: "";
+  display: block;
+  width: clamp(20px, 4vw, 50px);
+  height: 1px;
+  background: rgba(201, 163, 123, 0.55);
+}
+
+/* span kept in markup for legacy parity but hidden — CSS pseudo-elements handle the lines */
+.twostars-testimonials-hero__eyebrow-line {
+  display: none;
+}
+
+.twostars-testimonials-hero__eyebrow-text {
+  color: rgba(201, 163, 123, 0.95);
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  font-size: clamp(0.7rem, 1.2vw, 0.85rem);
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+}
+
+/* ── Title ────────────────────────────────────────────────────────── */
+.twostars-testimonials-hero__title {
+  margin: 0 0 1.5rem;
+  color: #FFFFFF;
+  font-family: var(--font-display, 'Cormorant Garamond', serif);
+  font-size: clamp(3rem, 8vw, 7.5rem);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  text-shadow: 0 4px 40px rgba(0, 0, 0, 0.8), 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.twostars-testimonials-hero__title-em {
+  font-style: italic;
+  color: var(--sahara-sand, #C9A37B);
+}
+
+/* ── Excerpt ──────────────────────────────────────────────────────── */
+.twostars-testimonials-hero__excerpt {
+  margin: 0 auto 3rem;
+  max-width: 660px;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  font-weight: 300;
+  line-height: 1.8;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.7), 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* ── Actions ──────────────────────────────────────────────────────── */
+.twostars-testimonials-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: center;
+}
+
+.twostars-testimonials-hero__primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2.8rem;
+  background: var(--sahara-sand, #C9A37B);
+  color: var(--deep-navy, #101C2E);
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.twostars-testimonials-hero__primary:hover,
+.twostars-testimonials-hero__primary:focus-visible {
+  background: #FFFFFF;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(201, 163, 123, 0.35);
+}
+
+.twostars-testimonials-hero__secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2.8rem;
+  background: rgba(16, 28, 46, 0.4);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  color: rgba(255, 255, 255, 0.92);
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.twostars-testimonials-hero__secondary:hover,
+.twostars-testimonials-hero__secondary:focus-visible {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--sahara-sand, #C9A37B);
+  color: var(--sahara-sand, #C9A37B);
+  transform: translateY(-3px);
+}
+
+/* ── Scroll indicator ─────────────────────────────────────────────── */
+.twostars-testimonials-hero__scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  z-index: 4;
+}
+
+.twostars-testimonials-hero__scroll-text {
+  color: rgba(255, 255, 255, 0.45);
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+}
+
+.twostars-testimonials-hero__scroll-line {
+  position: relative;
+  overflow: hidden;
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, rgba(201, 163, 123, 0.3), transparent);
+}
+
+.twostars-testimonials-hero__scroll-line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--sahara-sand, #C9A37B);
+  animation: twostars-testimonials-hero-scroll 2s ease-in-out infinite;
+}
+
+@keyframes twostars-testimonials-hero-scroll {
+  0%        { transform: translateY(-100%); }
+  60%, 100% { transform: translateY(100%); }
+}
+
+/* ── Responsive ───────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .twostars-testimonials-hero__content {
+    padding: 5rem 5%;
+  }
+
+  .twostars-testimonials-hero__title {
+    font-size: clamp(2.5rem, 9vw, 3.5rem);
+  }
+
+  .twostars-testimonials-hero__actions {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .twostars-testimonials-hero__primary,
+  .twostars-testimonials-hero__secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .twostars-testimonials-hero__scroll {
+    display: none;
+  }
+}
+
+/* ── Reduced motion ───────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .twostars-testimonials-hero__image,
+  .twostars-testimonials-hero__scroll-line::after {
+    animation: none;
+  }
+
+  .twostars-testimonials-hero__primary,
+  .twostars-testimonials-hero__secondary {
+    transition: none;
+  }
+}

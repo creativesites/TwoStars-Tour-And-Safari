@@ -1,0 +1,305 @@
+/* =====================================================================
+   Gallery Hero Widget — gallery-hero.css
+   Redesigned for Centered Editorial Composition and Cinematic Ken Burns
+   ===================================================================== */
+
+.twostars-gallery-hero {
+  position: relative;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  min-height: 85vh;
+  overflow: hidden;
+  background: var(--color-deep-night, #0D1B2A);
+}
+
+@media (max-width: 1024px) {
+  .twostars-gallery-hero {
+    min-height: 65vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .twostars-gallery-hero {
+    min-height: 50vh;
+  }
+}
+
+/* ── Media layer ───────────────────────────────────────────────────── */
+.twostars-gallery-hero__media {
+  position: absolute;
+  inset: -10%; /* Extend to allow 1.15 scale Ken Burns without edge clipping */
+  overflow: hidden;
+}
+
+.twostars-gallery-hero__image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1);
+  animation: twostars-gallery-hero-kenburns 25s ease-in-out infinite alternate;
+}
+
+.twostars-gallery-hero--parallax .twostars-gallery-hero__image {
+  animation-duration: 35s; /* Longer sweep out for parallax toggle */
+}
+
+@keyframes twostars-gallery-hero-kenburns {
+  0% { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.1) translate(-1%, 1%); }
+}
+
+.twostars-gallery-hero__image--placeholder {
+  background:
+    radial-gradient(circle at 30% 60%, rgba(212, 163, 115, 0.25), transparent 40%),
+    radial-gradient(circle at 80% 20%, rgba(0, 180, 216, 0.15), transparent 30%),
+    linear-gradient(160deg, #0D1B2A 0%, #1B3A6B 60%, #0D1B2A 100%);
+  animation: none;
+}
+
+/* ── Grain & overlay ──────────────────────────────────────────────── */
+.twostars-gallery-hero__grain {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeBlend in='SourceGraphic' mode='overlay'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.twostars-gallery-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(13, 27, 42, calc(var(--twostars-gallery-hero-overlay, 0.45) * 0.7));
+  background-image: 
+    radial-gradient(ellipse at center, rgba(13, 27, 42, calc(var(--twostars-gallery-hero-overlay, 0.45) * 0.6)) 0%, rgba(13, 27, 42, calc(var(--twostars-gallery-hero-overlay, 0.45) * 1.6)) 100%),
+    linear-gradient(to bottom, transparent 50%, rgba(13, 27, 42, calc(var(--twostars-gallery-hero-overlay, 0.45) * 1.8)) 100%);
+  z-index: 2;
+}
+
+/* ── Content layer ────────────────────────────────────────────────── */
+.twostars-gallery-hero__content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 7rem 5% 7rem;
+  box-sizing: border-box;
+}
+
+.twostars-gallery-hero__inner {
+  width: min(100%, 1024px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ── Eyebrow ─────────────────────────────────────────────────────── */
+.twostars-gallery-hero__eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.twostars-gallery-hero__eyebrow::before,
+.twostars-gallery-hero__eyebrow::after {
+  content: "";
+  display: block;
+  width: clamp(20px, 4vw, 50px);
+  height: 1px;
+  background: rgba(212, 163, 115, 0.6);
+}
+
+.twostars-gallery-hero__eyebrow-line {
+  display: none; /* Removed the asymmetrical left-line in favor of centered symmetrical lines */
+}
+
+.twostars-gallery-hero__eyebrow-text {
+  color: rgba(212, 163, 115, 0.95);
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  font-size: clamp(0.7rem, 1.2vw, 0.85rem);
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+}
+
+/* ── Title ────────────────────────────────────────────────────────── */
+.twostars-gallery-hero__title {
+  margin: 0 0 1.5rem;
+  color: #FFFFFF;
+  font-family: var(--font-display, 'Cormorant Garamond', Georgia, serif);
+  font-size: clamp(3rem, 8vw, 7.5rem);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  text-shadow: 0 4px 40px rgba(0, 0, 0, 0.8), 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.twostars-gallery-hero__title-em {
+  font-style: italic;
+  color: #D4A373;
+}
+
+/* ── Excerpt ──────────────────────────────────────────────────────── */
+.twostars-gallery-hero__excerpt {
+  margin: 0 auto 3rem;
+  max-width: 680px;
+  color: rgba(255, 255, 255, 0.95);
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  font-weight: 300;
+  line-height: 1.8;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.7), 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* ── Actions ──────────────────────────────────────────────────────── */
+.twostars-gallery-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: center;
+}
+
+.twostars-gallery-hero__primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2.8rem;
+  background: #D4A373;
+  color: #0D1B2A;
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.twostars-gallery-hero__primary:hover,
+.twostars-gallery-hero__primary:focus-visible {
+  background: #FFFFFF;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(212, 163, 115, 0.3);
+}
+
+.twostars-gallery-hero__secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2.8rem;
+  background: rgba(13, 27, 42, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: rgba(255, 255, 255, 0.95);
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.twostars-gallery-hero__secondary:hover,
+.twostars-gallery-hero__secondary:focus-visible {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #D4A373;
+  color: #D4A373;
+  transform: translateY(-3px);
+}
+
+/* ── Scroll indicator ─────────────────────────────────────────────── */
+.twostars-gallery-hero__scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  z-index: 4;
+}
+
+.twostars-gallery-hero__scroll-text {
+  /* Hide the literal word 'Scroll' or rotate it gracefully */
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+}
+
+.twostars-gallery-hero__scroll-line {
+  position: relative;
+  overflow: hidden;
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, rgba(212, 163, 115, 0.3), transparent);
+}
+
+.twostars-gallery-hero__scroll-line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #D4A373;
+  animation: twostars-gallery-hero-scroll 2s ease-in-out infinite;
+}
+
+@keyframes twostars-gallery-hero-scroll {
+  0% { transform: translateY(-100%); }
+  60%, 100% { transform: translateY(100%); }
+}
+
+/* ── Responsive ───────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .twostars-gallery-hero__content {
+    padding: 5rem 5% 5rem;
+  }
+
+  .twostars-gallery-hero__title {
+    font-size: clamp(2.5rem, 9vw, 3.5rem);
+  }
+
+  .twostars-gallery-hero__actions {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .twostars-gallery-hero__primary,
+  .twostars-gallery-hero__secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .twostars-gallery-hero__scroll {
+    display: none;
+  }
+}
+
+/* ── Reduced motion ───────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .twostars-gallery-hero__image,
+  .twostars-gallery-hero__scroll-line::after {
+    animation: none;
+    transition: none;
+  }
+}
