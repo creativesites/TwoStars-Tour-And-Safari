@@ -18,11 +18,11 @@ if (! defined('ABSPATH')) {
 						</span>
 						<div>
 							<p class="site-footer__eyebrow"><?php esc_html_e('Two Stars Tour and Safari', 'twostars-theme'); ?></p>
-							<h2 class="site-footer__title"><?php esc_html_e('Adventure Beyond the Horizon', 'twostars-theme'); ?></h2>
+							<h2 class="site-footer__title"><?php esc_html_e('Namibia’s coast, with Tuli and her team', 'twostars-theme'); ?></h2>
 						</div>
 					</div>
 					<p class="site-footer__text">
-						<?php esc_html_e('Elegant coastal and desert day tours from Walvis Bay and Swakopmund, shaped around scenic stops, local insight, flexible planning, and comfortable 4x4 experiences.', 'twostars-theme'); ?>
+						<?php esc_html_e('A women-led local family business running small-group day tours from Walvis Bay and Swakopmund: unhurried photo stops, a maximum of four guests per vehicle, and pickups from hotels and the cruise port. Registered with the Namibia Tourism Board, #TSO01736.', 'twostars-theme'); ?>
 					</p>
 				</div>
 
@@ -45,9 +45,9 @@ if (! defined('ABSPATH')) {
 
 				<div class="site-footer__cta">
 					<p class="site-footer__nav-label"><?php esc_html_e('Ready to Explore?', 'twostars-theme'); ?></p>
-					<p class="site-footer__cta-text"><?php esc_html_e('Tell us which tour caught your eye or ask for a private option and we will help you choose the right next step.', 'twostars-theme'); ?></p>
-					<a class="tour-booking-button site-footer__button" href="<?php echo esc_url(home_url('/booking/')); ?>">
-						<?php esc_html_e('Book Your Tour', 'twostars-theme'); ?>
+					<p class="site-footer__cta-text"><?php esc_html_e('Pick a tour and book online, or message us on WhatsApp and we will help you choose.', 'twostars-theme'); ?></p>
+					<a class="tour-booking-button site-footer__button" href="<?php echo esc_url(home_url('/tours/')); ?>" data-twostars-event="book_now_click">
+						<?php esc_html_e('See tours and prices', 'twostars-theme'); ?>
 					</a>
 				</div>
 			</div>
@@ -59,18 +59,22 @@ if (! defined('ABSPATH')) {
 						echo esc_html(
 							sprintf(
 								/* translators: %d is year */
-								__('© %d Two Stars Tour and Safari', 'twostars-theme'),
+								__('© %d Two Stars Tour & Safari CC', 'twostars-theme'),
 								(int) gmdate('Y')
 							)
 						);
 						?>
 					</p>
-					<p class="site-footer__legal"><?php esc_html_e('Walvis Bay and Swakopmund coastal tours, Sandwich Harbour experiences, and private day-trip planning.', 'twostars-theme'); ?></p>
+					<p class="site-footer__legal"><?php esc_html_e('Day tours from Walvis Bay and Swakopmund · Sandwich Harbour · Shore excursions · Private tours', 'twostars-theme'); ?></p>
 				</div>
 			</div>
 		</footer>
 	<?php endif; ?>
 </div>
+<nav class="twostars-mobile-bar" aria-label="<?php esc_attr_e('Quick booking', 'twostars-theme'); ?>">
+	<a class="twostars-mobile-bar__book" href="<?php echo esc_url(home_url('/tours/')); ?>" data-twostars-event="book_now_click"><?php esc_html_e('Book now', 'twostars-theme'); ?></a>
+	<a class="twostars-mobile-bar__wa" href="<?php echo esc_url(twostars_theme_get_whatsapp_url()); ?>" target="_blank" rel="noopener noreferrer" data-twostars-event="whatsapp_click"><?php esc_html_e('WhatsApp', 'twostars-theme'); ?></a>
+</nav>
 <?php wp_footer(); ?>
 </body>
 </html>

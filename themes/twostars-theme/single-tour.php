@@ -31,6 +31,14 @@ $twostars_fx = static function (float $nad): string {
 		$hook           = $meta['hook'] !== '' ? $meta['hook'] : wp_strip_all_tags(get_the_excerpt());
 		$gallery_ids    = twostars_theme_get_tour_gallery_ids($tour_id);
 		$hero_url       = $gallery_ids !== [] ? (string) wp_get_attachment_image_url($gallery_ids[0], 'full') : '';
+		$is_editor      = current_user_can('edit_posts');
+		$open_items     = [];
+		foreach (['duration', 'itinerary', 'includes', 'excludes', 'what_to_bring', 'notes', 'faqs', 'meeting_point', 'cancellation'] as $field) {
+			if (twostars_theme_has_placeholder((string) $meta[$field])) {
+				$open_items[] = $field;
+				$meta[$field] = implode("\n", array_filter(TourData::lines((string) $meta[$field]), static fn(string $l): bool => ! twostars_theme_has_placeholder($l)));
+			}
+		}
 		$itinerary      = TourData::rows($meta['itinerary'], 3);
 		$includes       = TourData::lines($meta['includes']);
 		$excludes       = TourData::lines($meta['excludes']);
@@ -102,6 +110,10 @@ $twostars_fx = static function (float $nad): string {
 						</dl>
 					</div>
 				</div>
+			<?php endif; ?>
+
+			<?php if ($is_editor && $open_items !== []) : ?>
+				<div class="site-shell"><p class="twostars-tour-page__editor-note"><?php echo esc_html('Editors only: placeholders hidden from visitors in ' . implode(', ', $open_items) . '.'); ?></p></div>
 			<?php endif; ?>
 
 			<div class="site-shell">

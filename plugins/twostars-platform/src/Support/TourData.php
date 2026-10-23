@@ -88,6 +88,18 @@ final class TourData
 		);
 	}
 
+	public static function get_price_label(int $tour_id): string
+	{
+		$price = (float) get_post_meta($tour_id, '_twostars_tour_price_from', true);
+
+		if ($price > 0) {
+			/* translators: %s: formatted NAD price */
+			return sprintf(__('From %s per adult', 'twostars-platform'), self::format_nad($price));
+		}
+
+		return __('Custom quote', 'twostars-platform');
+	}
+
 	public static function format_nad(float $amount): string
 	{
 		return 'N$' . number_format($amount, 0, '.', ',');
@@ -138,6 +150,12 @@ final class TourData
 	{
 		$meta  = self::get_tour_meta($tour_id);
 		$items = [];
+
+		$price_label = self::get_price_label($tour_id);
+
+		if ($price_label !== '') {
+			$items[] = ['label' => __('Price', 'twostars-platform'), 'value' => $price_label];
+		}
 
 		if ($meta['duration'] !== '') {
 			$items[] = ['label' => __('Duration', 'twostars-platform'), 'value' => (string) $meta['duration']];

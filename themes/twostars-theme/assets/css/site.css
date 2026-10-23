@@ -3328,3 +3328,91 @@ body.twostars-elementor-ready .elementor-tab-content {
     transition: none !important;
   }
 }
+
+/* ---------------------------------------------------------------
+   Compact header, mobile booking bar, price emphasis
+   --------------------------------------------------------------- */
+.site-header {
+  padding: 0.5rem 0;
+}
+
+.site-shell--header {
+  padding: 0;
+  gap: 0.75rem 2rem;
+}
+
+.site-branding__logo img,
+.site-branding__image {
+  max-height: 48px;
+}
+
+.twostars-tour-page__editor-note {
+  margin: 1rem 0 0;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  background: #fff4d6;
+  color: #5a4300;
+  font-size: 0.85rem;
+}
+
+.twostars-mobile-bar {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .site-branding__logo img,
+  .site-branding__image {
+    max-height: 40px;
+  }
+
+  .site-nav-toggle {
+    padding: 0.5rem 0.9rem;
+    min-height: 44px;
+  }
+
+  body {
+    padding-bottom: 68px;
+  }
+
+  .twostars-mobile-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9990;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem calc(0.5rem + env(safe-area-inset-bottom));
+    background: #fff;
+    box-shadow: 0 -6px 24px rgba(16, 28, 46, 0.14);
+  }
+
+  .twostars-mobile-bar a {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    text-decoration: none;
+  }
+
+  .twostars-mobile-bar__book {
+    background: #c96f3b;
+    color: #fff;
+  }
+
+  .twostars-mobile-bar__wa {
+    background: #fff;
+    color: #1b3a6b;
+    border: 2px solid #1b3a6b;
+  }
+
+  body .twostars-chatbot-float {
+    bottom: calc(68px + 0.75rem);
+  }
+}

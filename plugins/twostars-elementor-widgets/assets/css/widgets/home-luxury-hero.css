@@ -1,0 +1,241 @@
+/* Home hero: single H1, crossfading photos, price + CTAs above the fold, trust bar */
+.ts-hero {
+  position: relative;
+  isolation: isolate;
+  min-height: min(92svh, 780px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  color: var(--pure-white);
+  background: var(--deep-navy);
+}
+
+.ts-hero__slides,
+.ts-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.ts-hero .ts-hero__slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: ts-hero-fade 18s infinite;
+  animation-delay: calc(var(--ts-slide) * 6s - 1.2s);
+}
+
+.ts-hero__slide:first-child {
+  opacity: 1;
+}
+
+@keyframes ts-hero-fade {
+  0% { opacity: 0; }
+  6% { opacity: 1; }
+  33% { opacity: 1; }
+  39% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.ts-hero__overlay {
+  z-index: -1;
+  background:
+    linear-gradient(to top, rgba(16, 28, 46, 0.88) 0%, rgba(16, 28, 46, 0.45) 50%, rgba(16, 28, 46, 0.08) 100%),
+    linear-gradient(to right, rgba(16, 28, 46, 0.55), transparent 65%);
+}
+
+.ts-hero__inner {
+  width: min(100% - 2rem, var(--content-max));
+  margin: 0 auto;
+  padding: 7rem 0 2rem;
+  max-width: var(--content-max);
+}
+
+.ts-hero__eyebrow {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sahara-sand);
+}
+
+.ts-hero__title {
+  margin: 0;
+  max-width: 16ch;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.75rem, 7vw, 5rem);
+  line-height: 1.02;
+  color: var(--pure-white);
+}
+
+.ts-hero__title span {
+  color: var(--sahara-sand);
+}
+
+.ts-hero__body {
+  max-width: 40rem;
+  margin: 1.25rem 0 0;
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.ts-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+.ts-hero__button {
+  min-height: 52px;
+  padding: 0 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.ts-hero__button--primary {
+  background: var(--adventure-orange);
+  color: var(--pure-white);
+}
+
+.ts-hero__button--ghost {
+  border-color: rgba(255, 255, 255, 0.7);
+  color: var(--pure-white);
+}
+
+.ts-hero__button:hover,
+.ts-hero__button:focus-visible {
+  transform: translateY(-2px);
+}
+
+.ts-hero__button:focus-visible,
+.ts-hero__assist:focus-visible {
+  outline: 3px solid var(--sahara-sand);
+  outline-offset: 3px;
+}
+
+.ts-hero__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2.5rem;
+  margin: 2rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.ts-hero__facts dt {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.ts-hero__facts dd {
+  margin: 0.15rem 0 0;
+  font-weight: 600;
+}
+
+.ts-hero__assist {
+  position: absolute;
+  right: 5%;
+  top: 7rem;
+  min-height: 44px;
+  padding: 0 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 999px;
+  background: rgba(16, 28, 46, 0.55);
+  backdrop-filter: blur(8px);
+  color: var(--pure-white);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.ts-hero__trust {
+  list-style: none;
+  margin: 0;
+  padding: 0.9rem 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 2rem;
+  background: var(--warm-ivory);
+  color: var(--navy-primary);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.ts-hero__trust li::before {
+  content: "✓";
+  margin-right: 0.45rem;
+  color: var(--coastal-cyan);
+}
+
+@media (max-width: 767px) {
+  .ts-hero {
+    min-height: 0;
+  }
+
+  .ts-hero__overlay {
+    background: linear-gradient(to top, rgba(16, 28, 46, 0.94) 0%, rgba(16, 28, 46, 0.78) 55%, rgba(16, 28, 46, 0.6) 100%);
+  }
+
+  .ts-hero__title span,
+  .ts-hero__eyebrow {
+    color: #e3c69e;
+  }
+
+  .ts-hero__inner {
+    padding: 5.5rem 0 1.5rem;
+  }
+
+  .ts-hero__facts {
+    display: none;
+  }
+
+  .ts-hero__assist {
+    display: none;
+  }
+
+  .ts-hero__button {
+    flex: 1 1 100%;
+  }
+
+  .ts-hero__trust {
+    justify-content: flex-start;
+    font-size: 0.8rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ts-hero__slide {
+    animation: none;
+  }
+
+  .ts-hero__slide:not(:first-child) {
+    display: none;
+  }
+}

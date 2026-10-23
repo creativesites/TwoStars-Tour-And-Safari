@@ -280,165 +280,92 @@ final class HomeLuxuryHeroWidget extends BaseWidget
 
 	protected function render(): void
 	{
-		$settings = $this->normalize_service_copy($this->get_settings_for_display());
-		$image_id = absint($settings['background_image']['id'] ?? 0);
-		$facts         = array_values(
-			array_filter(
-				(array) ($settings['facts'] ?? []),
-				static fn(array $fact): bool => ! empty($fact['label']) || ! empty($fact['value'])
-			)
+		$settings      = $this->normalize_service_copy($this->get_settings_for_display());
+		$image_id      = absint($settings['background_image']['id'] ?? 0);
+		$slides        = $this->resolve_slider_slides($settings, $image_id);
+		$facts         = array_slice(
+			array_values(
+				array_filter(
+					(array) ($settings['facts'] ?? []),
+					static fn(array $fact): bool => ! empty($fact['label']) || ! empty($fact['value'])
+				)
+			),
+			0,
+			3
 		);
-		$hero_facts    = array_slice($facts, 0, 3);
-		$panel_facts   = self::DEFAULT_PANEL_FACTS;
-		$slider_slides = $this->resolve_slider_slides($settings, $image_id);
-		$service_pills = self::DEFAULT_SERVICE_PILLS;
+		$title         = (string) ($settings['title'] ?? '');
+		$highlight     = (string) ($settings['highlight'] ?? '');
+		$primary_url   = (string) ($settings['primary_cta_link']['url'] ?? '') !== '' ? (string) $settings['primary_cta_link']['url'] : home_url('/tours/');
+		$secondary_url = (string) ($settings['secondary_cta_link']['url'] ?? '') !== '' ? (string) $settings['secondary_cta_link']['url'] : home_url('/tours/');
+		$trust         = [
+			__('Registered with the Namibia Tourism Board, #TSO01736', 'twostars-elementor-widgets'),
+			__('Max 4 guests per vehicle', 'twostars-elementor-widgets'),
+			__('Free cancellation', 'twostars-elementor-widgets'),
+			__('Women-led local team', 'twostars-elementor-widgets'),
+		];
+
+		$title_html = esc_html($title);
+
+		if ($highlight !== '' && stripos($title, $highlight) !== false) {
+			$title_html = preg_replace('/' . preg_quote(esc_html($highlight), '/') . '/i', '<span>$0</span>', $title_html, 1) ?? $title_html;
+		}
 		?>
-		<section class="twostars-home-hero">
-			<div class="twostars-home-hero__ambient" aria-hidden="true"></div>
+		<section class="ts-hero">
+			<div class="ts-hero__slides" aria-hidden="true">
+				<?php foreach (array_slice($slides, 0, 3) as $index => $slide) : ?>
+					<?php if ($slide['image_url'] !== '') : ?>
+						<img
+							class="ts-hero__slide"
+							style="--ts-slide:<?php echo esc_attr((string) $index); ?>"
+							src="<?php echo esc_url($slide['image_url']); ?>"
+							alt=""
+							<?php echo $index === 0 ? 'fetchpriority="high"' : 'loading="lazy"'; ?>
+							decoding="async"
+						>
+					<?php endif; ?>
+				<?php endforeach; ?>
+			</div>
+			<div class="ts-hero__overlay" aria-hidden="true"></div>
 
-			<div class="twostars-home-hero__stack">
-				<?php if ($slider_slides !== []) : ?>
-					<div class="twostars-home-hero__slider" data-twostars-home-hero-slider data-autoplay="true" data-duration="5200" data-twostars-animate="fade-in-up">
-						<div class="twostars-home-hero__slides">
-							<?php foreach ($slider_slides as $index => $slide) : ?>
-								<div
-									class="twostars-home-hero__slide<?php echo $index === 0 ? ' is-active' : ''; ?>"
-									data-home-hero-slide-index="<?php echo esc_attr((string) $index); ?>"
-									aria-hidden="<?php echo $index === 0 ? 'false' : 'true'; ?>"
-								>
-									<div
-										class="twostars-home-hero__slide-media<?php echo $slide['image_url'] === '' ? ' twostars-home-hero__slide-media--fallback' : ''; ?>"
-										<?php if ($slide['image_url'] !== '') : ?>
-											style="background-image: url('<?php echo esc_url($slide['image_url']); ?>');"
-										<?php endif; ?>
-										aria-hidden="true"
-									></div>
-									<div class="twostars-home-hero__slide-overlay" aria-hidden="true"></div>
-									<div class="twostars-home-hero__slide-content">
-										<div class="twostars-home-hero__slide-title" role="heading" aria-level="1"><?php echo esc_html($slide['title']); ?></div>
-									</div>
-								</div>
-							<?php endforeach; ?>
-						</div>
-
-						<?php if (count($slider_slides) > 1) : ?>
-							<div class="twostars-home-hero__slider-arrows" aria-label="<?php esc_attr_e('Hero slide controls', 'twostars-elementor-widgets'); ?>">
-								<button type="button" class="twostars-home-hero__slider-arrow twostars-home-hero__slider-arrow--prev" data-home-hero-prev aria-label="<?php esc_attr_e('Previous slide', 'twostars-elementor-widgets'); ?>">
-									<span aria-hidden="true">&larr;</span>
-								</button>
-								<button type="button" class="twostars-home-hero__slider-arrow twostars-home-hero__slider-arrow--next" data-home-hero-next aria-label="<?php esc_attr_e('Next slide', 'twostars-elementor-widgets'); ?>">
-									<span aria-hidden="true">&rarr;</span>
-								</button>
-							</div>
-						<?php endif; ?>
-
-						<?php if (count($slider_slides) > 1) : ?>
-							<div class="twostars-home-hero__slider-dots" aria-label="<?php esc_attr_e('Hero titles', 'twostars-elementor-widgets'); ?>">
-								<?php foreach ($slider_slides as $index => $slide) : ?>
-									<button
-										type="button"
-										class="twostars-home-hero__slider-dot<?php echo $index === 0 ? ' is-active' : ''; ?>"
-										data-home-hero-dot-index="<?php echo esc_attr((string) $index); ?>"
-										aria-label="<?php echo esc_attr($slide['title']); ?>"
-									></button>
-								<?php endforeach; ?>
-							</div>
-						<?php endif; ?>
-					</div>
+			<div class="ts-hero__inner">
+				<?php if (! empty($settings['eyebrow'])) : ?>
+					<p class="ts-hero__eyebrow"><?php echo esc_html((string) $settings['eyebrow']); ?></p>
+				<?php endif; ?>
+				<h1 class="ts-hero__title"><?php echo wp_kses($title_html, ['span' => []]); ?></h1>
+				<?php if (! empty($settings['body'])) : ?>
+					<p class="ts-hero__body"><?php echo esc_html((string) $settings['body']); ?></p>
 				<?php endif; ?>
 
-				<div class="twostars-home-hero__frame">
-					<div class="twostars-home-hero__content">
-						<div class="twostars-home-hero__content-inner">
-						<?php if (! empty($settings['body'])) : ?>
-							<p class="twostars-home-hero__body" data-twostars-animate="fade-in-up" style="--twostars-delay:0.18s;"><?php echo esc_html((string) $settings['body']); ?></p>
-						<?php endif; ?>
-
-						<div class="twostars-home-hero__services" data-twostars-animate="fade-in-up" style="--twostars-delay:0.28s;">
-							<p class="twostars-home-hero__services-label"><?php esc_html_e('Popular Experiences', 'twostars-elementor-widgets'); ?></p>
-							<div class="twostars-home-hero__service-list">
-								<?php foreach ($service_pills as $pill) : ?>
-									<span class="twostars-home-hero__service-pill"><?php echo esc_html($pill); ?></span>
-								<?php endforeach; ?>
-							</div>
-						</div>
-
-						<div class="twostars-home-hero__actions" data-twostars-animate="fade-in-up" style="--twostars-delay:0.38s;">
-							<?php if (! empty($settings['primary_cta_text']) && ! empty($settings['primary_cta_link']['url'])) : ?>
-								<a class="twostars-safari-button twostars-safari-button--primary" <?php echo $this->link_attributes((array) $settings['primary_cta_link']); ?>>
-									<?php echo esc_html((string) $settings['primary_cta_text']); ?>
-								</a>
-							<?php endif; ?>
-
-							<?php if (! empty($settings['secondary_cta_text']) && ! empty($settings['secondary_cta_link']['url'])) : ?>
-								<a class="twostars-safari-button twostars-safari-button--ghost" <?php echo $this->link_attributes((array) $settings['secondary_cta_link']); ?>>
-									<?php echo esc_html((string) $settings['secondary_cta_text']); ?>
-								</a>
-							<?php endif; ?>
-						</div>
-
-						<?php if ($hero_facts !== []) : ?>
-							<div class="twostars-home-hero__summary" data-twostars-animate="fade-in-up" style="--twostars-delay:0.5s;">
-								<?php foreach ($hero_facts as $fact) : ?>
-									<div class="twostars-home-hero__summary-item">
-										<?php if (! empty($fact['label'])) : ?>
-											<span><?php echo esc_html((string) $fact['label']); ?></span>
-										<?php endif; ?>
-										<?php if (! empty($fact['value'])) : ?>
-											<strong><?php echo esc_html((string) $fact['value']); ?></strong>
-										<?php endif; ?>
-									</div>
-								<?php endforeach; ?>
-							</div>
-						<?php endif; ?>
-						</div>
-					</div>
-
-					<div class="twostars-home-hero__rail">
-						<div class="twostars-home-hero__brand-chip" data-twostars-animate="fade-in-right" style="--twostars-delay:0.12s;">
-							<span class="twostars-home-hero__brand-stars" aria-hidden="true">★ ★</span>
-							<span class="twostars-home-hero__brand-text"><?php esc_html_e('Two Stars Tour & Safari', 'twostars-elementor-widgets'); ?></span>
-						</div>
-
-						<aside
-							class="twostars-home-hero__panel"
-							data-twostars-home-hero-panel
-							data-default-copy="<?php echo esc_attr((string) ($settings['concierge_copy'] ?? '')); ?>"
-							data-default-label="<?php echo esc_attr((string) ($settings['concierge_button_label'] ?? '')); ?>"
-							data-fallback-url="<?php echo esc_url((string) ($settings['concierge_fallback_link']['url'] ?? home_url('/contact/'))); ?>"
-							data-twostars-animate="fade-in-right"
-							style="--twostars-delay:0.2s;"
-						>
-							<p class="twostars-home-hero__panel-kicker"><?php esc_html_e('Choose Your Tour', 'twostars-elementor-widgets'); ?></p>
-							<?php if (! empty($settings['concierge_label'])) : ?>
-								<p class="twostars-home-hero__panel-label"><?php echo esc_html((string) $settings['concierge_label']); ?></p>
-							<?php endif; ?>
-							<p class="twostars-home-hero__panel-copy" data-twostars-home-hero-copy><?php echo esc_html((string) ($settings['concierge_copy'] ?? '')); ?></p>
-							<button type="button" class="twostars-safari-button twostars-safari-button--ghost twostars-home-hero__panel-button" data-twostars-assistant-trigger>
-								<?php echo esc_html((string) ($settings['concierge_button_label'] ?? __(self::DEFAULT_PLANNING_BUTTON, 'twostars-elementor-widgets'))); ?>
-							</button>
-
-							<?php if ($panel_facts !== []) : ?>
-								<div class="twostars-home-hero__panel-stats">
-									<?php foreach ($panel_facts as $fact) : ?>
-										<div class="twostars-home-hero__panel-stat">
-											<?php if (! empty($fact['label'])) : ?>
-												<span><?php echo esc_html((string) $fact['label']); ?></span>
-											<?php endif; ?>
-											<?php if (! empty($fact['value'])) : ?>
-												<strong><?php echo esc_html((string) $fact['value']); ?></strong>
-											<?php endif; ?>
-										</div>
-									<?php endforeach; ?>
-								</div>
-							<?php endif; ?>
-						</aside>
-					</div>
+				<div class="ts-hero__actions">
+					<a class="ts-hero__button ts-hero__button--primary" href="<?php echo esc_url($primary_url); ?>" data-twostars-event="book_now_click"><?php echo esc_html((string) $settings['primary_cta_text']); ?></a>
+					<a class="ts-hero__button ts-hero__button--ghost" href="<?php echo esc_url($secondary_url); ?>"><?php echo esc_html((string) $settings['secondary_cta_text']); ?></a>
 				</div>
+
+				<?php if ($facts !== []) : ?>
+					<dl class="ts-hero__facts">
+						<?php foreach ($facts as $fact) : ?>
+							<div>
+								<dt><?php echo esc_html((string) ($fact['label'] ?? '')); ?></dt>
+								<dd><?php echo esc_html((string) ($fact['value'] ?? '')); ?></dd>
+							</div>
+						<?php endforeach; ?>
+					</dl>
+				<?php endif; ?>
 			</div>
+
+			<button type="button" class="ts-hero__assist" data-twostars-assistant-trigger>
+				<?php echo esc_html((string) ($settings['concierge_button_label'] ?? __('Ask the assistant', 'twostars-elementor-widgets'))); ?>
+			</button>
+
+			<ul class="ts-hero__trust">
+				<?php foreach ($trust as $item) : ?>
+					<li><?php echo esc_html($item); ?></li>
+				<?php endforeach; ?>
+			</ul>
 		</section>
 		<?php
 	}
+
 
 	/**
 	 * Keep legacy saved instances aligned with the new Two Stars service positioning.
