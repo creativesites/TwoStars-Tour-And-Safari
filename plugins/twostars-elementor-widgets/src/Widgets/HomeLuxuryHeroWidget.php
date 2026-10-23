@@ -298,10 +298,10 @@ final class HomeLuxuryHeroWidget extends BaseWidget
 		$primary_url   = (string) ($settings['primary_cta_link']['url'] ?? '') !== '' ? (string) $settings['primary_cta_link']['url'] : home_url('/tours/');
 		$secondary_url = (string) ($settings['secondary_cta_link']['url'] ?? '') !== '' ? (string) $settings['secondary_cta_link']['url'] : home_url('/tours/');
 		$trust         = [
-			__('Registered with the Namibia Tourism Board, #TSO01736', 'twostars-elementor-widgets'),
 			__('Max 4 guests per vehicle', 'twostars-elementor-widgets'),
 			__('Free cancellation', 'twostars-elementor-widgets'),
 			__('Women-led local team', 'twostars-elementor-widgets'),
+			__('Photographer-paced stops', 'twostars-elementor-widgets'),
 		];
 
 		$title_html = esc_html($title);

@@ -67,6 +67,12 @@ final class HomeTrustStoryWidget extends BaseWidget
 		$this->add_control('secondary_cta_text', ['label' => __('Secondary CTA Text', 'twostars-elementor-widgets'), 'type' => Controls_Manager::TEXT, 'default' => __('Contact on WhatsApp', 'twostars-elementor-widgets')]);
 		$this->add_control('secondary_cta_link', ['label' => __('Secondary CTA Link', 'twostars-elementor-widgets'), 'type' => Controls_Manager::URL, 'default' => ['url' => 'https://wa.me/264812060111', 'is_external' => 'true']]);
 		$this->add_control('support_image', ['label' => __('Support Image', 'twostars-elementor-widgets'), 'type' => Controls_Manager::MEDIA]);
+		$this->add_control('main_image', ['label' => __('Main Photo', 'twostars-elementor-widgets'), 'type' => Controls_Manager::MEDIA]);
+		$this->add_control('inset_image', ['label' => __('Inset Photo', 'twostars-elementor-widgets'), 'type' => Controls_Manager::MEDIA]);
+		$this->add_control('chip_number', ['label' => __('Chip Number', 'twostars-elementor-widgets'), 'type' => Controls_Manager::TEXT, 'default' => '4']);
+		$this->add_control('chip_text', ['label' => __('Chip Text', 'twostars-elementor-widgets'), 'type' => Controls_Manager::TEXT, 'default' => __('guests per vehicle, plus your guide. Always.', 'twostars-elementor-widgets')]);
+		$this->add_control('pill_text', ['label' => __('Price Pill', 'twostars-elementor-widgets'), 'type' => Controls_Manager::TEXT, 'default' => __('N$2,600 per adult · Free cancellation', 'twostars-elementor-widgets')]);
+		$this->add_control('footnote', ['label' => __('Footnote', 'twostars-elementor-widgets'), 'type' => Controls_Manager::TEXT, 'default' => __('Registered with the Namibia Tourism Board · #TSO01736', 'twostars-elementor-widgets')]);
 		$this->add_control('note_label', ['label' => __('Note Label', 'twostars-elementor-widgets'), 'type' => Controls_Manager::TEXT, 'default' => __(self::DEFAULT_NOTE_LABEL, 'twostars-elementor-widgets')]);
 		$this->add_control('note_title', ['label' => __('Note Title', 'twostars-elementor-widgets'), 'type' => Controls_Manager::TEXT, 'default' => __(self::DEFAULT_NOTE_TITLE, 'twostars-elementor-widgets')]);
 		$this->add_control('note_body', ['label' => __('Note Body', 'twostars-elementor-widgets'), 'type' => Controls_Manager::TEXTAREA, 'default' => __(self::DEFAULT_NOTE_BODY, 'twostars-elementor-widgets')]);
@@ -98,83 +104,108 @@ final class HomeTrustStoryWidget extends BaseWidget
 
 	protected function render(): void
 	{
-		$settings = $this->normalize_conversion_copy($this->get_settings_for_display());
-		$image_id = absint($settings['support_image']['id'] ?? 0);
+		$settings   = $this->get_settings_for_display();
+		$main_id    = absint($settings['main_image']['id'] ?? ($settings['support_image']['id'] ?? 0));
+		$inset_id   = absint($settings['inset_image']['id'] ?? 0);
+		$pillars    = array_slice(
+			array_values(
+				array_filter(
+					(array) ($settings['pillars'] ?? []),
+					static fn($pillar): bool => is_array($pillar) && (! empty($pillar['title']) || ! empty($pillar['copy']))
+				)
+			),
+			0,
+			4
+		);
+		$icons      = self::pillar_icons();
+		$title_html = nl2br(esc_html((string) ($settings['title'] ?? '')));
 		?>
-		<section class="twostars-home-story">
-			<div class="twostars-home-story__shell">
-				<header class="twostars-home-story__header" data-twostars-animate="fade-in-up">
-					<div class="twostars-home-story__header-copy">
-						<?php if (! empty($settings['eyebrow'])) : ?><p class="twostars-home-story__eyebrow"><?php echo esc_html((string) $settings['eyebrow']); ?></p><?php endif; ?>
-						<?php if (! empty($settings['title'])) : ?><h2 class="twostars-home-story__title"><?php echo nl2br(esc_html((string) $settings['title'])); ?></h2><?php endif; ?>
+		<section class="ts-story">
+			<span class="ts-story__glow" aria-hidden="true"></span>
+			<div class="ts-story__inner">
+				<div class="ts-story__copy" data-twostars-animate="fade-in-left">
+					<?php if (! empty($settings['eyebrow'])) : ?>
+						<p class="ts-story__eyebrow"><span aria-hidden="true"></span><?php echo esc_html((string) $settings['eyebrow']); ?></p>
+					<?php endif; ?>
+					<?php if (! empty($settings['title'])) : ?>
+						<h2 class="ts-story__title"><?php echo wp_kses($title_html, ['br' => []]); ?></h2>
+					<?php endif; ?>
+					<?php if (! empty($settings['lead'])) : ?>
+						<p class="ts-story__lead"><?php echo esc_html((string) $settings['lead']); ?></p>
+					<?php endif; ?>
+
+					<?php if ($pillars !== []) : ?>
+						<ul class="ts-story__pillars">
+							<?php foreach ($pillars as $index => $pillar) : ?>
+								<li class="ts-story__pillar">
+									<span class="ts-story__icon" aria-hidden="true"><?php echo $icons[$index % count($icons)]; // phpcs:ignore WordPress.Security.EscapeOutput ?></span>
+									<span class="ts-story__pillar-text">
+										<?php if (! empty($pillar['title'])) : ?><strong><?php echo esc_html((string) $pillar['title']); ?></strong><?php endif; ?>
+										<?php if (! empty($pillar['copy'])) : ?><span><?php echo esc_html((string) $pillar['copy']); ?></span><?php endif; ?>
+									</span>
+								</li>
+							<?php endforeach; ?>
+						</ul>
+					<?php endif; ?>
+
+					<div class="ts-story__actions">
+						<?php if (! empty($settings['primary_cta_text']) && ! empty($settings['primary_cta_link']['url'])) : ?>
+							<a class="ts-story__button ts-story__button--primary" <?php echo $this->link_attributes((array) $settings['primary_cta_link']); ?>><?php echo esc_html((string) $settings['primary_cta_text']); ?></a>
+						<?php endif; ?>
+						<?php if (! empty($settings['secondary_cta_text']) && ! empty($settings['secondary_cta_link']['url'])) : ?>
+							<a class="ts-story__button ts-story__button--ghost" <?php echo $this->link_attributes((array) $settings['secondary_cta_link']); ?> data-twostars-event="whatsapp_click"><?php echo esc_html((string) $settings['secondary_cta_text']); ?></a>
+						<?php endif; ?>
 					</div>
-
-					<div class="twostars-home-story__header-text">
-						<?php if (! empty($settings['lead'])) : ?><p class="twostars-home-story__lead"><?php echo esc_html((string) $settings['lead']); ?></p><?php endif; ?>
-						<?php if (! empty($settings['body'])) : ?><p class="twostars-home-story__body"><?php echo esc_html((string) $settings['body']); ?></p><?php endif; ?>
-
-						<div class="twostars-home-story__actions">
-							<?php if (! empty($settings['primary_cta_text']) && ! empty($settings['primary_cta_link']['url'])) : ?>
-								<a class="twostars-safari-button twostars-safari-button--primary" <?php echo $this->link_attributes((array) $settings['primary_cta_link']); ?>>
-									<?php echo esc_html((string) $settings['primary_cta_text']); ?>
-								</a>
+					<?php $ntb_url = (string) ($settings['ntb_logo']['url'] ?? ''); ?>
+					<?php if ($ntb_url !== '' || ! empty($settings['footnote'])) : ?>
+						<div class="ts-story__ntb">
+							<?php if ($ntb_url !== '') : ?>
+								<img class="ts-story__ntb-logo" src="<?php echo esc_url($ntb_url); ?>" alt="<?php esc_attr_e('Namibia Tourism Board', 'twostars-elementor-widgets'); ?>" width="72" height="44" loading="lazy" decoding="async">
 							<?php endif; ?>
-							<?php if (! empty($settings['secondary_cta_text']) && ! empty($settings['secondary_cta_link']['url'])) : ?>
-								<a class="twostars-safari-button twostars-safari-button--ghost" <?php echo $this->link_attributes((array) $settings['secondary_cta_link']); ?>>
-									<?php echo esc_html((string) $settings['secondary_cta_text']); ?>
-								</a>
-							<?php endif; ?>
+							<p class="ts-story__footnote"><?php echo esc_html((string) ($settings['footnote'] ?? '')); ?></p>
 						</div>
-					</div>
-				</header>
+					<?php endif; ?>
+				</div>
 
-				<div class="twostars-home-story__layout">
-					<div class="twostars-home-story__visual" data-twostars-animate="fade-in-left" style="--twostars-delay:0.1s;">
-						<div class="twostars-home-story__image-wrap">
-							<?php if ($image_id > 0) : ?>
-								<?php echo wp_get_attachment_image($image_id, 'large', false, ['class' => 'twostars-home-story__image', 'loading' => 'lazy']); ?>
-							<?php else : ?>
-								<div class="twostars-home-story__image twostars-home-story__image--placeholder"></div>
-							<?php endif; ?>
+				<div class="ts-story__visual" data-twostars-animate="fade-in-right" style="--twostars-delay:0.12s;">
+					<div class="ts-story__photo">
+						<?php if ($main_id > 0) : ?>
+							<?php echo wp_get_attachment_image($main_id, 'large', false, ['loading' => 'lazy', 'decoding' => 'async']); ?>
+						<?php endif; ?>
+					</div>
+					<?php if (! empty($settings['pill_text'])) : ?>
+						<p class="ts-story__pill"><?php echo esc_html((string) $settings['pill_text']); ?></p>
+					<?php endif; ?>
+					<?php if (! empty($settings['chip_number'])) : ?>
+						<div class="ts-story__chip">
+							<span class="ts-story__chip-number"><?php echo esc_html((string) $settings['chip_number']); ?></span>
+							<span class="ts-story__chip-text"><?php echo esc_html((string) ($settings['chip_text'] ?? '')); ?></span>
 						</div>
-
-						<div class="twostars-home-story__note">
-							<?php if (! empty($settings['ntb_logo']['url'])) : ?>
-								<div class="twostars-home-story__note-compliance">
-									<img src="<?php echo esc_url($settings['ntb_logo']['url']); ?>" alt="Namibia Tourism Board" class="twostars-home-story__ntb-logo">
-									<span class="twostars-home-story__note-badge"><?php esc_html_e('NTB #TSO01736', 'twostars-elementor-widgets'); ?></span>
-								</div>
-							<?php endif; ?>
-							<?php if (! empty($settings['note_label'])) : ?><p class="twostars-home-story__note-label"><?php echo esc_html((string) $settings['note_label']); ?></p><?php endif; ?>
-							<?php if (! empty($settings['note_title'])) : ?><h3 class="twostars-home-story__note-title"><?php echo esc_html((string) $settings['note_title']); ?></h3><?php endif; ?>
-							<?php if (! empty($settings['note_body'])) : ?><p class="twostars-home-story__note-body"><?php echo esc_html((string) $settings['note_body']); ?></p><?php endif; ?>
-							<div class="twostars-home-story__note-contact">
-								<span class="twostars-home-story__note-contact-label"><?php esc_html_e('Pickup', 'twostars-elementor-widgets'); ?></span>
-								<strong class="twostars-home-story__note-contact-value"><?php esc_html_e('Hotels and the cruise port', 'twostars-elementor-widgets'); ?></strong>
-							</div>
+					<?php endif; ?>
+					<?php if ($inset_id > 0) : ?>
+						<div class="ts-story__inset">
+							<?php echo wp_get_attachment_image($inset_id, 'medium_large', false, ['loading' => 'lazy', 'decoding' => 'async']); ?>
 						</div>
-					</div>
-
-					<div class="twostars-home-story__pillars" data-twostars-animate="fade-in-right" style="--twostars-delay:0.18s;">
-						<?php foreach ((array) ($settings['pillars'] ?? []) as $index => $pillar) : ?>
-							<?php if (empty($pillar['title']) && empty($pillar['copy'])) : ?>
-								<?php continue; ?>
-							<?php endif; ?>
-							<article class="twostars-home-story__pillar">
-								<div class="twostars-home-story__pillar-inner">
-									<span class="twostars-home-story__pillar-index" aria-hidden="true"><?php echo esc_html(str_pad((string) ($index + 1), 2, '0', STR_PAD_LEFT)); ?></span>
-									<div class="twostars-home-story__pillar-content">
-										<?php if (! empty($pillar['title'])) : ?><h3><?php echo esc_html((string) $pillar['title']); ?></h3><?php endif; ?>
-										<?php if (! empty($pillar['copy'])) : ?><p><?php echo esc_html((string) $pillar['copy']); ?></p><?php endif; ?>
-									</div>
-								</div>
-							</article>
-						<?php endforeach; ?>
-					</div>
+					<?php endif; ?>
 				</div>
 			</div>
 		</section>
 		<?php
+	}
+
+	/**
+	 * @return string[]
+	 */
+	private static function pillar_icons(): array
+	{
+		$open = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false">';
+
+		return [
+			$open . '<path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg>',
+			$open . '<circle cx="9" cy="8" r="3"/><path d="M3 20v-1a5 5 0 0 1 5-5h2a5 5 0 0 1 5 5v1"/><circle cx="17" cy="9" r="2.4"/><path d="M17.5 14.2A4 4 0 0 1 21 18v2"/></svg>',
+			$open . '<path d="M4 8h3l1.6-2.4h6.8L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.4"/></svg>',
+			$open . '<circle cx="12" cy="5" r="2"/><path d="M12 7v13M6 12H4a8 8 0 0 0 16 0h-2M8.5 11h7"/></svg>',
+		];
 	}
 
 	/**
