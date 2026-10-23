@@ -18,7 +18,7 @@ if (! defined('ABSPATH')) {
 						</span>
 						<div>
 							<p class="site-footer__eyebrow"><?php esc_html_e('Two Stars Tour and Safari', 'twostars-theme'); ?></p>
-							<h2 class="site-footer__title"><?php esc_html_e('Namibia’s coast, with Tuli and her team', 'twostars-theme'); ?></h2>
+							<h3 class="site-footer__title"><?php esc_html_e('Namibia’s coast, with Tuli and her team', 'twostars-theme'); ?></h3>
 						</div>
 					</div>
 					<p class="site-footer__text">

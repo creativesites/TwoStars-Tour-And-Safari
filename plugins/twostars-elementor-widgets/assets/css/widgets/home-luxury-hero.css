@@ -46,8 +46,8 @@
 .ts-hero__overlay {
   z-index: -1;
   background:
-    linear-gradient(to top, rgba(16, 28, 46, 0.88) 0%, rgba(16, 28, 46, 0.45) 50%, rgba(16, 28, 46, 0.08) 100%),
-    linear-gradient(to right, rgba(16, 28, 46, 0.55), transparent 65%);
+    linear-gradient(to top, rgba(16, 28, 46, 0.92) 0%, rgba(16, 28, 46, 0.68) 38%, rgba(16, 28, 46, 0.3) 64%, rgba(16, 28, 46, 0) 88%),
+    linear-gradient(to right, rgba(16, 28, 46, 0.55) 0%, rgba(16, 28, 46, 0.22) 48%, rgba(16, 28, 46, 0) 72%);
 }
 
 .ts-hero__inner {
@@ -240,4 +240,28 @@
   .ts-hero__slide:not(:first-child) {
     display: none;
   }
+}
+
+/* Single hero photo: no crossfade, a slow settle-in zoom instead */
+.ts-hero .ts-hero__slide:only-child {
+  opacity: 1;
+  animation: ts-hero-zoom 24s ease-out both;
+  transform-origin: 70% 40%;
+}
+
+@keyframes ts-hero-zoom {
+  from { transform: scale(1.08); }
+  to { transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ts-hero .ts-hero__slide:only-child {
+    animation: none;
+  }
+}
+
+.ts-hero__title,
+.ts-hero__body,
+.ts-hero__eyebrow {
+  text-shadow: 0 1px 14px rgba(16, 28, 46, 0.45);
 }
