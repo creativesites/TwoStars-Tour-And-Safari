@@ -151,18 +151,25 @@ final class TourData
 		$meta  = self::get_tour_meta($tour_id);
 		$items = [];
 
-		$price_label = self::get_price_label($tour_id);
+		$price = (float) get_post_meta($tour_id, '_twostars_tour_price_from', true);
 
-		if ($price_label !== '') {
-			$items[] = ['label' => __('Price', 'twostars-platform'), 'value' => $price_label];
-		}
-
-		if ($meta['duration'] !== '') {
-			$items[] = ['label' => __('Duration', 'twostars-platform'), 'value' => (string) $meta['duration']];
+		if ($price > 0) {
+			/* translators: %s: formatted NAD price */
+			$items[] = ['label' => __('From', 'twostars-platform'), 'value' => sprintf(__('%s / adult', 'twostars-platform'), self::format_nad($price))];
+		} else {
+			$items[] = ['label' => __('Price', 'twostars-platform'), 'value' => __('Custom quote', 'twostars-platform')];
 		}
 
 		if ($meta['group_size'] !== '') {
 			$items[] = ['label' => __('Group Size', 'twostars-platform'), 'value' => (string) $meta['group_size']];
+		}
+
+		if ($meta['departure_times'] !== '') {
+			$items[] = ['label' => __('Departs', 'twostars-platform'), 'value' => (string) $meta['departure_times']];
+		}
+
+		if ($meta['duration'] !== '') {
+			$items[] = ['label' => __('Duration', 'twostars-platform'), 'value' => (string) $meta['duration']];
 		}
 
 		if ($meta['pickup_location'] !== '') {

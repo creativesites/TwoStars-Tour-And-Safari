@@ -11,10 +11,10 @@ final class HomeTrustStoryWidget extends BaseWidget
 	private const DEFAULT_EYEBROW = 'Why Travelers Book With Two Stars';
 	private const DEFAULT_TITLE = 'Local Coastal Touring with a Polished, Personal Touch.';
 	private const DEFAULT_LEAD = 'We specialize in authentic coastal experiences departing daily from Walvis Bay and Swakopmund. As a fully registered operator (NTB #TSO01736), Two Stars Tour & Safari balances rugged Namibian adventure with the comfort, timing, and professional guidance you expect.';
-	private const DEFAULT_BODY = 'From our flagship Sandwich Harbour 4x4 excursions to relaxed marine cruises and inland desert trips, every itinerary is designed with scenic photography and effortless logistics in mind.';
+	private const DEFAULT_BODY = 'From Sandwich Harbour 4x4 tours to flamingo mornings and inland desert days, every trip is paced for photography.';
 	private const DEFAULT_NOTE_LABEL = 'Service Standard';
 	private const DEFAULT_NOTE_TITLE = 'Professionally Registered. Expertly Guided.';
-	private const DEFAULT_NOTE_BODY = 'Your safety is our priority. As a registered NTB member (TSO01736), we maintain high standards for vehicle safety, insurance, and guide certification. All boat and kayaking excursions depart from our meeting point at the Walvis Bay Waterfront, with seamless transfers available from the port or your hotel.';
+	private const DEFAULT_NOTE_BODY = 'Your safety is our priority. As a registered NTB member (TSO01736), we maintain high standards for vehicle safety, insurance, and guide certification. We collect guests from Walvis Bay hotels, Swakopmund hotels and the Walvis Bay cruise port.';
 	private const DEFAULT_PILLARS = [
 		[
 			'title' => 'Vessel-Ready Pickups',
@@ -149,8 +149,8 @@ final class HomeTrustStoryWidget extends BaseWidget
 							<?php if (! empty($settings['note_title'])) : ?><h3 class="twostars-home-story__note-title"><?php echo esc_html((string) $settings['note_title']); ?></h3><?php endif; ?>
 							<?php if (! empty($settings['note_body'])) : ?><p class="twostars-home-story__note-body"><?php echo esc_html((string) $settings['note_body']); ?></p><?php endif; ?>
 							<div class="twostars-home-story__note-contact">
-								<span class="twostars-home-story__note-contact-label"><?php esc_html_e('Marine Cruise Hub', 'twostars-elementor-widgets'); ?></span>
-								<strong class="twostars-home-story__note-contact-value"><?php esc_html_e('Walvis Bay Waterfront', 'twostars-elementor-widgets'); ?></strong>
+								<span class="twostars-home-story__note-contact-label"><?php esc_html_e('Pickup', 'twostars-elementor-widgets'); ?></span>
+								<strong class="twostars-home-story__note-contact-value"><?php esc_html_e('Hotels and the cruise port', 'twostars-elementor-widgets'); ?></strong>
 							</div>
 						</div>
 					</div>

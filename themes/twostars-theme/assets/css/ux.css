@@ -1,0 +1,521 @@
+/* ==========================================================================
+   Two Stars UX layer. Loaded last. Goals: nothing oversized, nothing unreadable,
+   every card fully visible without hunting, equal image shapes.
+   ========================================================================== */
+
+:root {
+  --spacing-section: clamp(3rem, 5.5vw, 4.5rem);
+  --ux-gutter: clamp(1rem, 4vw, 2rem);
+  --ux-h1: clamp(2.1rem, 4.2vw, 3.2rem);
+  --ux-h2: clamp(1.7rem, 2.7vw, 2.3rem);
+  --ux-h3: clamp(1.2rem, 1.7vw, 1.4rem);
+}
+
+/* ---- Header --------------------------------------------------------------- */
+html body .site-header .site-navigation a {
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+}
+
+html body .site-header__button {
+  min-height: 40px;
+  padding: 0 1.1rem;
+  font-size: 0.78rem;
+}
+
+/* ---- Section rhythm ------------------------------------------------------- */
+html body .elementor-widget-container > section:not(.ts-hero),
+html body .elementor-widget-container > div[class*="twostars-"][class*="-section"] {
+  padding-top: var(--spacing-section) !important;
+  padding-bottom: var(--spacing-section) !important;
+}
+
+/* Inner page heroes: header is sticky, not overlaid, so no huge top padding */
+html body .elementor-widget-container > section[class*="-hero"]:not(.ts-hero) {
+  min-height: 0 !important;
+  height: auto !important;
+  padding-top: clamp(2.75rem, 6vw, 4.5rem) !important;
+  padding-bottom: clamp(2.25rem, 5vw, 3.5rem) !important;
+}
+
+/* ---- Type scale ----------------------------------------------------------- */
+html body .elementor h1:not(.ts-hero__title),
+html body .site-content h1:not(.ts-hero__title):not(.twostars-tour-entry__masthead-title) {
+  font-size: var(--ux-h1) !important;
+  line-height: 1.08 !important;
+}
+
+html body .elementor h2,
+html body .site-content .twostars-tour-page__section h2 {
+  font-size: var(--ux-h2) !important;
+  line-height: 1.15 !important;
+}
+
+html body .elementor h3 {
+  font-size: var(--ux-h3);
+  line-height: 1.2;
+}
+
+html body .elementor p {
+  line-height: 1.65;
+}
+
+/* Section intro copy should not sprawl */
+html body .elementor [class*="__intro"],
+html body .elementor [class*="-intro"],
+html body .elementor [class*="__subtitle"] {
+  max-width: 46rem;
+}
+
+/* ---- Tour page hero (theme template) -------------------------------------- */
+html body .twostars-tour-page__hero {
+  min-height: 0;
+}
+
+html body .twostars-tour-page__hero-copy {
+  padding-top: clamp(3rem, 7vw, 5rem);
+  padding-bottom: 2rem;
+}
+
+html body .twostars-tour-page .twostars-tour-entry__masthead-title {
+  font-size: clamp(1.9rem, 3.8vw, 3rem);
+  line-height: 1.1;
+  max-width: 24ch;
+}
+
+/* ---- Card media: one consistent shape, nothing stretched ------------------ */
+html body .twostars-tours-grid__media,
+html body .twostars-home-collection__card-media,
+html body .twostars-destinations-grid__media,
+html body .twostars-destinations-highlights__media,
+html body .twostars-tours-fit-guide__media,
+html body .twostars-featured-tour__media {
+  height: auto !important;
+  min-height: 0 !important;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+html body .twostars-tours-grid__media img,
+html body .twostars-home-collection__card-media img,
+html body .twostars-destinations-grid__media img,
+html body .twostars-destinations-highlights__media img,
+html body .twostars-tours-fit-guide__media img,
+html body .twostars-featured-tour__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+}
+
+/* ---- Forms on dark sections: readable labels ------------------------------ */
+html body .twostars-home-planning label,
+html body .twostars-home-planning .twostars-contact-form__field,
+html body .twostars-home-planning .twostars-contact-form__field span {
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
+html body .twostars-home-planning__intro {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+html body .twostars-home-planning input::placeholder,
+html body .twostars-home-planning textarea::placeholder {
+  color: rgba(16, 28, 46, 0.55);
+}
+
+html body .twostars-home-planning input,
+html body .twostars-home-planning textarea,
+html body .twostars-home-planning select {
+  min-height: 46px;
+  font-size: 1rem;
+}
+
+/* ---- Touch targets and focus ---------------------------------------------- */
+html body .twostars-safari-button,
+html body .elementor a[class*="button"] {
+  min-height: 44px;
+}
+
+html body a:focus-visible,
+html body button:focus-visible,
+html body input:focus-visible,
+html body textarea:focus-visible,
+html body select:focus-visible {
+  outline: 3px solid #5f9ea8;
+  outline-offset: 2px;
+}
+
+/* ---- Phones --------------------------------------------------------------- */
+@media (max-width: 767px) {
+  :root {
+    --spacing-section: 2.75rem;
+  }
+
+  html body .elementor-widget-container > section:not(.ts-hero) {
+    padding-left: var(--ux-gutter) !important;
+    padding-right: var(--ux-gutter) !important;
+  }
+}
+
+/* ---- Tour cards: compact enough to read in one screen --------------------- */
+html body .twostars-home-collection__card-body,
+html body .twostars-tours-grid__body {
+  padding: 1.15rem 1.25rem 1.3rem !important;
+  gap: 0.6rem !important;
+}
+
+html body .twostars-home-collection__card-badge,
+html body .twostars-tours-grid__badge {
+  display: none !important;
+}
+
+html body .twostars-home-collection__card-body h3,
+html body .twostars-tours-grid__title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0;
+}
+
+html body .twostars-home-collection__card-body p,
+html body .twostars-tours-grid__excerpt {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+html body .twostars-home-collection__meta,
+html body .twostars-tours-grid__meta {
+  gap: 0.35rem !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html body .twostars-home-collection__meta li,
+html body .twostars-tours-grid__meta li {
+  padding: 0.3rem 0 !important;
+  min-height: 0 !important;
+}
+
+html body .twostars-home-collection__meta li:first-child strong,
+html body .twostars-tours-grid__meta li:first-child strong {
+  color: #b5522a;
+}
+
+html body .twostars-home-collection__card-body .twostars-safari-button,
+html body .twostars-tours-grid__actions .twostars-safari-button {
+  min-height: 44px !important;
+  padding-block: 0.6rem !important;
+}
+
+/* ---- Card meta as one compact row; destination chips live on the destinations page */
+html body .twostars-tours-grid__destinations {
+  display: none !important;
+}
+
+html body .twostars-tours-grid__meta,
+html body .twostars-home-collection__meta {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem !important;
+  list-style: none;
+}
+
+html body .twostars-tours-grid__meta li:nth-child(n + 4),
+html body .twostars-home-collection__meta li:nth-child(n + 4) {
+  display: none !important;
+}
+
+html body .twostars-tours-grid__meta li,
+html body .twostars-home-collection__meta li {
+  display: block !important;
+  min-width: 0;
+  padding: 0 !important;
+}
+
+html body .twostars-tours-grid__meta li span,
+html body .twostars-home-collection__meta li span {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+html body .twostars-tours-grid__meta li strong,
+html body .twostars-home-collection__meta li strong {
+  display: block;
+  font-size: 0.88rem;
+  line-height: 1.3;
+}
+
+html body .twostars-tours-grid__actions {
+  display: flex !important;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.9rem !important;
+}
+
+html body .twostars-tours-grid__eyebrow {
+  margin: 0;
+}
+
+html body .twostars-tours-grid__meta,
+html body .twostars-home-collection__meta {
+  grid-template-columns: 1.15fr 1fr 0.9fr;
+}
+
+html body .twostars-tours-grid__actions {
+  margin-top: 0.4rem !important;
+  padding-top: 0 !important;
+  border: 0 !important;
+}
+
+html body .twostars-tours-grid__actions .twostars-safari-button,
+html body .twostars-home-collection__card-body .twostars-safari-button {
+  flex: 1 1 auto;
+  min-height: 44px !important;
+  padding: 0.6rem 1rem !important;
+  font-size: 0.78rem !important;
+  letter-spacing: 0.07em !important;
+  white-space: nowrap;
+  text-align: center;
+  justify-content: center;
+}
+
+html body .twostars-tours-grid__secondary-link {
+  font-size: 0.82rem !important;
+  white-space: nowrap;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ---- Contrast (WCAG AA) --------------------------------------------------- */
+html body .twostars-safari-button--primary,
+html body .twostars-safari-button.twostars-safari-button--primary,
+html body .tour-booking-button,
+html body .site-header__button,
+html body .ts-hero__button--primary,
+html body .twostars-tour-entry__button--primary,
+html body .twostars-mobile-bar__book,
+html body .elementor [class*="button--primary"] {
+  background: #a9501f !important;
+  color: #fff !important;
+}
+
+html body .twostars-safari-button--primary:hover,
+html body .tour-booking-button:hover,
+html body .site-header__button:hover,
+html body .ts-hero__button--primary:hover {
+  background: #8f4219 !important;
+}
+
+html body .twostars-about-story__label,
+html body .twostars-about-tours__label,
+html body .twostars-gallery-page__eyebrow,
+html body .twostars-destinations-highlights__label,
+html body .twostars-contact__concierge-label,
+html body .twostars-home-story__note-badge,
+html body .twostars-booking-tour-card__toggle {
+  color: #a04c1d !important;
+}
+
+html body .twostars-about-tours__link,
+html body .twostars-destinations-grid__link {
+  color: #2d6b76 !important;
+}
+
+html body .twostars-gallery-reviews__eyebrow,
+html body .twostars-gallery-reviews__stars,
+html body .twostars-gallery-reviews__card-rating,
+html body .twostars-contact__intelligence-label,
+html body .twostars-contact__intelligence-copy,
+html body .twostars-contact__form-subtitle {
+  color: #7a5427 !important;
+}
+
+html body .twostars-contact__label,
+html body .twostars-tours-grid__eyebrow,
+html body .twostars-gallery-page__image-count,
+html body .twostars-tours-grid__meta li span {
+  color: rgba(16, 28, 46, 0.78) !important;
+  opacity: 1 !important;
+}
+
+html body .twostars-tours-grid__meta li:first-child strong {
+  color: #8f3f17 !important;
+}
+
+/* Home tour cards sit on a dark section: light labels, warm price */
+html body .twostars-home-collection__meta li span {
+  color: rgba(255, 255, 255, 0.72) !important;
+  opacity: 1 !important;
+}
+
+html body .twostars-home-collection__meta li strong {
+  color: #fff !important;
+}
+
+html body .twostars-home-collection__meta li:first-child strong {
+  color: #f2b88d !important;
+}
+
+html body .twostars-contact-form__consent span,
+html body .twostars-home-planning__consent span {
+  color: #5d4630;
+}
+
+html body .twostars-home-planning .twostars-contact-form__consent span {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* ---- Inner-page hero photos must always fill their hero ------------------- */
+html body [class*="-hero__media"] img,
+html body [class*="-hero__image"] {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none;
+  object-fit: cover;
+}
+
+/* ---- No sideways scrolling, ever ----------------------------------------- */
+html,
+body {
+  overflow-x: clip;
+}
+
+@media (max-width: 767px) {
+  html body .elementor-widget-container section [class*="__"] {
+    min-width: 0;
+  }
+
+  html body .twostars-home-story__pillars {
+    grid-template-columns: 1fr !important;
+  }
+
+  html body [class*="about-story__visual"],
+  html body [class*="about-story__image-stack"],
+  html body [class*="about-story__image-frame"],
+  html body [class*="contact__sidebar"],
+  html body [class*="contact__concierge-card"] {
+    max-width: 100% !important;
+  }
+
+  html body [class*="about-story__dot-grid"] {
+    display: none;
+  }
+
+  /* Hero copy: shorter on phones */
+  html body [class*="-hero__content"] {
+    gap: 1.25rem !important;
+    padding-top: 0 !important;
+  }
+
+  html body [class*="-hero__description"] {
+    font-size: 0.95rem !important;
+    margin: 0 !important;
+  }
+
+  html body [class*="-hero__stats"] {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 0.5rem !important;
+  }
+
+  html body [class*="-hero__stat"] {
+    padding: 0 !important;
+    text-align: left;
+  }
+
+  html body [class*="-hero__scroll"] {
+    display: none !important;
+  }
+}
+
+/* ---- Phones: shorter pages -------------------------------------------------
+   Tour card rows become swipeable carousels, hero paragraphs drop away, and
+   pillar lists sit two to a row, so nobody scrolls forever to reach the CTA. */
+@media (max-width: 767px) {
+  html body [class*="-hero__description"] {
+    display: none !important;
+  }
+
+  html body .twostars-home-collection__grid,
+  html body .twostars-about-tours__grid {
+    display: flex !important;
+    overflow-x: auto;
+    gap: 0.9rem !important;
+    padding: 0 var(--ux-gutter) 0.75rem;
+    margin-inline: calc(var(--ux-gutter) * -1);
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  html body .twostars-home-collection__grid > *,
+  html body .twostars-about-tours__grid > * {
+    flex: 0 0 82%;
+    scroll-snap-align: center;
+  }
+
+  html body .twostars-home-story__pillars {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.75rem !important;
+  }
+
+  html body .twostars-home-story__pillar-index {
+    display: none;
+  }
+
+  html body .twostars-home-story__pillar {
+    padding: 0.9rem !important;
+  }
+
+  html body .twostars-home-story__pillar h3 {
+    font-size: 1.05rem;
+  }
+
+  html body .twostars-home-story__pillar p {
+    font-size: 0.85rem;
+  }
+}
+
+/* ---- Booking page: shorter hero (flow itself is replaced by Bokun later) --- */
+html body .twostars-booking-page__hero {
+  min-height: 0 !important;
+  padding-top: clamp(2.5rem, 5vw, 3.5rem) !important;
+  padding-bottom: clamp(2rem, 4vw, 3rem) !important;
+}
+
+html body .twostars-booking-page__hero img {
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  html body .twostars-booking-page__hero [class*="__panel"],
+  html body .twostars-booking-page__hero [class*="__aside"] {
+    display: none;
+  }
+}
+
+html body .twostars-safari-button:not([class*="--"]) {
+  background: #a9501f !important;
+  color: #fff !important;
+}
+
+html body .twostars-whatsapp-button {
+  background: #157a3f !important;
+  border-color: #157a3f !important;
+  color: #fff !important;
+}
+
+html body .twostars-home-story__note-contact-label {
+  color: rgba(13, 27, 42, 0.78) !important;
+}

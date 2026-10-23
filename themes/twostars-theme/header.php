@@ -57,7 +57,7 @@ if (! defined('ABSPATH')) {
 						<?php wp_nav_menu(twostars_theme_get_menu_args('site-menu')); ?>
 					</nav>
 					<div class="site-header__actions">
-						<a class="site-header__button" href="<?php echo esc_url(home_url('/tours/')); ?>" data-twostars-event="book_now_click">
+						<a class="site-header__button" href="<?php echo esc_url(home_url('/booking/')); ?>" data-twostars-event="book_now_click">
 							<?php esc_html_e('Book Now', 'twostars-theme'); ?>
 						</a>
 					</div>

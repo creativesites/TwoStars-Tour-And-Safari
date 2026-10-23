@@ -72,7 +72,7 @@ if (! defined('ABSPATH')) {
 	<?php endif; ?>
 </div>
 <nav class="twostars-mobile-bar" aria-label="<?php esc_attr_e('Quick booking', 'twostars-theme'); ?>">
-	<a class="twostars-mobile-bar__book" href="<?php echo esc_url(home_url('/tours/')); ?>" data-twostars-event="book_now_click"><?php esc_html_e('Book now', 'twostars-theme'); ?></a>
+	<a class="twostars-mobile-bar__book" href="<?php echo esc_url(home_url('/booking/')); ?>" data-twostars-event="book_now_click"><?php esc_html_e('Book now', 'twostars-theme'); ?></a>
 	<a class="twostars-mobile-bar__wa" href="<?php echo esc_url(twostars_theme_get_whatsapp_url()); ?>" target="_blank" rel="noopener noreferrer" data-twostars-event="whatsapp_click"><?php esc_html_e('WhatsApp', 'twostars-theme'); ?></a>
 </nav>
 <?php wp_footer(); ?>

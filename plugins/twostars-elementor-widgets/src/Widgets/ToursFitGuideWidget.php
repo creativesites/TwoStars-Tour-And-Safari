@@ -113,7 +113,7 @@ final class ToursFitGuideWidget extends BaseWidget
 						<article class="twostars-tours-fit-guide__card" data-twostars-animate="fade-in-up" style="--twostars-delay:<?php echo esc_attr((string) number_format(($index % 3) * 0.12, 2)); ?>s;">
 							<div class="twostars-tours-fit-guide__media" aria-hidden="true">
 								<?php if (! empty($item['image_url'])) : ?>
-									<img src="<?php echo esc_url((string) $item['image_url']); ?>" alt="" loading="lazy">
+									<img src="<?php echo esc_url((string) $item['image_url']); ?>" alt="<?php echo esc_attr((string) ($item['title'] ?? '')); ?>" loading="lazy" decoding="async">
 								<?php else : ?>
 									<div class="twostars-tours-fit-guide__media-placeholder"></div>
 								<?php endif; ?>

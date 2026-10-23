@@ -33,11 +33,11 @@
     }
 
     if (persona === "comparison_shopper") {
-      return "The planning panel can help compare Sandwich Harbour, Pelican Point, kayaking, quad biking, and other day-tour options.";
+      return "The assistant can help compare Sandwich Harbour, the flamingo and Pink Salt Lake tour, Swakopmund with Dune 7, and Spitzkoppe.";
     }
 
     if (persona === "researcher") {
-      return "Use the planning panel to narrow down dunes, wildlife, marine life, camel rides, and 4x4 desert experiences.";
+      return "Use the assistant to narrow down dunes, flamingos and birdlife, Swakopmund, or a full day at Spitzkoppe.";
     }
 
     return fallbackCopy;
@@ -971,7 +971,7 @@
     }
 
     if (persona === "researcher") {
-      return "Tell us whether you want dunes, kayaking, marine life, birding, camel rides, or quad biking so we can suggest the right tour.";
+      return "Tell us whether you want dunes, flamingos and birding, Swakopmund, or Spitzkoppe so we can suggest the right tour.";
     }
 
     return defaultPlaceholder;

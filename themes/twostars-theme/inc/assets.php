@@ -98,3 +98,20 @@ function twostars_theme_enqueue_assets(): void
 }
 
 add_action('wp_enqueue_scripts', 'twostars_theme_enqueue_assets', 20);
+
+/**
+ * Sitewide polish layer: type scale, section density, card media, dark-section forms.
+ * Enqueued from wp_footer so it prints after the per-widget stylesheets.
+ */
+function twostars_theme_enqueue_ux_layer(): void
+{
+	$path = get_template_directory() . '/assets/css/ux.css';
+
+	wp_enqueue_style(
+		'twostars-theme-ux',
+		get_template_directory_uri() . '/assets/css/ux.css',
+		[],
+		(string) filemtime($path)
+	);
+}
+add_action('wp_footer', 'twostars_theme_enqueue_ux_layer', 5);

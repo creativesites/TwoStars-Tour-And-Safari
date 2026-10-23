@@ -143,7 +143,7 @@ final class HomePlanningCtaWidget extends BaseWidget
 
 							<label class="twostars-contact-form__field twostars-contact-form__field--full">
 								<span><?php esc_html_e('Message', 'twostars-elementor-widgets'); ?></span>
-								<textarea name="message" rows="5" placeholder="<?php esc_attr_e('Tell us the type of safari you want, the regions you are leaning toward, and any timing or budget constraints.', 'twostars-elementor-widgets'); ?>"></textarea>
+								<textarea name="message" rows="5" placeholder="<?php esc_attr_e('Tell us your preferred date, group size, pickup point and any questions.', 'twostars-elementor-widgets'); ?>"></textarea>
 							</label>
 						</div>
 

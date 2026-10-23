@@ -191,7 +191,7 @@ final class ContactSectionWidget extends BaseWidget
 			[
 				'label'   => __('Message Placeholder', 'twostars-elementor-widgets'),
 				'type'    => Controls_Manager::TEXTAREA,
-				'default' => __('Tell us about your route ideas, budget expectations, and the type of safari you want to create.', 'twostars-elementor-widgets'),
+				'default' => __('Tell us which tour you like, your date, group size and pickup point.', 'twostars-elementor-widgets'),
 			]
 		);
 
