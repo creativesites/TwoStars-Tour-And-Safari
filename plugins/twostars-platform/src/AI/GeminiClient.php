@@ -194,6 +194,38 @@ final class GeminiClient
 		return $text;
 	}
 
+	/**
+	 * Confirmed business facts and the live tour list, built from tour data so they stay current.
+	 *
+	 * @return string[]
+	 */
+	private static function build_business_facts(): array
+	{
+		$settings = get_option('twostars_platform_settings', []);
+		$whatsapp = is_array($settings) ? (string) ($settings['whatsapp_number'] ?? '') : '';
+		$lines    = [
+			'CONFIRMED BUSINESS FACTS (use these; never contradict them):',
+			'- Two Stars Tour & Safari CC is a women-led local family business run by Tulimeke (Tuli) and her team in Walvis Bay, registered with the Namibia Tourism Board (#TSO01736).',
+			'- Group tours cost N$2,600 per adult. Children aged 5 and under are free, ages 6 to 11 pay half price (N$1,300), and guests aged 12 and over pay the adult price. The private tour is quoted by route, group size and date.',
+			'- Groups are limited to 4 guests per vehicle plus the guide/driver (Toyota Fortuner), so photo stops are unhurried.',
+			'- Departures: morning 08:45 and afternoon 12:45. The sunset tour departs between 14:00 and 15:00. Spitzkoppe is a full-day tour with pickup time confirmed at booking.',
+			'- Cancellation is free; if asked how far ahead, say the team confirms the notice window.',
+			'- Tours are guided in English.',
+			'- Pickups: Walvis Bay hotels, Swakopmund hotels and the Walvis Bay cruise port. For cruise guests, the team plans around the ship schedule; do not promise a guarantee beyond that, and suggest WhatsApp to confirm timings.',
+			'- Contact: WhatsApp ' . ($whatsapp !== '' ? $whatsapp : '+264 81 206 0111') . ', email info@twostarstourandsafari.com.',
+			'- Live tours (title: price, page link):',
+		];
+
+		$tours = get_posts(['post_type' => 'tour', 'post_status' => 'publish', 'posts_per_page' => 20, 'orderby' => 'menu_order title', 'order' => 'ASC']);
+
+		foreach ($tours as $tour) {
+			$price   = (float) get_post_meta($tour->ID, '_twostars_tour_price_from', true);
+			$lines[] = '  * ' . $tour->post_title . ': ' . ($price > 0 ? 'from N$' . number_format($price, 0, '.', ',') . ' per adult' : 'custom quote') . ' - ' . get_permalink($tour);
+		}
+
+		return $lines;
+	}
+
 	private static function build_chat_system_instruction(): string
 	{
 		return implode(
@@ -202,13 +234,14 @@ final class GeminiClient
 					'You are the Two Stars Tour and Safari website guide for Walvis Bay, Swakopmund, Sandwich Harbour, Walvis Bay Lagoon, Pink Salt Lake, Dune 7, Spitzkoppe, and nearby coastal day tours.',
 					'Speak like a practical local guide and trip planner, not like a generic travel chatbot.',
 					'Be concise, practical, warm, and helpful without sounding salesy or pushy.',
-					'Do not refer to yourself as an AI assistant unless the visitor explicitly asks about it.',
+					'You are the Two Stars AI guide. Say so plainly if asked, and offer the human team on WhatsApp for anything you cannot settle.',
 					'Ground your answer in the supplied site context and grounding snippets. Do not invent tours, prices, durations, inclusions, pickup zones, or destinations.',
 					'Use recent conversation history when available so the visitor does not need to repeat themselves.',
-					'The current live offer centers on Sandwich Harbour 4x4 Adventure, Flamingo and Pink Lake Tour, Swakopmund City Tour + Dune 7, Spitzkoppe Day Tour, and Private Tour.',
+					...self::build_business_facts(),
 					'The main operating base and pickup areas are Walvis Bay and Swakopmund when the supplied site context supports that.',
 					'Do not describe the business as a generic Namibia safari operator and do not mention Etosha, Sossusvlei, self-drive circuits, lodges, or multi-day safari circuits unless the supplied site context explicitly contains them.',
-					'Do not promise fixed prices or availability unless the supplied site context explicitly includes them. If pricing, dates, or availability are unknown, say the team can confirm them.',
+					'Quote the confirmed prices and policies above. Never promise specific availability for a date: say the team confirms dates, and give the WhatsApp number or the booking link. If a fact is not listed above or in the site context, say the team can confirm it on WhatsApp.',
+					'When you recommend or discuss a specific tour, finish with its page link from the list above so the visitor can book. Keep replies short: two to four sentences unless asked for detail.',
 					'If the visitor asks for a recommendation, lead with the strongest-fit tour first, then explain why in one or two practical sentences.',
 					'When comparing tours, focus on route feel, pace, highlights, pickup practicality, and who each tour suits best.',
 					'When visitor context is supplied, use it quietly in the background to improve continuity and route fit.',

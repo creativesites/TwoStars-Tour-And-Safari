@@ -47,7 +47,7 @@ final class Chatbot implements Service
 
 		$atts = shortcode_atts(
 			[
-				'title'   => __('Trip Planner', 'twostars-platform'),
+				'title'   => __('Two Stars Guide', 'twostars-platform'),
 				'variant' => 'inline',
 			],
 			$atts,
@@ -80,7 +80,7 @@ final class Chatbot implements Service
 
 		echo '<div class="twostars-chatbot-float__panel" id="' . esc_attr($panel_id) . '" data-twostars-chatbot-panel hidden>';
 		echo $this->render_chatbot_markup([
-			'title'   => __('Ask Two Stars', 'twostars-platform'),
+			'title'   => __('Two Stars Guide', 'twostars-platform'),
 			'variant' => 'floating',
 		]);
 		echo '</div>';
@@ -168,12 +168,18 @@ final class Chatbot implements Service
 					<div class="twostars-chatbot__brand">
 						<span class="twostars-chatbot__brand-mark" aria-hidden="true"><img src="<?php echo esc_url($icon_url); ?>" alt="" loading="lazy"></span>
 						<div class="twostars-chatbot__brand-copy">
-							<span class="twostars-chatbot__eyebrow"><?php esc_html_e('Two Stars Tour Guide', 'twostars-platform'); ?></span>
-							<strong><?php echo esc_html((string) ($atts['title'] ?? __('Trip Planner', 'twostars-platform'))); ?></strong>
+							<strong><?php echo esc_html((string) ($atts['title'] ?? __('Two Stars Guide', 'twostars-platform'))); ?></strong>
+							<span class="twostars-chatbot__eyebrow"><span class="twostars-chatbot__online" aria-hidden="true"></span><?php esc_html_e('AI guide · Walvis Bay & Swakopmund', 'twostars-platform'); ?></span>
 						</div>
 					</div>
 					<div class="twostars-chatbot__header-actions">
 						<span class="twostars-chatbot__status-pill" data-twostars-chatbot-status><?php esc_html_e('Planning', 'twostars-platform'); ?></span>
+						<?php $ts_settings = get_option('twostars_platform_settings', []); $ts_wa = preg_replace('/[^0-9]/', '', (string) (is_array($ts_settings) ? ($ts_settings['whatsapp_number'] ?? '') : '')); ?>
+						<?php if ($ts_wa !== '') : ?>
+							<a class="twostars-chatbot__human" href="<?php echo esc_url('https://wa.me/' . $ts_wa); ?>" target="_blank" rel="noopener noreferrer" data-twostars-event="whatsapp_click" aria-label="<?php esc_attr_e('Talk to the team on WhatsApp', 'twostars-platform'); ?>" title="<?php esc_attr_e('Talk to the team on WhatsApp', 'twostars-platform'); ?>">
+								<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3.5a8.5 8.5 0 0 0-7.3 12.8L3.5 20.5l4.3-1.1A8.5 8.5 0 1 0 12 3.5z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"></path><path d="M9 8.8c.2 3 2.6 5.4 5.7 5.7l1-1.4-1.9-1-.8.7a3.6 3.6 0 0 1-1.9-1.9l.7-.8-1-1.9z" fill="currentColor"></path></svg>
+							</a>
+						<?php endif; ?>
 						<button type="button" class="twostars-chatbot__new-chat" data-twostars-chatbot-reset aria-label="<?php esc_attr_e('Start a new chat', 'twostars-platform'); ?>" title="<?php esc_attr_e('Start a new chat', 'twostars-platform'); ?>">
 							<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
 								<path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
@@ -212,7 +218,7 @@ final class Chatbot implements Service
 			</div>
 
 			<div class="twostars-chatbot__conversation">
-				<div class="twostars-chatbot__messages" data-twostars-chatbot-messages data-chatbot-initial="<?php echo esc_attr(__('Hello. I can help compare the current Two Stars tours, explain pickups from Walvis Bay and Swakopmund, and point you to the right next booking step.', 'twostars-platform')); ?>"></div>
+				<div class="twostars-chatbot__messages" role="log" aria-live="polite" aria-label="<?php esc_attr_e('Conversation', 'twostars-platform'); ?>" data-twostars-chatbot-messages data-chatbot-initial="<?php echo esc_attr(__('Hi, I’m the Two Stars guide. Ask me about tours, prices, pickups, or how to fit a cruise-port day.', 'twostars-platform')); ?>"></div>
 				<div class="twostars-chatbot__typing" data-twostars-chatbot-typing hidden>
 					<span class="twostars-chatbot__typing-dot"></span>
 					<span class="twostars-chatbot__typing-dot"></span>
@@ -222,14 +228,17 @@ final class Chatbot implements Service
 			</div>
 
 			<div class="twostars-chatbot__rail" data-twostars-chatbot-rail>
-				<button type="button" class="twostars-chatbot__rail-button" data-chatbot-prompt="<?php esc_attr_e('Which tour is best if I want Sandwich Harbour and scenic photo stops?', 'twostars-platform'); ?>">
-					<?php esc_html_e('Sandwich Harbour', 'twostars-platform'); ?>
+				<button type="button" class="twostars-chatbot__rail-button" data-chatbot-prompt="<?php esc_attr_e('How much do the tours cost, and what do children pay?', 'twostars-platform'); ?>">
+					<?php esc_html_e('Prices', 'twostars-platform'); ?>
 				</button>
-				<button type="button" class="twostars-chatbot__rail-button" data-chatbot-prompt="<?php esc_attr_e('What is the difference between the Flamingo and Pink Lake tour and the Sandwich Harbour tour?', 'twostars-platform'); ?>">
-					<?php esc_html_e('Compare tours', 'twostars-platform'); ?>
+				<button type="button" class="twostars-chatbot__rail-button" data-chatbot-prompt="<?php esc_attr_e('Which tour is best if I want Sandwich Harbour and great photo stops?', 'twostars-platform'); ?>">
+					<?php esc_html_e('Best for photos', 'twostars-platform'); ?>
 				</button>
-				<button type="button" class="twostars-chatbot__rail-button" data-chatbot-prompt="<?php esc_attr_e('Do you offer pickups from Walvis Bay and Swakopmund?', 'twostars-platform'); ?>">
-					<?php esc_html_e('Pickups', 'twostars-platform'); ?>
+				<button type="button" class="twostars-chatbot__rail-button" data-chatbot-prompt="<?php esc_attr_e('I am on a cruise. What can I do in a port day and can you get me back to the ship?', 'twostars-platform'); ?>">
+					<?php esc_html_e('Cruise day', 'twostars-platform'); ?>
+				</button>
+				<button type="button" class="twostars-chatbot__rail-button" data-chatbot-prompt="<?php esc_attr_e('Do you pick up from Walvis Bay and Swakopmund hotels, and how many people are in a group?', 'twostars-platform'); ?>">
+					<?php esc_html_e('Pickups and group size', 'twostars-platform'); ?>
 				</button>
 				<button type="button" class="twostars-chatbot__rail-button" data-chatbot-prompt="<?php esc_attr_e('I want a private tour with flexible timing. Can you help?', 'twostars-platform'); ?>">
 					<?php esc_html_e('Private tour', 'twostars-platform'); ?>
@@ -251,7 +260,7 @@ final class Chatbot implements Service
 			<form class="twostars-chatbot__composer" data-twostars-chatbot-form>
 				<div class="twostars-chatbot__composer-field">
 					<label class="screen-reader-text" for="<?php echo esc_attr($input_id); ?>"><?php esc_html_e('Ask the Two Stars guide', 'twostars-platform'); ?></label>
-					<textarea id="<?php echo esc_attr($input_id); ?>" name="message" rows="1" placeholder="<?php esc_attr_e('Ask about routes, pickups, private tours, timing, or booking...', 'twostars-platform'); ?>" required></textarea>
+					<textarea id="<?php echo esc_attr($input_id); ?>" name="message" rows="1" placeholder="<?php esc_attr_e('Ask about tours or prices…', 'twostars-platform'); ?>" required></textarea>
 					<button type="submit" class="twostars-chatbot__send" aria-label="<?php esc_attr_e('Send message', 'twostars-platform'); ?>">
 						<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
 							<path d="M4 12L20 4L15 20L11.5 13.5L4 12Z" fill="currentColor"></path>

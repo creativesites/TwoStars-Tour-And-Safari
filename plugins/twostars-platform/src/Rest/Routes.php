@@ -169,18 +169,36 @@ final class Routes implements Service
 
 	public function handle_chat(WP_REST_Request $request): WP_REST_Response
 	{
-		$message      = sanitize_textarea_field((string) $request->get_param('message'));
+		$message = sanitize_textarea_field((string) $request->get_param('message'));
+
+		if (! $this->allow_chat_request()) {
+			return new WP_REST_Response(
+				[
+					'success' => false,
+					'reply'   => __('You are sending messages quickly. Please wait a moment, or message the team on WhatsApp for a faster answer.', 'twostars-platform'),
+				],
+				429
+			);
+		}
+
+		$message      = mb_substr($message, 0, 1200);
 		$chat_context = $this->build_chat_context($request);
 		$grounding    = ContextStore::get_grounding_pack($message, $chat_context);
 		$reply        = $this->get_fallback_chat_reply($message, $chat_context, $grounding);
 		$handoff      = $this->should_suggest_handoff($message, $chat_context);
+		$fact_reply   = \TwoStars\Platform\AI\FactAnswers::reply($message);
+
+		if ($fact_reply !== null) {
+			$reply   = $fact_reply;
+			$handoff = false;
+		}
 
 		if (GeminiConfig::is_enabled()) {
 			$gemini_reply = GeminiClient::generate_chat_reply($message, $chat_context, $grounding);
 
 			if (! is_wp_error($gemini_reply)) {
 				$reply = $this->enrich_chat_ui_blocks($gemini_reply, $grounding);
-			} elseif ($handoff) {
+			} elseif ($handoff && $fact_reply === null) {
 				$reply = __('This sounds like a real planning or booking inquiry. I can hand your details to the team so they can follow up with pricing, availability, or a tailored route.', 'twostars-platform');
 			}
 		}
@@ -224,6 +242,25 @@ final class Routes implements Service
 				'history_count'     => (int) ($chat_context['conversation_message_count'] ?? 0) + 2,
 			]
 		);
+	}
+
+	/**
+	 * Per-visitor limit on chat requests: 20 messages per 10 minutes. The endpoint is public and
+	 * calls a paid AI API, so it must not be an open proxy.
+	 */
+	private function allow_chat_request(): bool
+	{
+		$ip  = isset($_SERVER['REMOTE_ADDR']) ? (string) $_SERVER['REMOTE_ADDR'] : 'unknown';
+		$key = 'twostars_chat_rl_' . md5($ip);
+		$hit = (int) get_transient($key);
+
+		if ($hit >= 20) {
+			return false;
+		}
+
+		set_transient($key, $hit + 1, 10 * MINUTE_IN_SECONDS);
+
+		return true;
 	}
 
 	public function handle_chat_history(WP_REST_Request $request): WP_REST_Response

@@ -295,13 +295,69 @@
     return normalizeRemoteThread(result.thread);
   }
 
+  function friendlyLinkLabel(url) {
+    try {
+      var path = new URL(url, window.location.href).pathname.replace(/\/+$/, '');
+
+      if (/\/booking$/.test(path)) {
+        return 'Start booking';
+      }
+
+      if (/\/tours$/.test(path)) {
+        return 'See all tours and prices';
+      }
+
+      if (/\/tours\/[^/]+$/.test(path)) {
+        return 'View this tour';
+      }
+    } catch (error) {
+      return 'Open link';
+    }
+
+    return 'Open link';
+  }
+
+  function renderRichText(target, text) {
+    var pattern = /(https?:\/\/[^\s<]+[^\s<.,;:!?)])|(\+264[\d ]{8,13}\d)/g;
+    var last = 0;
+    var match;
+
+    while ((match = pattern.exec(text)) !== null) {
+      if (match.index > last) {
+        target.appendChild(document.createTextNode(text.slice(last, match.index)));
+      }
+
+      var link = document.createElement('a');
+      link.className = 'twostars-chatbot__link';
+
+      if (match[1]) {
+        link.href = match[1];
+        link.textContent = friendlyLinkLabel(match[1]);
+      } else {
+        link.href = 'https://wa.me/' + match[2].replace(/\D/g, '');
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.textContent = match[2];
+        link.setAttribute('data-twostars-event', 'whatsapp_click');
+      }
+
+      target.appendChild(link);
+      last = match.index + match[0].length;
+    }
+
+    if (last < text.length) {
+      target.appendChild(document.createTextNode(text.slice(last)));
+    }
+  }
+
   function renderEntry(container, entry) {
     if (entry.text) {
       var card = createElement('article', 'twostars-chatbot__message-card twostars-chatbot__message-card--' + entry.role);
       var avatar = createElement('div', 'twostars-chatbot__message-avatar', entry.role === 'user' ? 'You' : 'TS');
       var content = createElement('div', 'twostars-chatbot__message-content');
       var meta = createElement('div', 'twostars-chatbot__message-meta', entry.role === 'user' ? 'Guest' : 'Two Stars Guide');
-      var message = createElement('div', 'twostars-chatbot__message-bubble', entry.text);
+      var message = createElement('div', 'twostars-chatbot__message-bubble');
+      renderRichText(message, entry.text);
 
       card.appendChild(avatar);
       content.appendChild(meta);
@@ -437,8 +493,10 @@
 
     if (pageContext.title) {
       suggestions.push({
-        label: 'This page',
-        prompt: 'Can you explain the highlights, route, pickups, and ideal guest for ' + pageContext.title + '?'
+        label: pageContext.type === 'tour' ? 'About this tour' : 'About this page',
+        prompt: pageContext.type === 'tour'
+          ? 'How much is ' + pageContext.title + ', what is included, and who is it best for?'
+          : 'Can you explain the highlights, route, pickups, and ideal guest for ' + pageContext.title + '?'
       });
     }
 
@@ -465,8 +523,20 @@
 
     suggestions.push(
       {
-        label: 'Sandwich Harbour',
-        prompt: 'Which tour is best if I want Sandwich Harbour and scenic photo stops?'
+        label: 'Prices',
+        prompt: 'How much do the tours cost, and what do children pay?'
+      },
+      {
+        label: 'Cruise day',
+        prompt: 'I am on a cruise. What can I do in a port day and can you get me back to the ship?'
+      },
+      {
+        label: 'Pickups and group size',
+        prompt: 'Do you pick up from Walvis Bay and Swakopmund hotels, and how many people are in a group?'
+      },
+      {
+        label: 'Best for photos',
+        prompt: 'Which tour is best if I want Sandwich Harbour and great photo stops?'
       },
       {
         label: 'Private tour',
@@ -478,7 +548,7 @@
       return items.findIndex(function (candidate) {
         return candidate.prompt === item.prompt;
       }) === index;
-    }).slice(0, 6);
+    }).slice(0, 5);
   }
 
   function renderSuggestions(root) {
