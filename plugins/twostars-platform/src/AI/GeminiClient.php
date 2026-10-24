@@ -48,6 +48,13 @@ final class GeminiClient
 			);
 		}
 
+		if (self::is_down()) {
+			return new WP_Error(
+				'twostars_gemini_unavailable',
+				__('The AI service is temporarily unavailable.', 'twostars-platform')
+			);
+		}
+
 		$model = GeminiConfig::get_embedding_model();
 		$response = wp_remote_post(
 			'https://generativelanguage.googleapis.com/v1beta/models/' . rawurlencode($model) . ':embedContent',
@@ -56,7 +63,7 @@ final class GeminiClient
 					'Content-Type' => 'application/json',
 					'x-goog-api-key' => $api_key,
 				],
-				'timeout' => 25,
+				'timeout' => 8,
 				'body'    => wp_json_encode(
 					[
 						'model' => 'models/' . $model,
@@ -71,11 +78,17 @@ final class GeminiClient
 		);
 
 		if (is_wp_error($response)) {
+			self::mark_down();
+
 			return $response;
 		}
 
 		$status_code = (int) wp_remote_retrieve_response_code($response);
 		$body = json_decode((string) wp_remote_retrieve_body($response), true);
+
+		if ($status_code >= 401) {
+			self::mark_down();
+		}
 
 		if ($status_code >= 400) {
 			return new WP_Error(
@@ -131,6 +144,13 @@ final class GeminiClient
 			);
 		}
 
+		if (self::is_down()) {
+			return new WP_Error(
+				'twostars_gemini_unavailable',
+				__('The AI service is temporarily unavailable.', 'twostars-platform')
+			);
+		}
+
 		$response = wp_remote_post(
 			'https://generativelanguage.googleapis.com/v1beta/models/' . rawurlencode($model) . ':generateContent',
 			[
@@ -138,7 +158,7 @@ final class GeminiClient
 					'Content-Type' => 'application/json',
 					'x-goog-api-key' => $api_key,
 				],
-				'timeout' => 25,
+				'timeout' => 15,
 					'body'    => wp_json_encode(
 						[
 							'systemInstruction' => [
@@ -157,11 +177,17 @@ final class GeminiClient
 		);
 
 		if (is_wp_error($response)) {
+			self::mark_down();
+
 			return $response;
 		}
 
 		$status_code = (int) wp_remote_retrieve_response_code($response);
 		$body        = json_decode((string) wp_remote_retrieve_body($response), true);
+
+		if ($status_code >= 401) {
+			self::mark_down();
+		}
 
 		if ($status_code >= 400) {
 			$message_text = (string) ($body['error']['message'] ?? __('Gemini request failed.', 'twostars-platform'));
@@ -192,6 +218,20 @@ final class GeminiClient
 		}
 
 		return $text;
+	}
+
+	/**
+	 * Circuit breaker. After a failed call (billing denied, quota, outage) skip the AI for a few minutes so
+	 * visitors get the instant offline answers instead of waiting on a request that will fail again.
+	 */
+	private static function is_down(): bool
+	{
+		return (bool) get_transient('twostars_gemini_down');
+	}
+
+	private static function mark_down(): void
+	{
+		set_transient('twostars_gemini_down', 1, 5 * MINUTE_IN_SECONDS);
 	}
 
 	/**

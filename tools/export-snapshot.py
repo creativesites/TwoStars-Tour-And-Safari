@@ -135,6 +135,11 @@ for fid in [r[0] for r in rows("select ID from wp_posts where post_type='faq' an
         "meta": {},
     })
 
+# gallery page list lives in an option (attachment IDs): export as file names
+opt = sql("select option_value from wp_options where option_name='twostars_gallery_library_images'")
+gal_ids = [int(n) for n in re.findall(r"i:\d+;i:(\d+);", opt)] or [int(n) for n in re.findall(r"\d+", opt)]
+snap["option_att_lists"] = {"twostars_gallery_library_images": [os.path.basename(att_file[i]).lower() for i in gal_ids if i in att_file]}
+
 with open(OUT, "w") as fh:
     json.dump(snap, fh, ensure_ascii=False, indent=1)
 text = open(OUT).read()

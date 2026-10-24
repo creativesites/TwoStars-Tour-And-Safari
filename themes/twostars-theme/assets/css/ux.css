@@ -854,11 +854,14 @@ html body .twostars-destination-planning-strip {
 /* ---- Tour page: video and sunset note --------------------------------------- */
 html body .twostars-tour-page__video {
   display: block;
-  width: 100%;
+  width: auto;
+  height: auto;
+  max-width: 100%;
   max-height: 520px;
+  margin: 0 auto;
   border-radius: 14px;
   background: #101c2e;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 html body .twostars-tour-page__sunset {
@@ -877,4 +880,27 @@ html body .twostars-tour-page__sunset .twostars-tour-entry__button--secondary {
   border-color: #1b3a6b;
   background: transparent;
   margin-top: 0.5rem;
+}
+
+/* ---- Tour key facts on phones: one compact block --------------------------- */
+@media (max-width: 640px) {
+  html body .twostars-tour-page__facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem 1rem;
+    padding: 0.9rem 0;
+  }
+
+  html body .twostars-tour-page__fact dd {
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+
+  html body .twostars-tour-page__fact dt {
+    font-size: 0.66rem;
+  }
+
+  /* Pickup places are listed again lower on the page */
+  html body .twostars-tour-page__fact:nth-child(4):not(:last-child) {
+    display: none;
+  }
 }

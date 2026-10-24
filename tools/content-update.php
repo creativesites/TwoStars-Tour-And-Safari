@@ -279,6 +279,16 @@ foreach ((array) ($snap['options'] ?? []) as $name => $value) {
 	$say("  = option {$name} = " . (is_scalar($value) ? $value : wp_json_encode($value)));
 }
 
+foreach ((array) ($snap['option_att_lists'] ?? []) as $name => $files) {
+	$ids = array_values(array_filter(array_map(static fn($f) => $resolve_att('@att:' . $f), (array) $files)));
+
+	if (! $dry && $ids !== []) {
+		update_option((string) $name, $ids);
+	}
+
+	$say("  = option {$name} = " . count($ids) . ' images');
+}
+
 if (! $dry) {
 	flush_rewrite_rules();
 

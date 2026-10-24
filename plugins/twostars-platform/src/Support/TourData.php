@@ -190,7 +190,8 @@ final class TourData
 			/* translators: %s: formatted NAD price */
 			$items[] = ['label' => __('From', 'twostars-platform'), 'value' => sprintf(__('%s / adult', 'twostars-platform'), self::format_price($price))];
 		} else {
-			$items[] = ['label' => __('Price', 'twostars-platform'), 'value' => self::get_no_price_label($tour_id)];
+			$status  = (string) get_post_meta($tour_id, '_twostars_tour_availability_status', true);
+			$items[] = ['label' => __('Price', 'twostars-platform'), 'value' => $status === 'on_request' ? __('Custom quote', 'twostars-platform') : __('On request', 'twostars-platform')];
 		}
 
 		if ($meta['group_size'] !== '') {

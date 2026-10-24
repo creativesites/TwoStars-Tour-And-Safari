@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-24 18:42:41",
+ "generated": "2026-10-24 21:37:02",
  "attachments": [
   {
    "file": "hero-sandwich-harbour-dunes-lagoon.webp",
@@ -208,7 +208,17 @@
          {
           "label": "Sandwich Harbour from",
           "value": "US$135 per adult",
-          "_id": "88ee349"
+          "_id": "88ee2e4"
+         },
+         {
+          "label": "Group size",
+          "value": "Max 4 guests per vehicle",
+          "_id": "6b9cc93"
+         },
+         {
+          "label": "Pickups",
+          "value": "Hotels & cruise port",
+          "_id": "f8c7fbd"
          }
         ],
         "concierge_label": "NEED HELP CHOOSING?",
@@ -895,6 +905,15 @@
           },
           "title": "Free cancellation",
           "description": "Cancel up to 24 hours before the experience starts for a full refund."
+         },
+         {
+          "_id": "val4",
+          "icon": {
+           "value": "fas fa-camera",
+           "library": "fa-solid"
+          },
+          "title": "Photographer pacing",
+          "description": "Long, fixed photo stops planned around the light, so you leave with the pictures you came for."
          }
         ]
        },
@@ -1958,16 +1977,18 @@
     "_yoast_wpseo_focuskw": "sandwich harbour tour",
     "_twostars_tour_price_from": "135",
     "_twostars_tour_price_note": "Children under 6 go free, ages 6 to 11 pay half price, and guests aged 12 and over pay the full adult price.",
-    "_twostars_tour_cancellation": "Free cancellation up to 24 hours before",
+    "_twostars_tour_cancellation": "Free up to 24h before",
     "_twostars_tour_faqs": "What time does the tour leave? | The morning tour departs at 08:45 and the afternoon tour at 12:45.\nDo you offer a sunset tour? | Sunset departures are offered on request, depending on the season and availability. Message us on WhatsApp with your date and we will confirm the timing before you book.\nHow many guests are on each tour? | We take a maximum of 4 guests per vehicle, plus your guide and driver, so there is always room to stop for photos.\nHow much does it cost? | The Sandwich Harbour tour is US$135 per adult. Children under 6 go free, ages 6 to 11 pay half price, and guests aged 12 and over pay the full adult price.\nCan I cancel? | Yes. You can cancel up to 24 hours before the experience starts for a full refund.\nWhich language is the tour in? | Tours are guided in English.\nWhere do you pick up? | We collect from Walvis Bay hotels, Swakopmund hotels and the Walvis Bay cruise port.",
     "_yoast_wpseo_metadesc": "Small-group Sandwich Harbour 4x4 from Walvis Bay, max 4 guests, women-led team. From US$135 per adult. Free cancellation up to 24h.",
+    "_twostars_tour_sunset_note": "Sunset departures are offered on request, depending on the season and availability. We confirm the timing and availability with you before you book.",
+    "_twostars_tour_video_url": "{{home}}/wp-content/uploads/2026/10/sandwich-harbour-dune-ridge-and-lagoon-view.mp4",
+    "_twostars_tour_video_poster": "{{home}}/wp-content/uploads/2026/10/sandwich-harbour-dune-ridge-and-lagoon-view-poster.webp",
     "_twostars_tour_gallery_images": {
      "_t": "att_list",
      "files": [
       "dune-picnic-setup-two-stars-4x4-open-boot.webp",
       "guests-celebrating-at-picnic-table-two-stars-4x4.webp",
       "sunset-picnic-table-sandwich-harbour-dunes-guests.webp",
-      "sunset-picnic-table-on-sand-dune-two-guests.webp",
       "sunset-over-the-atlantic-namibia-coast.webp",
       "two-stars-4x4-parked-on-sandwich-harbour-dune.webp",
       "two-stars-4x4-door-coastal-dune-track.webp",
@@ -1977,9 +1998,6 @@
       "whatsapp-image-2026-03-27-at-6.00.41-am.jpeg"
      ]
     },
-    "_twostars_tour_sunset_note": "Sunset departures are offered on request, depending on the season and availability. We confirm the timing and availability with you before you book.",
-    "_twostars_tour_video_url": "{{home}}/wp-content/uploads/2026/10/sandwich-harbour-dune-ridge-and-lagoon-view.mp4",
-    "_twostars_tour_video_poster": "{{home}}/wp-content/uploads/2026/10/sandwich-harbour-dune-ridge-and-lagoon-view-poster.webp",
     "_thumbnail_id": "@att:two-stars-4x4-and-picnic-table-sandwich-harbour-dunes.webp"
    }
   },
@@ -2008,7 +2026,7 @@
     "_yoast_wpseo_title": "Walvis Bay Flamingo & Pink Salt Lake Tour | Two Stars",
     "_yoast_wpseo_focuskw": "walvis bay flamingos",
     "_twostars_tour_price_note": "Message us on WhatsApp for the current price. Children under 6 go free and ages 6 to 11 pay half price.",
-    "_twostars_tour_cancellation": "Free cancellation up to 24 hours before",
+    "_twostars_tour_cancellation": "Free up to 24h before",
     "_twostars_tour_faqs": "Is this a good tour for first-time visitors? | Yes. It is a short, easy outing with few transitions, ideal if you want the Walvis Bay highlights without a long day.\nHow many guests are on each tour? | We take a maximum of 4 guests per vehicle, plus your guide and driver, so there is always room to stop for photos.\nHow much does it cost? | Message us on WhatsApp for the current price of this tour. Children under 6 go free and ages 6 to 11 pay half price.\nCan I cancel? | Yes. You can cancel up to 24 hours before the experience starts for a full refund.\nWhich language is the tour in? | Tours are guided in English.\nWhere do you pick up? | We collect from Walvis Bay hotels, Swakopmund hotels and the Walvis Bay cruise port.",
     "_yoast_wpseo_metadesc": "Walvis Bay flamingos and the Pink Salt Lake with a women-led local team. Max 4 guests, relaxed pace. Free cancellation up to 24h.",
     "_twostars_tour_gallery_images": {
@@ -2053,7 +2071,7 @@
     "_yoast_wpseo_title": "Swakopmund City & Dune 7 Tour from Walvis Bay | Two Stars",
     "_yoast_wpseo_focuskw": "swakopmund dune 7 tour",
     "_twostars_tour_price_note": "Message us on WhatsApp for the current price. Children under 6 go free and ages 6 to 11 pay half price.",
-    "_twostars_tour_cancellation": "Free cancellation up to 24 hours before",
+    "_twostars_tour_cancellation": "Free up to 24h before",
     "_twostars_tour_faqs": "What will we see? | Swakopmund's landmarks and history, followed by a desert stop at Dune 7 with time for photos.\nHow many guests are on each tour? | We take a maximum of 4 guests per vehicle, plus your guide and driver, so there is always room to stop for photos.\nHow much does it cost? | Message us on WhatsApp for the current price of this tour. Children under 6 go free and ages 6 to 11 pay half price.\nCan I cancel? | Yes. You can cancel up to 24 hours before the experience starts for a full refund.\nWhich language is the tour in? | Tours are guided in English.\nWhere do you pick up? | We collect from Walvis Bay hotels, Swakopmund hotels and the Walvis Bay cruise port.",
     "_yoast_wpseo_metadesc": "Swakopmund landmarks and a Dune 7 desert stop in one day. Small group, max 4 guests, pickup included. Free cancellation up to 24h.",
     "_twostars_tour_gallery_images": {
@@ -2108,7 +2126,7 @@
      ]
     },
     "_twostars_tour_price_note": "Message us on WhatsApp for the current price. Children under 6 go free and ages 6 to 11 pay half price.",
-    "_twostars_tour_cancellation": "Free cancellation up to 24 hours before",
+    "_twostars_tour_cancellation": "Free up to 24h before",
     "_twostars_tour_faqs": "How long is the Spitzkoppe tour? | It is a full-day tour. Your exact pickup time is confirmed when you book.\nHow many guests are on each tour? | We take a maximum of 4 guests per vehicle, plus your guide and driver, so there is always room to stop for photos.\nHow much does it cost? | Message us on WhatsApp for the current price of this tour. Children under 6 go free and ages 6 to 11 pay half price.\nCan I cancel? | Yes. You can cancel up to 24 hours before the experience starts for a full refund.\nWhich language is the tour in? | Tours are guided in English.\nWhere do you pick up? | We collect from Walvis Bay hotels, Swakopmund hotels and the Walvis Bay cruise port.",
     "_yoast_wpseo_metadesc": "Full-day Spitzkoppe tour from Swakopmund: granite peaks and wide Namib views in a small group of 4. Free cancellation up to 24h.",
     "_thumbnail_id": "@att:spitzkoppe-namibia-1.jpg"
@@ -2141,7 +2159,7 @@
     "_yoast_wpseo_metadesc": "Private tours in Walvis Bay & Swakopmund: your own vehicle, route and pace with a women-led local team. Free cancellation.",
     "_yoast_wpseo_focuskw": "private tours walvis bay",
     "_twostars_tour_price_note": "Private tours are quoted by route, group size and date.",
-    "_twostars_tour_cancellation": "Free cancellation up to 24 hours before",
+    "_twostars_tour_cancellation": "Free up to 24h before",
     "_twostars_tour_gallery_images": {
      "_t": "att_list",
      "files": [
@@ -2346,5 +2364,37 @@
  ],
  "options": {
   "twostars_price_currency": "USD"
+ },
+ "option_att_lists": {
+  "twostars_gallery_library_images": [
+   "two-stars-4x4-and-picnic-table-sandwich-harbour-dunes.webp",
+   "sunset-picnic-table-sandwich-harbour-dunes-guests.webp",
+   "flamingos-wading-walvis-bay-lagoon.webp",
+   "guests-celebrating-at-picnic-table-two-stars-4x4.webp",
+   "pink-salt-lake-shoreline-walvis-bay.webp",
+   "sunset-over-the-atlantic-namibia-coast.webp",
+   "two-stars-4x4-parked-on-sandwich-harbour-dune.webp",
+   "pink-lagoon-horizon-walvis-bay.webp",
+   "guest-arms-out-on-dune-above-lagoon-sandwich-harbour.webp",
+   "dune-picnic-setup-two-stars-4x4-open-boot.webp",
+   "seal-silhouette-on-namibian-coast-golden-light.webp",
+   "sunset-picnic-table-on-sand-dune-two-guests.webp",
+   "salt-flats-pink-lagoon-walvis-bay-guests-walking.webp",
+   "guest-mid-jump-on-dune-sandwich-harbour.webp",
+   "two-stars-4x4-door-coastal-dune-track.webp",
+   "whatsapp-image-2026-04-07-at-11.27.22-am-2.jpeg",
+   "whatsapp-image-2026-04-07-at-11.27.21-am-2.jpeg",
+   "whatsapp-image-2026-04-07-at-11.27.23-am.jpeg",
+   "whatsapp-image-2026-04-07-at-11.27.21-am.jpeg",
+   "whatsapp-image-2026-04-07-at-11.27.22-am.jpeg",
+   "whatsapp-image-2026-04-07-at-1.34.33-pm.jpeg",
+   "whatsapp-image-2026-04-07-at-11.27.20-am.jpeg",
+   "whatsapp-image-2026-04-07-at-1.34.32-pm.jpeg",
+   "whatsapp-image-2026-04-07-at-1.34.32-pm-2.jpeg",
+   "whatsapp-image-2026-04-07-at-1.34.32-pm-3.jpeg",
+   "whatsapp-image-2026-04-07-at-11.27.23-am-2.jpeg",
+   "caption-4.jpg",
+   "caption-5.jpg"
+  ]
  }
 }
