@@ -31,6 +31,12 @@ if (! defined('ABSPATH')) {
 	require $root . '/wp-load.php';
 }
 
+// The snapshot is our own trusted content. Without a logged-in admin, WordPress would HTML-encode
+// characters such as & in titles ("&amp;"), so switch the content filters off for this run.
+if (function_exists('kses_remove_filters')) {
+	kses_remove_filters();
+}
+
 require_once ABSPATH . 'wp-admin/includes/image.php';
 require_once ABSPATH . 'wp-admin/includes/file.php';
 

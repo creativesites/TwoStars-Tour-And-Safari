@@ -21,6 +21,14 @@ final class FactAnswers
 		$whatsapp = self::whatsapp();
 		$tours    = home_url('/tours/');
 
+		// A price question about a tour other than Sandwich Harbour: its price is not confirmed yet.
+		$asks_price  = preg_match('/\b(price|prices|cost|costs|how much|rate|rates|fee|fees)\b/', $text) === 1;
+		$other_tour  = preg_match('/\b(spitzkoppe|flamingo|flamingos|swakopmund|dune 7|pink)\b/', $text) === 1 && preg_match('/\bsandwich/', $text) !== 1;
+
+		if ($asks_price && $other_tour) {
+			return 'The price for that tour is being confirmed, so message the team on WhatsApp (' . $whatsapp . ') for the current price. For reference, the Sandwich Harbour tour is US$135 per adult, and you can cancel up to 24 hours before for a full refund. See the tours: ' . $tours;
+		}
+
 		$intents = [
 			[
 				'/\b(cruise|ship|port day|shore|disembark|back to the (ship|boat))\b/',
