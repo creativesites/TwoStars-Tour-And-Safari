@@ -62,6 +62,9 @@ final class TourData
 			'meeting_point'       => (string) get_post_meta($tour_id, '_twostars_tour_meeting_point', true),
 			'map_embed_url'       => esc_url_raw((string) get_post_meta($tour_id, '_twostars_tour_map_embed_url', true)),
 			'bokun_url'           => esc_url_raw((string) get_post_meta($tour_id, '_twostars_tour_bokun_url', true)),
+			'sunset_note'         => (string) get_post_meta($tour_id, '_twostars_tour_sunset_note', true),
+			'video_url'           => esc_url_raw((string) get_post_meta($tour_id, '_twostars_tour_video_url', true)),
+			'video_poster'        => esc_url_raw((string) get_post_meta($tour_id, '_twostars_tour_video_poster', true)),
 		];
 	}
 
@@ -93,16 +96,46 @@ final class TourData
 		$price = (float) get_post_meta($tour_id, '_twostars_tour_price_from', true);
 
 		if ($price > 0) {
-			/* translators: %s: formatted NAD price */
-			return sprintf(__('From %s per adult', 'twostars-platform'), self::format_nad($price));
+			/* translators: %s: formatted price */
+			return sprintf(__('From %s per adult', 'twostars-platform'), self::format_price($price));
 		}
 
-		return __('Custom quote', 'twostars-platform');
+		return self::get_no_price_label($tour_id);
 	}
 
+	/**
+	 * Shown when a tour has no confirmed price: private tours are quoted, others are on request.
+	 */
+	public static function get_no_price_label(int $tour_id): string
+	{
+		$status = (string) get_post_meta($tour_id, '_twostars_tour_availability_status', true);
+
+		return $status === 'on_request' ? __('Custom quote', 'twostars-platform') : __('Price on request', 'twostars-platform');
+	}
+
+	/**
+	 * Currency prices are entered in (option twostars_price_currency: USD, NAD or EUR).
+	 */
+	public static function get_currency(): string
+	{
+		$currency = strtoupper((string) get_option('twostars_price_currency', 'USD'));
+
+		return in_array($currency, ['USD', 'NAD', 'EUR'], true) ? $currency : 'USD';
+	}
+
+	public static function format_price(float $amount): string
+	{
+		$symbols = ['USD' => 'US$', 'NAD' => 'N$', 'EUR' => '€'];
+
+		return $symbols[self::get_currency()] . number_format($amount, 0, '.', ',');
+	}
+
+	/**
+	 * @deprecated Use format_price(); kept so older templates keep working.
+	 */
 	public static function format_nad(float $amount): string
 	{
-		return 'N$' . number_format($amount, 0, '.', ',');
+		return self::format_price($amount);
 	}
 
 	public static function get_booking_url(int $tour_id): string
@@ -155,9 +188,9 @@ final class TourData
 
 		if ($price > 0) {
 			/* translators: %s: formatted NAD price */
-			$items[] = ['label' => __('From', 'twostars-platform'), 'value' => sprintf(__('%s / adult', 'twostars-platform'), self::format_nad($price))];
+			$items[] = ['label' => __('From', 'twostars-platform'), 'value' => sprintf(__('%s / adult', 'twostars-platform'), self::format_price($price))];
 		} else {
-			$items[] = ['label' => __('Price', 'twostars-platform'), 'value' => __('Custom quote', 'twostars-platform')];
+			$items[] = ['label' => __('Price', 'twostars-platform'), 'value' => self::get_no_price_label($tour_id)];
 		}
 
 		if ($meta['group_size'] !== '') {

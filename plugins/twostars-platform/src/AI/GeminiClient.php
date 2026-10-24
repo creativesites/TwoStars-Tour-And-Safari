@@ -206,10 +206,10 @@ final class GeminiClient
 		$lines    = [
 			'CONFIRMED BUSINESS FACTS (use these; never contradict them):',
 			'- Two Stars Tour & Safari CC is a women-led local family business run by Tulimeke (Tuli) and her team in Walvis Bay, registered with the Namibia Tourism Board (#TSO01736).',
-			'- Group tours cost N$2,600 per adult. Children aged 5 and under are free, ages 6 to 11 pay half price (N$1,300), and guests aged 12 and over pay the adult price. The private tour is quoted by route, group size and date.',
+			'- Sandwich Harbour tour: US$135 per adult. Children under 6 go free, ages 6 to 11 pay half price, guests aged 12 and over pay the full adult price. Prices for the other group tours are not confirmed yet: say the team confirms them on request. The private tour is quoted by route, group size and date.',
 			'- Groups are limited to 4 guests per vehicle plus the guide/driver (Toyota Fortuner), so photo stops are unhurried.',
-			'- Departures: morning 08:45 and afternoon 12:45. The sunset tour departs between 14:00 and 15:00. Spitzkoppe is a full-day tour with pickup time confirmed at booking.',
-			'- Cancellation is free; if asked how far ahead, say the team confirms the notice window.',
+			'- Departures: morning 08:45 and afternoon 12:45. Spitzkoppe is a full-day tour with pickup time confirmed at booking. Sunset departures are offered on request, seasonal and subject to availability: never promise a sunset slot, say the team confirms by WhatsApp.',
+			'- Cancellation: full refund if cancelled up to 24 hours before the experience starts.',
 			'- Tours are guided in English.',
 			'- Pickups: Walvis Bay hotels, Swakopmund hotels and the Walvis Bay cruise port. For cruise guests, the team plans around the ship schedule; do not promise a guarantee beyond that, and suggest WhatsApp to confirm timings.',
 			'- Contact: WhatsApp ' . ($whatsapp !== '' ? $whatsapp : '+264 81 206 0111') . ', email info@twostarstourandsafari.com.',
@@ -220,7 +220,7 @@ final class GeminiClient
 
 		foreach ($tours as $tour) {
 			$price   = (float) get_post_meta($tour->ID, '_twostars_tour_price_from', true);
-			$lines[] = '  * ' . $tour->post_title . ': ' . ($price > 0 ? 'from N$' . number_format($price, 0, '.', ',') . ' per adult' : 'custom quote') . ' - ' . get_permalink($tour);
+			$lines[] = '  * ' . $tour->post_title . ': ' . ($price > 0 ? 'from ' . \TwoStars\Platform\Support\TourData::format_price($price) . ' per adult' : 'price on request or custom quote (team confirms)') . ' - ' . get_permalink($tour);
 		}
 
 		return $lines;

@@ -1,0 +1,2350 @@
+{
+ "generated": "2026-10-24 18:37:20",
+ "attachments": [
+  {
+   "file": "hero-sandwich-harbour-dunes-lagoon.webp",
+   "path": "2026/10/hero-sandwich-harbour-dunes-lagoon.webp",
+   "alt": "View over Sandwich Harbour where golden dunes meet the turquoise lagoon and the Atlantic Ocean"
+  },
+  {
+   "file": "sunset-picnic-table-sandwich-harbour-dunes-guests.webp",
+   "path": "2026/10/sunset-picnic-table-sandwich-harbour-dunes-guests.webp",
+   "alt": "Two guests in white dresses beside a picnic table set up on the Sandwich Harbour dunes at sunset"
+  },
+  {
+   "file": "two-stars-4x4-door-coastal-dune-track.webp",
+   "path": "2026/10/two-stars-4x4-door-coastal-dune-track.webp",
+   "alt": "Close view of the Two Stars Toyota Fortuner 4x4 on a sandy track above the coast"
+  },
+  {
+   "file": "salt-flats-pink-lagoon-walvis-bay-guests-walking.webp",
+   "path": "2026/10/salt-flats-pink-lagoon-walvis-bay-guests-walking.webp",
+   "alt": "Guests walking along a salt-crusted causeway beside the pink lagoon near Walvis Bay"
+  },
+  {
+   "file": "dune-picnic-setup-two-stars-4x4-open-boot.webp",
+   "path": "2026/10/dune-picnic-setup-two-stars-4x4-open-boot.webp",
+   "alt": "Two Stars 4x4 with its boot open and a picnic table laid out on the sand dunes"
+  },
+  {
+   "file": "two-stars-4x4-parked-on-sandwich-harbour-dune.webp",
+   "path": "2026/10/two-stars-4x4-parked-on-sandwich-harbour-dune.webp",
+   "alt": "Two Stars 4x4 parked on a Sandwich Harbour dune with the ocean in the distance"
+  },
+  {
+   "file": "guest-standing-on-dune-ridge-sandwich-harbour.webp",
+   "path": "2026/10/guest-standing-on-dune-ridge-sandwich-harbour.webp",
+   "alt": "Guest standing on a dune ridge above the Atlantic at Sandwich Harbour"
+  },
+  {
+   "file": "two-stars-4x4-and-picnic-table-sandwich-harbour-dunes.webp",
+   "path": "2026/10/two-stars-4x4-and-picnic-table-sandwich-harbour-dunes.webp",
+   "alt": "Two Stars 4x4 beside a picnic table with drinks laid out among the Sandwich Harbour dunes"
+  },
+  {
+   "file": "guest-on-sand-dune-blue-sky-sandwich-harbour.webp",
+   "path": "2026/10/guest-on-sand-dune-blue-sky-sandwich-harbour.webp",
+   "alt": "Guest walking across a sand dune under a clear blue sky at Sandwich Harbour"
+  },
+  {
+   "file": "guest-at-pink-salt-lake-viewing-platform.webp",
+   "path": "2026/10/guest-at-pink-salt-lake-viewing-platform.webp",
+   "alt": "Guest leaning on a railing at the pink salt lake viewing platform near Walvis Bay"
+  },
+  {
+   "file": "guests-celebrating-at-picnic-table-two-stars-4x4.webp",
+   "path": "2026/10/guests-celebrating-at-picnic-table-two-stars-4x4.webp",
+   "alt": "Group of guests cheering around the picnic table next to the Two Stars 4x4 on the dunes"
+  },
+  {
+   "file": "pink-salt-lake-shoreline-walvis-bay.webp",
+   "path": "2026/10/pink-salt-lake-shoreline-walvis-bay.webp",
+   "alt": "Pink salt lake shoreline with white salt crust near Walvis Bay"
+  },
+  {
+   "file": "seal-silhouette-on-namibian-coast-golden-light.webp",
+   "path": "2026/10/seal-silhouette-on-namibian-coast-golden-light.webp",
+   "alt": "Seal silhouetted on the Namibian coast in golden light"
+  },
+  {
+   "file": "flamingos-wading-walvis-bay-lagoon.webp",
+   "path": "2026/10/flamingos-wading-walvis-bay-lagoon.webp",
+   "alt": "Flamingos wading in the shallow water of the Walvis Bay lagoon"
+  },
+  {
+   "file": "pink-salt-lake-and-blue-sky-walvis-bay.webp",
+   "path": "2026/10/pink-salt-lake-and-blue-sky-walvis-bay.webp",
+   "alt": "Pink salt lake under a deep blue sky near Walvis Bay"
+  },
+  {
+   "file": "pink-lagoon-horizon-walvis-bay.webp",
+   "path": "2026/10/pink-lagoon-horizon-walvis-bay.webp",
+   "alt": "Wide view of the pink lagoon stretching to the horizon near Walvis Bay"
+  },
+  {
+   "file": "guest-at-the-pink-salt-lake-walvis-bay.webp",
+   "path": "2026/10/guest-at-the-pink-salt-lake-walvis-bay.webp",
+   "alt": "Guest standing at the edge of the pink salt lake near Walvis Bay"
+  },
+  {
+   "file": "guest-on-steep-dune-slope-sandwich-harbour.webp",
+   "path": "2026/10/guest-on-steep-dune-slope-sandwich-harbour.webp",
+   "alt": "Guest posing on a steep golden dune slope at Sandwich Harbour"
+  },
+  {
+   "file": "guest-posing-on-golden-dune-sandwich-harbour.webp",
+   "path": "2026/10/guest-posing-on-golden-dune-sandwich-harbour.webp",
+   "alt": "Guest posing on a golden dune at Sandwich Harbour"
+  },
+  {
+   "file": "guest-arms-out-on-dune-above-lagoon-sandwich-harbour.webp",
+   "path": "2026/10/guest-arms-out-on-dune-above-lagoon-sandwich-harbour.webp",
+   "alt": "Guest with arms outstretched on a dune above the Sandwich Harbour lagoon"
+  },
+  {
+   "file": "sunset-picnic-table-on-sand-dune-two-guests.webp",
+   "path": "2026/10/sunset-picnic-table-on-sand-dune-two-guests.webp",
+   "alt": "Picnic table on a sand dune with two guests watching the sun set over the ocean"
+  },
+  {
+   "file": "guest-mid-jump-on-dune-sandwich-harbour.webp",
+   "path": "2026/10/guest-mid-jump-on-dune-sandwich-harbour.webp",
+   "alt": "Guest jumping for the camera on a dune above the Sandwich Harbour lagoon"
+  },
+  {
+   "file": "sunset-over-the-atlantic-namibia-coast.webp",
+   "path": "2026/10/sunset-over-the-atlantic-namibia-coast.webp",
+   "alt": "Sun setting over the Atlantic Ocean off the Namibian coast"
+  }
+ ],
+ "alts": {
+  "skeleton-coast.jpg": "Dune and ocean coastline in Namibia",
+  "whatsapp-image-2026-03-27-at-6.00.45-am.jpeg": "Two Stars guests and guides sitting together on a Sandwich Harbour dune with 4x4 vehicles behind them",
+  "whatsapp-image-2026-03-27-at-5.55.41-am-2.jpeg": "View over Sandwich Harbour where the golden dunes meet the lagoon and the Atlantic Ocean",
+  "whatsapp-image-2026-03-27-at-6.00.41-am.jpeg": "Two Stars team and guests standing together on a golden dune at Sandwich Harbour",
+  "whatsapp-image-2026-03-27-at-6.00.45-am-2.jpeg": "Two Stars team and guests smiling in front of the pink salt lake near Walvis Bay",
+  "whatsapp-image-2026-03-27-at-6.00.45-am-8.jpeg": "Flamingos wading in the shallow water of Walvis Bay lagoon",
+  "whatsapp-image-2026-03-27-at-6.00.45-am-7.jpeg": "Springbok grazing on a grassy dune slope near Sandwich Harbour",
+  "whatsapp-image-2026-03-27-at-6.00.45-am-6.jpeg": "A springbok standing on a ridge above the dunes at Sandwich Harbour",
+  "whatsapp-image-2026-03-27-at-6.00.45-am-5.jpeg": "A springbok on a grassy ridge near Sandwich Harbour",
+  "whatsapp-image-2026-03-27-at-6.00.45-am-4.jpeg": "A guest holding a small desert gecko on a Namib dune",
+  "whatsapp-image-2026-03-27-at-6.02.03-am-2.jpeg": "Two Stars Toyota Fortuner 4x4 parked on a dune above the ocean at Sandwich Harbour",
+  "whatsapp-image-2026-03-27-at-6.02.03-am.jpeg": "Two Stars Toyota Fortuner 4x4 on a dune crest under a deep blue sky",
+  "whatsapp-image-2026-03-27-at-6.00.46-am-3.jpeg": "Pink water and white salt crystals at the edge of the salt pans near Walvis Bay",
+  "whatsapp-image-2026-03-27-at-6.00.46-am-2.jpeg": "A hand holding white salt crystals beside the pink salt lake near Walvis Bay",
+  "whatsapp-image-2026-03-27-at-6.00.46-am.jpeg": "A guest walking along the white salt edge of the pink lake near Walvis Bay",
+  "whatsapp-image-2026-03-27-at-6.00.45-am-10.jpeg": "A salt-crusted path beside the pink salt lake near Walvis Bay",
+  "two-stars-logo.png": "Two Stars Tour & Safari logo",
+  "cropped-two-stars-logo.png": "Two Stars Tour & Safari logo",
+  "whatsapp-image-2026-03-27-at-60045-am-picsart-aiimageenhancer.jpeg": "Two Stars guests and guides sitting together on a Sandwich Harbour dune with 4x4 vehicles behind them",
+  "whatsapp-image-2026-03-27-at-60045-am-2-picsart-aiimageenhancer.jpeg": "Two Stars team and guests smiling in front of the pink salt lake near Walvis Bay",
+  "spitzkoppe-namibia-1.jpg": "Granite rock formations at Spitzkoppe in the Namib Desert",
+  "swakopmund.jpg": "Swakopmund seafront on the Namibian coast",
+  "whatsapp-image-2026-04-07-at-11.27.20-am.jpeg": "A guest standing on a high dune above the Atlantic shoreline at Sandwich Harbour",
+  "whatsapp-image-2026-04-07-at-1.34.33-pm.jpeg": "A guest crouching beside the pink salt pans near Walvis Bay",
+  "whatsapp-image-2026-04-07-at-1.34.32-pm-3.jpeg": "A guest crouching at the edge of the pink salt lake near Walvis Bay",
+  "whatsapp-image-2026-04-07-at-1.34.32-pm-2.jpeg": "A guest lying back on a rippled Sandwich Harbour dune",
+  "whatsapp-image-2026-04-07-at-1.34.32-pm.jpeg": "A guest relaxing on a Sandwich Harbour dune under a partly cloudy sky",
+  "whatsapp-image-2026-04-07-at-11.27.23-am-2.jpeg": "A guest sitting on a rippled dune at Sandwich Harbour",
+  "whatsapp-image-2026-04-07-at-11.27.23-am.jpeg": "A guest sitting on a large dune at Sandwich Harbour with the lagoon behind",
+  "whatsapp-image-2026-04-07-at-11.27.22-am-2.jpeg": "Two Stars 4x4 and guide on a dune at Sandwich Harbour",
+  "whatsapp-image-2026-04-07-at-11.27.22-am.jpeg": "A guest kneeling on a dune with the Atlantic coastline behind",
+  "whatsapp-image-2026-04-07-at-11.27.21-am-2.jpeg": "Two guests giving a thumbs up on a dune above Sandwich Harbour",
+  "whatsapp-image-2026-04-07-at-11.27.21-am.jpeg": "A guest standing on a dune overlooking the Sandwich Harbour lagoon"
+ },
+ "posts": [
+  {
+   "type": "page",
+   "slugs": [
+    "home"
+   ],
+   "meta": {
+    "_yoast_wpseo_title": "Walvis Bay Tours & Sandwich Harbour 4x4 | Two Stars Tour & Safari",
+    "_yoast_wpseo_metadesc": "Women-led day tours from Walvis Bay & Swakopmund: Sandwich Harbour 4x4, flamingos, Dune 7, Spitzkoppe. Max 4 guests. Free cancellation up to 24h.",
+    "_yoast_wpseo_focuskw": "walvis bay tours"
+   },
+   "elementor": [
+    {
+     "id": "8702064",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "margin": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      }
+     },
+     "elements": [
+      {
+       "id": "f260cd3",
+       "elType": "widget",
+       "settings": {
+        "background_image": {
+         "url": "{{home}}/wp-content/uploads/2026/03/skeleton-coast.jpg",
+         "id": "@att:skeleton-coast.jpg",
+         "size": "",
+         "alt": "",
+         "source": "library"
+        },
+        "eyebrow": "Women-led day tours · Walvis Bay & Swakopmund",
+        "title": "Namibia’s coast with Tuli and her team",
+        "highlight": "Tuli and her team",
+        "body": "Small groups of up to four, unhurried photo stops, and a local family business behind every trip. Sandwich Harbour 4x4, flamingos, Swakopmund, Dune 7 and Spitzkoppe, with free cancellation up to 24 hours before.",
+        "primary_cta_text": "See tours & prices",
+        "secondary_cta_text": "Book your tour",
+        "facts": [
+         {
+          "label": "Sandwich Harbour from",
+          "value": "US$135 per adult",
+          "_id": "88ee349"
+         }
+        ],
+        "concierge_label": "NEED HELP CHOOSING?",
+        "concierge_copy": "Not sure which tour fits your day? Ask our assistant about Sandwich Harbour timing, private departures or cruise port pickups.",
+        "concierge_button_label": "Ask The Assistant",
+        "slider_titles": [
+         {
+          "title": "Where the Ocean Kisses the Dunes",
+          "image": {
+           "url": "{{home}}/wp-content/uploads/2026/10/hero-sandwich-harbour-dunes-lagoon.webp",
+           "id": "@att:hero-sandwich-harbour-dunes-lagoon.webp"
+          },
+          "_id": "ea58209"
+         }
+        ]
+       },
+       "elements": [],
+       "widgetType": "twostars-home-luxury-hero"
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "d3e29ea",
+     "elType": "container",
+     "settings": {
+      "content_width": "full"
+     },
+     "elements": [
+      {
+       "id": "27c3a16",
+       "elType": "widget",
+       "settings": {
+        "eyebrow": "Why travellers book with Two Stars",
+        "title": "A local, women-led team, with room for every photo.",
+        "lead": "Tuli and her team run every trip themselves. Guests keep telling us the people made the day, so we keep the groups small and the pace human.",
+        "body": "Choose from Sandwich Harbour in a 4x4, flamingos and the Pink Salt Lake, Swakopmund with Dune 7, a full day at Spitzkoppe, or a private day built around you.",
+        "support_image": {
+         "url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-6.00.45-AM.jpeg",
+         "id": "@att:whatsapp-image-2026-03-27-at-6.00.45-am.jpeg",
+         "size": "",
+         "alt": "",
+         "source": "library"
+        },
+        "note_label": "Our promise",
+        "note_title": "Never more than four guests per vehicle.",
+        "note_body": "That means long photo stops, time for questions, clean pickups from your hotel or the cruise port, and free cancellation.",
+        "pillars": [
+         {
+          "title": "Women-led local team",
+          "copy": "A Walvis Bay family business, registered with the Namibia Tourism Board.",
+          "_id": "5cd7809"
+         },
+         {
+          "title": "Never more than four",
+          "copy": "Four guests per vehicle, so nobody is rushed and everyone has a window seat.",
+          "_id": "cb6727e"
+         },
+         {
+          "title": "Photographer pacing",
+          "copy": "Long, unhurried stops planned around the light, not a checklist.",
+          "_id": "5ace656"
+         },
+         {
+          "title": "Cruise-friendly",
+          "copy": "Pickup and drop-off at the Walvis Bay cruise port, or from your hotel.",
+          "_id": "44400df"
+         }
+        ],
+        "primary_cta_text": "See tours & prices",
+        "secondary_cta_text": "Chat on WhatsApp",
+        "ntb_logo": {
+         "url": "{{home}}/wp-content/uploads/2026/04/Namibia-Tourism-Board.png",
+         "id": "@att:namibia-tourism-board.png"
+        },
+        "main_image": {
+         "url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-60045-AM-Picsart-AiImageEnhancer.jpeg",
+         "id": "@att:whatsapp-image-2026-03-27-at-60045-am-picsart-aiimageenhancer.jpeg"
+        },
+        "inset_image": {
+         "url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-6.02.03-AM.jpeg",
+         "id": "@att:whatsapp-image-2026-03-27-at-6.02.03-am.jpeg"
+        },
+        "chip_number": "4",
+        "chip_text": "guests per vehicle, plus your guide. Always.",
+        "pill_text": "From US$135 per adult · Free cancellation up to 24h",
+        "footnote": "Registered with the Namibia Tourism Board · #TSO01736"
+       },
+       "elements": [],
+       "widgetType": "twostars-home-trust-story"
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "d39abd5",
+     "elType": "container",
+     "settings": {
+      "content_width": "full"
+     },
+     "elements": [
+      {
+       "id": "8860597",
+       "elType": "widget",
+       "settings": {
+        "eyebrow": "Tours & prices",
+        "title": "Choose your Namib coast day",
+        "intro": "Small groups, unhurried photo stops, and a local family business behind every trip. Free cancellation up to 24 hours before.",
+        "strip_copy": "Not sure which one to pick? Ask the assistant, or message Tuli and her team on WhatsApp.",
+        "strip_button_label": "Ask the assistant",
+        "tour_limit": 5,
+        "source": "auto"
+       },
+       "elements": [],
+       "widgetType": "twostars-home-signature-collection"
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "1d1fcd2",
+     "elType": "container",
+     "settings": {
+      "content_width": "full"
+     },
+     "elements": [
+      {
+       "id": "cc718e1",
+       "elType": "widget",
+       "settings": {
+        "eyebrow": "Guest Reviews",
+        "title": "What guests remember most",
+        "intro": "Real reviews from guests, many naming Tuli and her team.",
+        "auto_limit": 8,
+        "leave_review_label": "Leave a Review",
+        "view_all_label": "Read All Reviews",
+        "view_all_link": {
+         "url": "{{home}}/reviews/"
+        },
+        "leave_review_heading": "Share your Two Stars experience",
+        "leave_review_copy": "Tell future guests what stood out, whether it was the route, the guiding, the pickup, or the overall feel of the day.",
+        "grid_title": "More guest feedback"
+       },
+       "elements": [],
+       "widgetType": "twostars-reviews-showcase"
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "f4d60a4",
+     "elType": "container",
+     "settings": {
+      "content_width": "full"
+     },
+     "elements": [
+      {
+       "id": "6d8615d",
+       "elType": "widget",
+       "settings": {
+        "eyebrow": "Plan your day",
+        "title": "Pick a tour, or ask us for a private day.",
+        "intro": "Tell us your date, group size and pickup point. We will confirm availability and next steps.",
+        "promises": [
+         {
+          "item": "Pickup and drop-off from Walvis Bay, Swakopmund and the cruise port.",
+          "_id": "c7475f3"
+         },
+         {
+          "item": "Never more than four guests per vehicle.",
+          "_id": "943e2a9"
+         },
+         {
+          "item": "Free cancellation up to 24 hours before.",
+          "_id": "9f69a74"
+         }
+        ],
+        "assistant_label": "Want a quicker answer first?",
+        "assistant_button_label": "Ask The Assistant",
+        "submit_text": "Send my request",
+        "success_message": "Thanks. Your request is in and the team can now follow up with the right tour guidance."
+       },
+       "elements": [],
+       "widgetType": "twostars-home-planning-cta"
+      }
+     ],
+     "isInner": false
+    }
+   ]
+  },
+  {
+   "type": "page",
+   "slugs": [
+    "tours"
+   ],
+   "meta": {
+    "_yoast_wpseo_title": "Walvis Bay & Swakopmund Day Tours | Two Stars Tour & Safari",
+    "_yoast_wpseo_metadesc": "Small-group day tours from Walvis Bay & Swakopmund: Sandwich Harbour 4x4, flamingos, Dune 7, Spitzkoppe. Max 4 guests, free cancellation.",
+    "_yoast_wpseo_focuskw": "walvis bay tours"
+   },
+   "elementor": [
+    {
+     "id": "tourhero01",
+     "elType": "container",
+     "settings": {
+      "content_width": "full"
+     },
+     "elements": [
+      {
+       "id": "tourhero02",
+       "elType": "widget",
+       "settings": {
+        "background_image": {
+         "id": "@att:spitzkoppe-namibia-1.jpg",
+         "url": "{{home}}/wp-content/uploads/2026/03/spitzkoppe-namibia-1.jpg",
+         "source": "library",
+         "alt": "",
+         "size": ""
+        },
+        "subtitle": "Walvis Bay & Swakopmund day tours",
+        "title": "Walvis Bay Tours with\nTuli and her team",
+        "highlight_phrase": "Tuli",
+        "description": "Sandwich Harbour 4x4, flamingos and the Pink Salt Lake, Swakopmund and Dune 7, Spitzkoppe, or a private day. Small groups of up to four, unhurried photo stops, free cancellation up to 24 hours before.",
+        "cta_text": "Book now",
+        "cta_link": {
+         "url": "{{home}}/booking/",
+         "is_external": ""
+        },
+        "secondary_cta_text": "Ask on WhatsApp",
+        "secondary_cta_link": {
+         "url": "https://wa.me/264812060111",
+         "is_external": "on"
+        },
+        "stats": [
+         {
+          "value": "US$135",
+          "label": "Sandwich Harbour,\nper adult",
+          "_id": "3f468c0"
+         },
+         {
+          "value": "4",
+          "label": "Max guests\nper vehicle",
+          "_id": "26b0834"
+         },
+         {
+          "value": "24h",
+          "label": "Free cancellation\nbefore the tour",
+          "_id": "cf34b21"
+         }
+        ]
+       },
+       "elements": [],
+       "widgetType": "twostars-tours-hero"
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "tourgrid01",
+     "elType": "container",
+     "settings": {
+      "content_width": "full"
+     },
+     "elements": [
+      {
+       "id": "tourgrid02",
+       "elType": "widget",
+       "settings": {
+        "section_label": "All tours",
+        "section_title": "Choose your day",
+        "section_intro": "Sandwich Harbour is US$135 per adult. Children under 6 go free, ages 6 to 11 pay half price. Ask us for the price of any other tour.",
+        "group_id": "tours-main",
+        "empty_state_text": "No tours match that combination yet. Reach out directly and we will guide you to the closest fit or a private option."
+       },
+       "elements": [],
+       "widgetType": "twostars-tours-grid"
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "tourplan01",
+     "elType": "container",
+     "settings": {
+      "content_width": "full"
+     },
+     "elements": [
+      {
+       "id": "tourplan02",
+       "elType": "widget",
+       "settings": {
+        "subtitle": "Ready to book?",
+        "title": "Pick your day and book online",
+        "text": "Message us on WhatsApp if you would like help choosing between the tours.",
+        "primary_cta_text": "Book now",
+        "primary_cta_link": {
+         "url": "{{home}}/booking/",
+         "is_external": ""
+        },
+        "secondary_cta_text": "Ask on WhatsApp",
+        "secondary_cta_link": {
+         "url": "https://wa.me/264812060111",
+         "is_external": "on"
+        },
+        "trust_items": [
+         {
+          "text": "Max 4 guests per vehicle",
+          "_id": "02ed95a"
+         },
+         {
+          "text": "Free cancellation up to 24h",
+          "icon": {
+           "value": "fas fa-car-side",
+           "library": "fa-solid"
+          },
+          "_id": "2ddb0ab"
+         },
+         {
+          "text": "Pickup from hotels and the cruise port",
+          "icon": {
+           "value": "fas fa-comments",
+           "library": "fa-solid"
+          },
+          "_id": "6d521c9"
+         }
+        ]
+       },
+       "elements": [],
+       "widgetType": "twostars-planning-strip"
+      }
+     ],
+     "isInner": false
+    }
+   ]
+  },
+  {
+   "type": "page",
+   "slugs": [
+    "destinations"
+   ],
+   "meta": {
+    "_yoast_wpseo_title": "Places We Visit: Sandwich Harbour, Dune 7, Spitzkoppe | Two Stars",
+    "_yoast_wpseo_metadesc": "The places on our Walvis Bay tours: Sandwich Harbour, Walvis Bay Lagoon, Pink Salt Lake, Swakopmund, Dune 7 and Spitzkoppe.",
+    "_yoast_wpseo_focuskw": "walvis bay destinations"
+   },
+   "elementor": [
+    {
+     "id": "bbad806c",
+     "elType": "container",
+     "settings": {
+      "content_width": "full"
+     },
+     "elements": [
+      {
+       "id": "bb9908c9",
+       "elType": "widget",
+       "settings": {
+        "background_image": {
+         "id": "@att:whatsapp-image-2026-03-27-at-60045-am-2-picsart-aiimageenhancer.jpeg",
+         "url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-60045-AM-2-Picsart-AiImageEnhancer.jpeg",
+         "source": "library",
+         "alt": "",
+         "size": ""
+        },
+        "subtitle": "Walvis Bay • Swakopmund • Sandwich Harbour",
+        "title": "Places on our\nWalvis Bay tours",
+        "highlight_phrase": "Walvis Bay",
+        "description": "Flamingo lagoons, pink salt pans, dune viewpoints, Swakopmund landmarks and the granite peaks of Spitzkoppe: the places our small groups visit.",
+        "cta_text": "See tours & prices",
+        "cta_link": {
+         "url": "{{home}}/tours/",
+         "is_external": ""
+        },
+        "secondary_cta_text": "Book now",
+        "secondary_cta_link": {
+         "url": "{{home}}/booking/",
+         "is_external": ""
+        },
+        "overlay_opacity": {
+         "unit": "%",
+         "size": 54
+        },
+        "stats": [
+         {
+          "_id": "dh1",
+          "value": "6",
+          "label": "Destinations"
+         },
+         {
+          "_id": "dh2",
+          "value": "5",
+          "label": "Tours"
+         },
+         {
+          "_id": "dh3",
+          "value": "Walvis Bay",
+          "label": "Our base"
+         }
+        ]
+       },
+       "elements": [],
+       "widgetType": "twostars-destinations-hero"
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "bbc20479",
+     "elType": "container",
+     "settings": {
+      "content_width": "full"
+     },
+     "elements": [
+      {
+       "id": "bbba4380",
+       "elType": "widget",
+       "settings": {
+        "section_label": "Why These Places Matter",
+        "section_title": "Stops on the route",
+        "section_intro": "The main places featured across our tours.",
+        "items": [
+         {
+          "_id": "dhi1",
+          "image_url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-6.00.45-AM-8.jpeg",
+          "title": "Coastal Birdlife",
+          "description": "Walvis Bay Lagoon brings flamingos, wetland calm, and a scenic coastal start to the route."
+         },
+         {
+          "_id": "dhi2",
+          "image_url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-6.00.45-AM-2.jpeg",
+          "title": "Salt Pan Color",
+          "description": "Pink Salt Lake adds contrast, photography appeal, and one of the most memorable visual stops near Walvis Bay."
+         },
+         {
+          "_id": "dhi3",
+          "image_url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-5.55.41-AM-2.jpeg",
+          "title": "Dune Drama",
+          "description": "Sandwich Harbour and Dune 7 deliver the desert scale and energy that guests travel to Namibia to feel."
+         },
+         {
+          "_id": "dhi4",
+          "image_url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-6.00.45-AM.jpeg",
+          "title": "Route Logic",
+          "description": "Because these stops connect naturally, the day stays scenic, practical, and easy to enjoy from start to finish."
+         }
+        ]
+       },
+       "elements": [],
+       "widgetType": "twostars-destinations-highlights"
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "bbe5f268",
+     "elType": "container",
+     "settings": {
+      "content_width": "full"
+     },
+     "elements": [
+      {
+       "id": "bbd3a61e",
+       "elType": "widget",
+       "settings": {
+        "section_label": "Destination Collection",
+        "section_title": "Explore the places behind the tours",
+        "section_intro": "Open a destination to see what it offers and which tours include it."
+       },
+       "elements": [],
+       "widgetType": "twostars-destinations-grid"
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "bc0c02f9",
+     "elType": "container",
+     "settings": {
+      "content_width": "full"
+     },
+     "elements": [
+      {
+       "id": "bbfa724b",
+       "elType": "widget",
+       "settings": {
+        "subtitle": "Turn places into a plan",
+        "title": "Which place do you want to see?",
+        "text": "Tell us the stop you are keen on and we will point you to the tour that includes it.",
+        "cta_text": "See tours & prices",
+        "cta_link": {
+         "url": "{{home}}/booking/",
+         "is_external": ""
+        },
+        "secondary_cta_text": "Ask on WhatsApp",
+        "secondary_cta_link": {
+         "url": "https://wa.me/264812060111",
+         "is_external": "true"
+        },
+        "trust_items": [
+         {
+          "_id": "dpt1",
+          "text": "Max 4 guests per vehicle"
+         },
+         {
+          "_id": "dpt2",
+          "icon": {
+           "value": "fas fa-car-side",
+           "library": "fa-solid"
+          },
+          "text": "Private options available"
+         },
+         {
+          "_id": "dpt3",
+          "icon": {
+           "value": "fas fa-comments",
+           "library": "fa-solid"
+          },
+          "text": "Free cancellation"
+         }
+        ]
+       },
+       "elements": [],
+       "widgetType": "twostars-destination-planning-strip"
+      }
+     ],
+     "isInner": false
+    }
+   ]
+  },
+  {
+   "type": "page",
+   "slugs": [
+    "about"
+   ],
+   "meta": {
+    "_yoast_wpseo_title": "Meet Tuli & the Team: Women-Led Tours in Walvis Bay | Two Stars",
+    "_yoast_wpseo_metadesc": "Meet Tuli and the women-led team behind Two Stars Tour & Safari, a Walvis Bay family business. NTB registered #TSO01736. Small groups of four.",
+    "_yoast_wpseo_focuskw": "two stars tour and safari"
+   },
+   "elementor": [
+    {
+     "id": "3eafba9d",
+     "elType": "container",
+     "isInner": false,
+     "settings": {
+      "content_width": "full"
+     },
+     "elements": [
+      {
+       "id": "3e9b8c37",
+       "elType": "widget",
+       "widgetType": "twostars-about-hero",
+       "settings": {
+        "background_image": {
+         "id": "@att:whatsapp-image-2026-03-27-at-5.55.41-am-2.jpeg",
+         "url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-5.55.41-AM-2.jpeg",
+         "source": "library"
+        },
+        "headline_text": "Meet Tuli\nand the team",
+        "subheadline_text": "A women-led local family business from Walvis Bay. We keep our groups small, our stops long and our welcome personal.",
+        "content_alignment": "left",
+        "overlay_opacity": {
+         "unit": "%",
+         "size": 56
+        },
+        "eyebrow_text": "About Two Stars Tour & Safari",
+        "highlight_phrase": "Tuli",
+        "excerpt_text": "A women-led local family business from Walvis Bay, running small-group day tours with unhurried photo stops.",
+        "primary_cta_text": "Our story",
+        "primary_cta_link": {
+         "url": "{{home}}/about/#about-story"
+        },
+        "secondary_cta_text": "See tours & prices",
+        "secondary_cta_link": {
+         "url": "{{home}}/tours/"
+        },
+        "stats": [
+         {
+          "_id": "ah1",
+          "value": "4",
+          "label": "Max guests per vehicle"
+         },
+         {
+          "_id": "ah2",
+          "value": "#TSO01736",
+          "label": "NTB registered"
+         },
+         {
+          "_id": "ah3",
+          "value": "Women-led",
+          "label": "Local team"
+         }
+        ]
+       },
+       "elements": []
+      }
+     ]
+    },
+    {
+     "id": "3ecfed33",
+     "elType": "container",
+     "isInner": false,
+     "settings": {
+      "content_width": "full"
+     },
+     "elements": [
+      {
+       "id": "3ebaa68c",
+       "elType": "widget",
+       "widgetType": "twostars-about-story",
+       "settings": {
+        "section_label": "Our story",
+        "heading": "A Walvis Bay family business, led by Tuli",
+        "body_content": "<p>Two Stars Tour & Safari is run by Tulimeke (Tuli) and her team in Walvis Bay. We are a women-led local business, registered with the Namibia Tourism Board (#TSO01736), and we take guests to the places we know best: the flamingo lagoon and Pink Salt Lake, the dunes of Sandwich Harbour, Swakopmund, Dune 7 and Spitzkoppe.</p><p>We keep every group to a maximum of four guests per vehicle. That means no rushing, long photo stops, and time to ask questions. Many of our guests mention Tuli and the team by name in their reviews, and that is exactly the kind of day we are aiming for.</p><p>We focus on coastal and desert day tours that feel personal, well paced and grounded in local knowledge. When you travel with Two Stars, you travel with people who call this coast home.</p>",
+        "image": {
+         "id": "@att:whatsapp-image-2026-03-27-at-60045-am-picsart-aiimageenhancer.jpeg",
+         "url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-60045-AM-Picsart-AiImageEnhancer.jpeg",
+         "source": "library"
+        },
+        "image_position": "right",
+        "enable_stats_row": "yes",
+        "stats": [
+         {
+          "_id": "stat1",
+          "value": "Walvis Bay",
+          "label": "Our base"
+         },
+         {
+          "_id": "stat2",
+          "value": "Max 4",
+          "label": "Guests per vehicle"
+         },
+         {
+          "_id": "stat3",
+          "value": "24h",
+          "label": "Free cancellation"
+         }
+        ]
+       },
+       "elements": []
+      }
+     ]
+    },
+    {
+     "id": "3ee92464",
+     "elType": "container",
+     "isInner": false,
+     "settings": {
+      "content_width": "full"
+     },
+     "elements": [
+      {
+       "id": "3ed23873",
+       "elType": "widget",
+       "widgetType": "twostars-about-values",
+       "settings": {
+        "section_title": "Why guests choose Two Stars",
+        "section_subtitle": "Local people, small groups and a pace set by the light and your group.",
+        "columns": "3",
+        "values": [
+         {
+          "_id": "val1",
+          "icon": {
+           "value": "fas fa-map-marker-alt",
+           "library": "fa-solid"
+          },
+          "title": "Women-led local team",
+          "description": "Tuli and her team guide the places they work in every day, from Walvis Bay and Sandwich Harbour to Swakopmund, Dune 7 and Spitzkoppe."
+         },
+         {
+          "_id": "val2",
+          "icon": {
+           "value": "fas fa-users",
+           "library": "fa-solid"
+          },
+          "title": "Small groups",
+          "description": "A maximum of four guests per vehicle, so the day stays personal and comfortable."
+         },
+         {
+          "_id": "val3",
+          "icon": {
+           "value": "fas fa-clock",
+           "library": "fa-solid"
+          },
+          "title": "Free cancellation",
+          "description": "Cancel up to 24 hours before the experience starts for a full refund."
+         }
+        ]
+       },
+       "elements": []
+      }
+     ]
+    },
+    {
+     "id": "3f015879",
+     "elType": "container",
+     "isInner": false,
+     "settings": {
+      "content_width": "full"
+     },
+     "elements": [
+      {
+       "id": "3efd7322",
+       "elType": "widget",
+       "widgetType": "twostars-about-tours-overview",
+       "settings": {
+        "section_label": "Our tours",
+        "section_title": "Day tours from Walvis Bay and Swakopmund",
+        "section_subtitle": "From relaxed flamingo mornings to a full day at Spitzkoppe.",
+        "auto_populate_tours": "yes",
+        "posts_to_show": 5,
+        "grid_columns": "3"
+       },
+       "elements": []
+      }
+     ]
+    },
+    {
+     "id": "3f21e48c",
+     "elType": "container",
+     "isInner": false,
+     "settings": {
+      "content_width": "full"
+     },
+     "elements": [
+      {
+       "id": "3f131b3b",
+       "elType": "widget",
+       "widgetType": "twostars-about-commitment",
+       "settings": {
+        "section_title": "Our promise to you",
+        "items_per_row": "2",
+        "commitment_items": [
+         {
+          "_id": "com1",
+          "icon": {
+           "value": "fas fa-shield-alt",
+           "library": "fa-solid"
+          },
+          "title": "Safety First",
+          "description": "Your safety and comfort stay central from pickup to return, with sensible pacing and dependable vehicles."
+         },
+         {
+          "_id": "com2",
+          "icon": {
+           "value": "fas fa-comments",
+           "library": "fa-solid"
+          },
+          "title": "Honest Planning",
+          "description": "We help guests choose the experience that really fits, instead of pushing the same answer for everyone."
+         },
+         {
+          "_id": "com3",
+          "icon": {
+           "value": "fas fa-leaf",
+           "library": "fa-solid"
+          },
+          "title": "Respect for Nature",
+          "description": "Wildlife, lagoons, and desert landscapes are treated with care so the experience stays responsible as well as memorable."
+         },
+         {
+          "_id": "com4",
+          "icon": {
+           "value": "fas fa-phone-alt",
+           "library": "fa-solid"
+          },
+          "title": "Clear Communication",
+          "description": "Booking, pickups, private requests, and next steps stay simple and direct from the first message onward."
+         }
+        ],
+        "items": [
+         {
+          "title": "Safety first",
+          "description": "Your safety and comfort come first, from pickup to return, with sensible pacing and dependable vehicles."
+         },
+         {
+          "title": "Honest advice",
+          "description": "We help you pick the tour that really fits your day, instead of pushing the same answer to everyone."
+         },
+         {
+          "title": "Respect for nature",
+          "description": "Wildlife, lagoons and desert landscapes are treated with care."
+         },
+         {
+          "title": "Clear, quick communication",
+          "description": "Booking, pickups and private requests stay simple and direct, by WhatsApp or email."
+         }
+        ]
+       },
+       "elements": []
+      }
+     ]
+    },
+    {
+     "id": "3f4f33ba",
+     "elType": "container",
+     "isInner": false,
+     "settings": {
+      "content_width": "full"
+     },
+     "elements": [
+      {
+       "id": "3f37f975",
+       "elType": "widget",
+       "widgetType": "twostars-about-location-expertise",
+       "settings": {
+        "section_title": "Why we are based in Walvis Bay",
+        "body_content": "<p>Walvis Bay and Swakopmund sit where the Atlantic meets the Namib Desert. That means flamingo lagoons, pink salt pans, windswept coastal roads and the dunes of Sandwich Harbour dropping toward the ocean, all within a short drive.</p><p>Living here lets us plan around weather windows and the best light, and choose the stops that make a day feel complete.</p>",
+        "enable_highlights": "yes",
+        "highlights": [
+         {
+          "_id": "hl1",
+          "icon": {
+           "value": "fas fa-water",
+           "library": "fa-solid"
+          },
+          "text": "Direct access to Walvis Bay Lagoon"
+         },
+         {
+          "_id": "hl2",
+          "icon": {
+           "value": "fas fa-road",
+           "library": "fa-solid"
+          },
+          "text": "Short transfer to Swakopmund"
+         },
+         {
+          "_id": "hl3",
+          "icon": {
+           "value": "fas fa-map-pin",
+           "library": "fa-solid"
+          },
+          "text": "Convenient coastal pickup routes"
+         },
+         {
+          "_id": "hl4",
+          "icon": {
+           "value": "fas fa-mountain",
+           "library": "fa-solid"
+          },
+          "text": "Gateway to Sandwich Harbour, Dune 7, and Spitzkoppe"
+         }
+        ],
+        "visual_type": "image",
+        "image": {
+         "id": "@att:whatsapp-image-2026-03-27-at-6.00.45-am.jpeg",
+         "url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-6.00.45-AM.jpeg",
+         "source": "library"
+        }
+       },
+       "elements": []
+      }
+     ]
+    },
+    {
+     "id": "3f6766d8",
+     "elType": "container",
+     "isInner": false,
+     "settings": {
+      "content_width": "full"
+     },
+     "elements": [
+      {
+       "id": "3f56b180",
+       "elType": "widget",
+       "widgetType": "twostars-about-cta",
+       "settings": {
+        "title": "Ready to explore Namibia’s coast with us?",
+        "subtext": "Pick a tour and book online, or message us on WhatsApp and we will help you choose.",
+        "primary_cta_text": "See tours & prices",
+        "primary_cta_link": {
+         "url": "https://calendly.com/creativesites263/30min",
+         "is_external": "true"
+        },
+        "secondary_cta_text": "Ask on WhatsApp",
+        "secondary_cta_link": {
+         "url": "https://wa.me/264812060111",
+         "is_external": "true"
+        },
+        "trust_items": [
+         {
+          "_id": "tr1",
+          "icon": {
+           "value": "fas fa-check-circle",
+           "library": "fa-solid"
+          },
+          "text": "Free cancellation up to 24h"
+         },
+         {
+          "_id": "tr2",
+          "icon": {
+           "value": "fas fa-map-pin",
+           "library": "fa-solid"
+          },
+          "text": "Women-led local team"
+         },
+         {
+          "_id": "tr3",
+          "icon": {
+           "value": "fas fa-users",
+           "library": "fa-solid"
+          },
+          "text": "Max 4 guests per vehicle"
+         }
+        ]
+       },
+       "elements": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "page",
+   "slugs": [
+    "faqs"
+   ],
+   "meta": {
+    "_yoast_wpseo_title": "Walvis Bay Tour FAQs: Prices, Pickups, Cancellation | Two Stars",
+    "_yoast_wpseo_metadesc": "Answers on prices, pickups, group size, free cancellation and private tours for Two Stars day tours from Walvis Bay and Swakopmund.",
+    "_yoast_wpseo_focuskw": "walvis bay tour faq"
+   },
+   "elementor": [
+    {
+     "id": "7d24ba29",
+     "elType": "container",
+     "isInner": false,
+     "settings": {
+      "content_width": "full"
+     },
+     "elements": [
+      {
+       "id": "7d1d0fb9",
+       "elType": "widget",
+       "widgetType": "twostars-faq-hero",
+       "settings": {
+        "background_image": {
+         "id": "@att:whatsapp-image-2026-03-27-at-6.00.45-am.jpeg",
+         "url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-6.00.45-AM.jpeg",
+         "source": "library"
+        },
+        "label": "Before you book",
+        "headline_text": "Questions\nBefore You Book",
+        "subheadline_text": "Prices, pickups, group size, cancellation and what to expect on a Two Stars day tour from Walvis Bay or Swakopmund.",
+        "stat_value": "Quick answers",
+        "stat_label": "Or ask on WhatsApp",
+        "overlay_opacity": {
+         "unit": "%",
+         "size": 54
+        },
+        "highlight_phrase": "Before",
+        "primary_cta_text": "See tours & prices",
+        "primary_cta_link": {
+         "url": "{{home}}/tours/"
+        },
+        "secondary_cta_text": "Ask on WhatsApp",
+        "secondary_cta_link": {
+         "url": "https://wa.me/264812060111",
+         "is_external": "true"
+        },
+        "stats": [
+         {
+          "_id": "fh1",
+          "value": "US$135",
+          "label": "Sandwich Harbour,\nper adult"
+         },
+         {
+          "_id": "fh2",
+          "value": "4",
+          "label": "Max guests\nper vehicle"
+         },
+         {
+          "_id": "fh3",
+          "value": "24h",
+          "label": "Free cancellation"
+         }
+        ]
+       },
+       "elements": []
+      }
+     ]
+    },
+    {
+     "id": "7d4b8b4b",
+     "elType": "container",
+     "isInner": false,
+     "settings": {
+      "content_width": "full"
+     },
+     "elements": [
+      {
+       "id": "7d3a5910",
+       "elType": "widget",
+       "widgetType": "twostars-faq-accordion",
+       "settings": {
+        "section_label": "Planning Answers",
+        "heading": "Frequently asked questions",
+        "intro": "Pickups, prices, private tours and what is included.",
+        "posts_to_show": 8,
+        "open_first": "yes"
+       },
+       "elements": []
+      }
+     ]
+    },
+    {
+     "id": "7d6ea5a4",
+     "elType": "container",
+     "isInner": false,
+     "settings": {
+      "content_width": "full"
+     },
+     "elements": [
+      {
+       "id": "7d5d4726",
+       "elType": "widget",
+       "widgetType": "twostars-faq-cta",
+       "settings": {
+        "subtitle": "Still deciding?",
+        "title": "Need help choosing a tour?",
+        "text": "Ask about pickups, private days or which tour fits you best and we will point you in the right direction.",
+        "primary_cta_text": "See tours & prices",
+        "primary_cta_link": {
+         "url": "https://calendly.com/creativesites263/30min",
+         "is_external": "true"
+        },
+        "secondary_cta_text": "Ask on WhatsApp",
+        "secondary_cta_link": {
+         "url": "https://wa.me/264812060111",
+         "is_external": "true"
+        },
+        "trust_items": [
+         {
+          "_id": "ft1",
+          "icon": {
+           "value": "fas fa-map-pin",
+           "library": "fa-solid"
+          },
+          "text": "Pickup from hotels and the cruise port"
+         },
+         {
+          "_id": "ft2",
+          "icon": {
+           "value": "fas fa-car-side",
+           "library": "fa-solid"
+          },
+          "text": "Private tours available"
+         },
+         {
+          "_id": "ft3",
+          "icon": {
+           "value": "fas fa-comments",
+           "library": "fa-solid"
+          },
+          "text": "Free cancellation up to 24h"
+         }
+        ]
+       },
+       "elements": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "page",
+   "slugs": [
+    "contact"
+   ],
+   "meta": {
+    "_yoast_wpseo_title": "Contact Two Stars Tour & Safari | Walvis Bay Tours",
+    "_yoast_wpseo_metadesc": "WhatsApp +264 81 206 0111 or email info@twostarstourandsafari.com to book a Walvis Bay or Swakopmund day tour, or plan a private day.",
+    "_yoast_wpseo_focuskw": "contact two stars tour and safari"
+   },
+   "elementor": [
+    {
+     "id": "5dadb3c",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "margin": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      }
+     },
+     "elements": [
+      {
+       "id": "8e688eb",
+       "elType": "widget",
+       "settings": {
+        "background_image": {
+         "url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-60045-AM-Picsart-AiImageEnhancer.jpeg",
+         "id": "@att:whatsapp-image-2026-03-27-at-60045-am-picsart-aiimageenhancer.jpeg",
+         "size": "",
+         "alt": "",
+         "source": "library"
+        },
+        "label": "Contact Two Stars",
+        "highlight_text": "Talk to Tuli and the team",
+        "note_text": "Tell us the tour you like, your date and group size, or ask for a private day. WhatsApp is the fastest way to reach us.",
+        "show_concierge": "",
+        "concierge_name": "Sarah",
+        "concierge_role": "Senior Safari Designer",
+        "concierge_availability": "Available for consultations"
+       },
+       "elements": [],
+       "widgetType": "twostars-contact-hero"
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "f802898",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "margin": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      }
+     },
+     "elements": [
+      {
+       "id": "7612d0c",
+       "elType": "widget",
+       "settings": {
+        "contact_items": [
+         {
+          "label": "WhatsApp or call",
+          "value": "+264 81 206 0111",
+          "_id": "8526a30"
+         },
+         {
+          "label": "Email",
+          "value": "info@twostarstourandsafari.com",
+          "_id": "42bb7e6"
+         },
+         {
+          "label": "Pickups",
+          "value": "Walvis Bay hotels, Swakopmund hotels and the cruise port",
+          "_id": "2c16968"
+         }
+        ],
+        "form_title": "Ask about a tour",
+        "success_message": "Thanks, your message is in. We will get back to you soon.",
+        "submit_text": "Send message",
+        "placeholder_name": "Full Name",
+        "placeholder_email": "Email Address",
+        "placeholder_phone": "Phone or WhatsApp",
+        "placeholder_dates": "Preferred tour date",
+        "placeholder_message": "Tell us which tour you want, whether you need pickup from Walvis Bay or Swakopmund, and if you want a private option.",
+        "default_tour": "284",
+        "intelligence_note_label": "Prices",
+        "intelligence_note_copy": "Sandwich Harbour is US$135 per adult. Children under 6 go free, ages 6 to 11 pay half price. Cancel up to 24 hours before for a full refund.",
+        "whatsapp_number": "264812060111",
+        "whatsapp_text": "Chat on WhatsApp"
+       },
+       "elements": [],
+       "widgetType": "twostars-contact-section"
+      }
+     ],
+     "isInner": false
+    }
+   ]
+  },
+  {
+   "type": "page",
+   "slugs": [
+    "reviews"
+   ],
+   "meta": {
+    "_yoast_wpseo_title": "Guest Reviews: Walvis Bay Tours with Tuli & Team | Two Stars",
+    "_yoast_wpseo_metadesc": "Read real guest reviews of Two Stars day tours in Walvis Bay, Sandwich Harbour and Swakopmund. Small groups, free cancellation.",
+    "_yoast_wpseo_focuskw": "walvis bay tour reviews"
+   },
+   "elementor": [
+    {
+     "id": "1245326",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "margin": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      },
+      "background_background": "classic"
+     },
+     "elements": [
+      {
+       "id": "8933c15",
+       "elType": "widget",
+       "settings": {
+        "background_image": {
+         "url": "{{home}}/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-07-at-1.34.32-PM.jpeg",
+         "id": "@att:whatsapp-image-2026-04-07-at-1.34.32-pm.jpeg",
+         "size": "",
+         "alt": "",
+         "source": "library"
+        },
+        "label": "Guest Reviews",
+        "title": "Guest reviews: Two Stars Tour & Safari",
+        "excerpt": "Real reviews from guests who toured Walvis Bay, Sandwich Harbour and Swakopmund with Tuli and her team.",
+        "eyebrow_text": "Guest reviews",
+        "headline_text": "What guests say about Tuli and the team",
+        "highlight_phrase": "Tuli",
+        "excerpt_text": "Warm, specific and honest: words from real guests on our Walvis Bay, Sandwich Harbour and Swakopmund tours.",
+        "primary_cta_text": "Read reviews",
+        "secondary_cta_text": "See tours & prices"
+       },
+       "elements": [],
+       "widgetType": "twostars-testimonials-hero"
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "ee56a63",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "margin": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      },
+      "background_background": "classic"
+     },
+     "elements": [
+      {
+       "id": "f0188d4",
+       "elType": "widget",
+       "settings": {
+        "eyebrow": "Verified on this site",
+        "title": "Recent reviews from our guests",
+        "intro": "Reviews are submitted by guests and approved by the Two Stars team before they go live.",
+        "auto_limit": 12,
+        "leave_review_label": "Leave a Review",
+        "view_all_label": "See tours & prices",
+        "view_all_link": {
+         "url": "{{home}}/booking/"
+        },
+        "leave_review_heading": "Share your Two Stars experience",
+        "leave_review_copy": "Toured with us? Tell future guests what stood out.",
+        "show_grid": "yes",
+        "grid_title": "More reviews",
+        "bg_image": {
+         "url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-5.55.41-AM-2.jpeg",
+         "id": "@att:whatsapp-image-2026-03-27-at-5.55.41-am-2.jpeg",
+         "size": "",
+         "alt": "",
+         "source": "library"
+        }
+       },
+       "elements": [],
+       "widgetType": "twostars-reviews-showcase"
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "c61e6b8",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "margin": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      },
+      "background_background": "classic"
+     },
+     "elements": [
+      {
+       "id": "11d801f",
+       "elType": "widget",
+       "settings": {
+        "subtitle": "Ready for your own day on the coast?",
+        "title": "Join a small group of up to four, with free cancellation up to 24 hours before.",
+        "cta_text": "See tours & prices",
+        "cta_link": {
+         "url": "{{home}}/booking/"
+        }
+       },
+       "elements": [],
+       "widgetType": "twostars-testimonials-cta"
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "64d838f",
+     "elType": "container",
+     "settings": [],
+     "elements": [
+      {
+       "id": "03b452d",
+       "elType": "widget",
+       "settings": {
+        "heading": "Tours our guests review",
+        "posts_to_show": 5
+       },
+       "elements": [],
+       "widgetType": "twostars-testimonials-grid"
+      }
+     ],
+     "isInner": false
+    }
+   ]
+  },
+  {
+   "type": "page",
+   "slugs": [
+    "gallery"
+   ],
+   "meta": {
+    "_yoast_wpseo_title": "Photos: Sandwich Harbour, Flamingos & Namib Dunes | Two Stars",
+    "_yoast_wpseo_metadesc": "Photos from Two Stars day tours in Walvis Bay: Sandwich Harbour dunes, flamingos, the Pink Salt Lake and Spitzkoppe.",
+    "_yoast_wpseo_focuskw": "sandwich harbour photos"
+   },
+   "elementor": [
+    {
+     "id": "b47b6be",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "margin": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      }
+     },
+     "elements": [
+      {
+       "id": "18ad7e8",
+       "elType": "widget",
+       "settings": {
+        "eyebrow_text": "Walvis Bay & Swakopmund",
+        "headline_text": "Photos from our tours",
+        "highlight_phrase": "tours",
+        "excerpt_text": "Dunes, flamingos, salt pans and granite peaks, photographed on real Two Stars tours.",
+        "primary_cta_text": "See tours & prices",
+        "secondary_cta_text": "Book now",
+        "background_image": {
+         "url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-60045-AM-2-Picsart-AiImageEnhancer.jpeg",
+         "id": "@att:whatsapp-image-2026-03-27-at-60045-am-2-picsart-aiimageenhancer.jpeg",
+         "size": "",
+         "alt": "",
+         "source": "library"
+        }
+       },
+       "elements": [],
+       "widgetType": "twostars-gallery-hero"
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "c39efc7",
+     "elType": "container",
+     "settings": {
+      "content_width": "full"
+     },
+     "elements": [
+      {
+       "id": "5dec718",
+       "elType": "widget",
+       "settings": {
+        "section_eyebrow": "Gallery",
+        "section_title": "A day with Two Stars",
+        "section_subtitle": "Coastal dunes, flamingo lagoons and wide Namib skies, from our guests and our team.",
+        "filter_items": [
+         {
+          "filter_label": "All",
+          "filter_slug": "all",
+          "_id": "e967b5e"
+         },
+         {
+          "filter_label": "Coastal",
+          "filter_slug": "coastal",
+          "_id": "fdcc1f6"
+         },
+         {
+          "filter_label": "Dunes",
+          "filter_slug": "dunes",
+          "_id": "057ace1"
+         },
+         {
+          "filter_label": "Wildlife",
+          "filter_slug": "wildlife",
+          "_id": "bd0d806"
+         },
+         {
+          "filter_label": "Tours",
+          "filter_slug": "tours",
+          "_id": "7e057d6"
+         }
+        ],
+        "images": [
+         {
+          "id": "@att:whatsapp-image-2026-04-07-at-11.27.21-am-2.jpeg",
+          "url": "{{home}}/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-07-at-11.27.21-AM-2.jpeg"
+         },
+         {
+          "id": "@att:whatsapp-image-2026-03-27-at-6.00.45-am-9.jpeg",
+          "url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-6.00.45-AM-9.jpeg"
+         },
+         {
+          "id": "@att:whatsapp-image-2026-03-27-at-60045-am-picsart-aiimageenhancer.jpeg",
+          "url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-60045-AM-Picsart-AiImageEnhancer.jpeg"
+         },
+         {
+          "id": "@att:whatsapp-image-2026-04-07-at-1.34.32-pm-2.jpeg",
+          "url": "{{home}}/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-07-at-1.34.32-PM-2.jpeg"
+         },
+         {
+          "id": "@att:whatsapp-image-2026-04-07-at-1.34.32-pm-3.jpeg",
+          "url": "{{home}}/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-07-at-1.34.32-PM-3.jpeg"
+         },
+         {
+          "id": "@att:whatsapp-image-2026-04-07-at-11.27.23-am-2.jpeg",
+          "url": "{{home}}/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-07-at-11.27.23-AM-2.jpeg"
+         },
+         {
+          "id": "@att:whatsapp-image-2026-04-07-at-11.27.22-am.jpeg",
+          "url": "{{home}}/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-07-at-11.27.22-AM.jpeg"
+         },
+         {
+          "id": "@att:whatsapp-image-2026-04-07-at-11.27.21-am.jpeg",
+          "url": "{{home}}/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-07-at-11.27.21-AM.jpeg"
+         },
+         {
+          "id": "@att:whatsapp-image-2026-03-27-at-6.00.45-am-10.jpeg",
+          "url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-6.00.45-AM-10.jpeg"
+         },
+         {
+          "id": "@att:whatsapp-image-2026-04-07-at-11.27.23-am.jpeg",
+          "url": "{{home}}/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-07-at-11.27.23-AM.jpeg"
+         },
+         {
+          "id": "@att:whatsapp-image-2026-04-07-at-11.27.22-am-2.jpeg",
+          "url": "{{home}}/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-07-at-11.27.22-AM-2.jpeg"
+         },
+         {
+          "id": "@att:whatsapp-image-2026-04-07-at-11.27.20-am.jpeg",
+          "url": "{{home}}/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-07-at-11.27.20-AM.jpeg"
+         },
+         {
+          "id": "@att:whatsapp-image-2026-04-07-at-1.34.32-pm.jpeg",
+          "url": "{{home}}/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-07-at-1.34.32-PM.jpeg"
+         },
+         {
+          "id": "@att:whatsapp-image-2026-04-07-at-1.34.33-pm.jpeg",
+          "url": "{{home}}/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-07-at-1.34.33-PM.jpeg"
+         },
+         {
+          "id": "@att:whatsapp-image-2026-03-27-at-60045-am-2-picsart-aiimageenhancer.jpeg",
+          "url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-60045-AM-2-Picsart-AiImageEnhancer.jpeg"
+         },
+         {
+          "id": "@att:whatsapp-image-2026-03-27-at-6.00.46-am-3.jpeg",
+          "url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-6.00.46-AM-3.jpeg"
+         },
+         {
+          "id": "@att:whatsapp-image-2026-03-27-at-6.00.46-am.jpeg",
+          "url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-6.00.46-AM.jpeg"
+         },
+         {
+          "id": "@att:whatsapp-image-2026-03-27-at-6.00.46-am-2.jpeg",
+          "url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-6.00.46-AM-2.jpeg"
+         },
+         {
+          "id": "@att:whatsapp-image-2026-03-27-at-6.02.03-am-2.jpeg",
+          "url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-6.02.03-AM-2.jpeg"
+         },
+         {
+          "id": "@att:whatsapp-image-2026-03-27-at-6.00.45-am-8.jpeg",
+          "url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-6.00.45-AM-8.jpeg"
+         },
+         {
+          "id": "@att:whatsapp-image-2026-03-27-at-6.00.45-am-7.jpeg",
+          "url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-6.00.45-AM-7.jpeg"
+         },
+         {
+          "id": "@att:whatsapp-image-2026-03-27-at-6.00.45-am-6.jpeg",
+          "url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-6.00.45-AM-6.jpeg"
+         },
+         {
+          "id": "@att:whatsapp-image-2026-03-27-at-6.00.45-am-4.jpeg",
+          "url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-6.00.45-AM-4.jpeg"
+         },
+         {
+          "id": "@att:whatsapp-image-2026-03-27-at-6.00.41-am.jpeg",
+          "url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-6.00.41-AM.jpeg"
+         },
+         {
+          "id": "@att:whatsapp-image-2026-03-27-at-6.00.45-am-2.jpeg",
+          "url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-6.00.45-AM-2.jpeg"
+         },
+         {
+          "id": "@att:two-stars-4x4-and-picnic-table-sandwich-harbour-dunes.webp",
+          "url": "{{home}}/wp-content/uploads/2026/10/two-stars-4x4-and-picnic-table-sandwich-harbour-dunes.webp"
+         },
+         {
+          "id": "@att:guests-celebrating-at-picnic-table-two-stars-4x4.webp",
+          "url": "{{home}}/wp-content/uploads/2026/10/guests-celebrating-at-picnic-table-two-stars-4x4.webp"
+         },
+         {
+          "id": "@att:sunset-picnic-table-sandwich-harbour-dunes-guests.webp",
+          "url": "{{home}}/wp-content/uploads/2026/10/sunset-picnic-table-sandwich-harbour-dunes-guests.webp"
+         },
+         {
+          "id": "@att:sunset-picnic-table-on-sand-dune-two-guests.webp",
+          "url": "{{home}}/wp-content/uploads/2026/10/sunset-picnic-table-on-sand-dune-two-guests.webp"
+         },
+         {
+          "id": "@att:sunset-over-the-atlantic-namibia-coast.webp",
+          "url": "{{home}}/wp-content/uploads/2026/10/sunset-over-the-atlantic-namibia-coast.webp"
+         },
+         {
+          "id": "@att:flamingos-wading-walvis-bay-lagoon.webp",
+          "url": "{{home}}/wp-content/uploads/2026/10/flamingos-wading-walvis-bay-lagoon.webp"
+         },
+         {
+          "id": "@att:pink-salt-lake-shoreline-walvis-bay.webp",
+          "url": "{{home}}/wp-content/uploads/2026/10/pink-salt-lake-shoreline-walvis-bay.webp"
+         },
+         {
+          "id": "@att:pink-lagoon-horizon-walvis-bay.webp",
+          "url": "{{home}}/wp-content/uploads/2026/10/pink-lagoon-horizon-walvis-bay.webp"
+         },
+         {
+          "id": "@att:salt-flats-pink-lagoon-walvis-bay-guests-walking.webp",
+          "url": "{{home}}/wp-content/uploads/2026/10/salt-flats-pink-lagoon-walvis-bay-guests-walking.webp"
+         },
+         {
+          "id": "@att:two-stars-4x4-parked-on-sandwich-harbour-dune.webp",
+          "url": "{{home}}/wp-content/uploads/2026/10/two-stars-4x4-parked-on-sandwich-harbour-dune.webp"
+         },
+         {
+          "id": "@att:two-stars-4x4-door-coastal-dune-track.webp",
+          "url": "{{home}}/wp-content/uploads/2026/10/two-stars-4x4-door-coastal-dune-track.webp"
+         },
+         {
+          "id": "@att:seal-silhouette-on-namibian-coast-golden-light.webp",
+          "url": "{{home}}/wp-content/uploads/2026/10/seal-silhouette-on-namibian-coast-golden-light.webp"
+         },
+         {
+          "id": "@att:guest-arms-out-on-dune-above-lagoon-sandwich-harbour.webp",
+          "url": "{{home}}/wp-content/uploads/2026/10/guest-arms-out-on-dune-above-lagoon-sandwich-harbour.webp"
+         },
+         {
+          "id": "@att:guest-mid-jump-on-dune-sandwich-harbour.webp",
+          "url": "{{home}}/wp-content/uploads/2026/10/guest-mid-jump-on-dune-sandwich-harbour.webp"
+         }
+        ],
+        "image_meta": [],
+        "video_url": "{{home}}/wp-content/uploads/2026/04/WhatsApp-Video-2026-04-07-at-11.27.18-AM.mp4",
+        "video_caption": "Two Stars — On the road",
+        "video_category": "tours",
+        "load_more_text": "Load More",
+        "filter_all_label": "All",
+        "filter_categories": [],
+        "videos": [
+         {
+          "_id": "cc4ec20",
+          "video_caption": "Two Stars — On the road"
+         }
+        ],
+        "image_source": "twostars_admin"
+       },
+       "elements": [],
+       "widgetType": "twostars-gallery"
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "5f0305f",
+     "elType": "container",
+     "settings": {
+      "content_width": "full"
+     },
+     "elements": [
+      {
+       "id": "09a522d",
+       "elType": "widget",
+       "settings": {
+        "eyebrow": "Guest Reviews",
+        "title": "What guests say about their day with Two Stars",
+        "intro": "Real reviews from guests who toured Walvis Bay, Sandwich Harbour and beyond with us.",
+        "view_all_label": "Read All Reviews",
+        "leave_review_label": "Leave a Review",
+        "leave_review_heading": "Share your Two Stars experience",
+        "leave_review_copy": "Tell future guests what made the day special — the route, the wildlife, the dunes, or the moment it all came together."
+       },
+       "elements": [],
+       "widgetType": "twostars-gallery-reviews"
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "c6e966e",
+     "elType": "container",
+     "settings": {
+      "content_width": "full"
+     },
+     "elements": [
+      {
+       "id": "3823674",
+       "elType": "widget",
+       "settings": {
+        "title": "Ready to see it in person?",
+        "subtext": "Pick a tour and book online. Small groups, long photo stops, free cancellation.",
+        "primary_cta_text": "See tours & prices",
+        "secondary_cta_text": "Chat on WhatsApp",
+        "trust_items": [
+         {
+          "text": "Max 4 guests per vehicle",
+          "icon_name": "users",
+          "_id": "345ee33"
+         },
+         {
+          "text": "Women-led local team",
+          "icon_name": "map-pinned",
+          "_id": "621a2f6"
+         },
+         {
+          "text": "Free cancellation",
+          "icon_name": "calendar-check",
+          "_id": "fb7cf4d"
+         }
+        ]
+       },
+       "elements": [],
+       "widgetType": "twostars-gallery-cta"
+      }
+     ],
+     "isInner": false
+    }
+   ]
+  },
+  {
+   "type": "page",
+   "slugs": [
+    "booking"
+   ],
+   "meta": {
+    "_yoast_wpseo_title": "Book a Walvis Bay Tour Online | Two Stars Tour & Safari",
+    "_yoast_wpseo_metadesc": "Choose your Walvis Bay or Swakopmund day tour and send your request. Sandwich Harbour from US$135 per adult, max 4 guests, free cancellation up to 24h."
+   }
+  },
+  {
+   "type": "tour",
+   "slugs": [
+    "sandwich-harbour-tour",
+    "sandwich-harbour-4x4-adventure"
+   ],
+   "fields": {
+    "title": "Sandwich Harbour Small-Group 4x4 Tour from Walvis Bay",
+    "slug": "sandwich-harbour-tour",
+    "content": "Your guides are Tuli and her women-led local team, a family business that takes only four guests per vehicle. That small size is the point: nobody is rushed, and there is room to stop wherever the light is good.\n\nWe plan the day around photography, with long, unhurried stops rather than quick drive-bys. You visit the Walvis Bay Lagoon for flamingos, the Pink Salt Lake, and then Sandwich Harbour, where the dunes meet the Atlantic.\n\nAlong the way there are scenic photo stops as well as light snacks and refreshments.",
+    "excerpt": "Women-led team, small groups of four, and unhurried photo stops where the Namib dunes meet the Atlantic."
+   },
+   "meta": {
+    "_twostars_tour_booking_notes": "Pickups and drop-off can be arranged in Walvis Bay and Swakopmund.",
+    "_twostars_tour_availability_status": "available",
+    "_twostars_tour_difficulty": "moderate",
+    "_twostars_tour_hook": "Women-led team, small groups, picnic in the dunes",
+    "_twostars_tour_group_size": "Max 4 guests",
+    "_twostars_tour_departure_times": "08:45 / 12:45",
+    "_twostars_tour_pickup_location": "Walvis Bay hotels, Swakopmund hotels, Walvis Bay cruise port",
+    "_twostars_tour_itinerary": "Start | Hotel or port pickup | We collect you from Walvis Bay, Swakopmund or the Walvis Bay cruise port.\nStop 1 | Walvis Bay Lagoon | Flamingo viewing and a photo stop.\nStop 2 | Pink Salt Lake | A photo stop at the salt pans.\nStop 3 | Sandwich Harbour 4x4 | Dune driving where the dunes meet the Atlantic, with long photo stops and refreshments.\nFinish | Drop-off | Back to your hotel or the cruise port.",
+    "_twostars_tour_includes": "Walvis Bay Lagoon stop\nPink Salt Lake stop\n4x4 dune driving at Sandwich Harbour\nLight snacks and refreshments\nScenic photo stops\nHotel and cruise port pickup",
+    "_twostars_tour_meeting_point": "Pickup is available from Walvis Bay hotels, Swakopmund hotels and the Walvis Bay cruise port.",
+    "_twostars_tour_what_to_bring": "Sun hat and sunscreen\nLight layers: coastal mornings can be cool and windy\nClosed, comfortable shoes\nCamera or phone, and a power bank\nSunglasses\nDrinking water",
+    "_yoast_wpseo_title": "Sandwich Harbour 4x4 Tour from Walvis Bay | Two Stars",
+    "_yoast_wpseo_focuskw": "sandwich harbour tour",
+    "_twostars_tour_price_from": "135",
+    "_twostars_tour_price_note": "Children under 6 go free, ages 6 to 11 pay half price, and guests aged 12 and over pay the full adult price.",
+    "_twostars_tour_cancellation": "Free cancellation up to 24 hours before",
+    "_twostars_tour_faqs": "What time does the tour leave? | The morning tour departs at 08:45 and the afternoon tour at 12:45.\nDo you offer a sunset tour? | Sunset departures are offered on request, depending on the season and availability. Message us on WhatsApp with your date and we will confirm the timing before you book.\nHow many guests are on each tour? | We take a maximum of 4 guests per vehicle, plus your guide and driver, so there is always room to stop for photos.\nHow much does it cost? | The Sandwich Harbour tour is US$135 per adult. Children under 6 go free, ages 6 to 11 pay half price, and guests aged 12 and over pay the full adult price.\nCan I cancel? | Yes. You can cancel up to 24 hours before the experience starts for a full refund.\nWhich language is the tour in? | Tours are guided in English.\nWhere do you pick up? | We collect from Walvis Bay hotels, Swakopmund hotels and the Walvis Bay cruise port.",
+    "_yoast_wpseo_metadesc": "Small-group Sandwich Harbour 4x4 from Walvis Bay, max 4 guests, women-led team. From US$135 per adult. Free cancellation up to 24h.",
+    "_twostars_tour_gallery_images": {
+     "_t": "att_list",
+     "files": [
+      "dune-picnic-setup-two-stars-4x4-open-boot.webp",
+      "guests-celebrating-at-picnic-table-two-stars-4x4.webp",
+      "sunset-picnic-table-sandwich-harbour-dunes-guests.webp",
+      "sunset-picnic-table-on-sand-dune-two-guests.webp",
+      "sunset-over-the-atlantic-namibia-coast.webp",
+      "two-stars-4x4-parked-on-sandwich-harbour-dune.webp",
+      "two-stars-4x4-door-coastal-dune-track.webp",
+      "guest-arms-out-on-dune-above-lagoon-sandwich-harbour.webp",
+      "guest-mid-jump-on-dune-sandwich-harbour.webp",
+      "whatsapp-image-2026-03-27-at-5.55.41-am-2.jpeg",
+      "whatsapp-image-2026-03-27-at-6.00.41-am.jpeg"
+     ]
+    },
+    "_twostars_tour_sunset_note": "Sunset departures are offered on request, depending on the season and availability. We confirm the timing and availability with you before you book.",
+    "_twostars_tour_video_url": "{{home}}/wp-content/uploads/2026/10/sandwich-harbour-dune-ridge-and-lagoon-view.mp4",
+    "_twostars_tour_video_poster": "{{home}}/wp-content/uploads/2026/10/sandwich-harbour-dune-ridge-and-lagoon-view-poster.webp",
+    "_thumbnail_id": "@att:two-stars-4x4-and-picnic-table-sandwich-harbour-dunes.webp"
+   }
+  },
+  {
+   "type": "tour",
+   "slugs": [
+    "walvis-bay-flamingo-tour",
+    "flamingo-and-pink-lake-tour"
+   ],
+   "fields": {
+    "title": "Walvis Bay Flamingo & Pink Salt Lake Tour",
+    "slug": "walvis-bay-flamingo-tour",
+    "content": "This is the relaxed way to see Walvis Bay: a shorter outing built around birdlife, the Pink Salt Lake and easy photo stops, led by Tuli and her women-led local team.\n\nIt centres on the Walvis Bay Lagoon and the Pink Salt Lake, with few transitions and no rush, so it suits families, birders and anyone who wants a lighter day. We take a maximum of four guests per vehicle, which leaves time to wait for the right shot.",
+    "excerpt": "A short, relaxed outing for flamingos, the Pink Salt Lake and coastal photography with a women-led local team."
+   },
+   "meta": {
+    "_twostars_tour_booking_notes": "A good fit for guests who prefer a shorter, relaxed outing.",
+    "_twostars_tour_hook": "Short, relaxed, birding and photography",
+    "_twostars_tour_group_size": "Max 4 guests",
+    "_twostars_tour_departure_times": "08:45 / 12:45",
+    "_twostars_tour_pickup_location": "Walvis Bay hotels, Swakopmund hotels, Walvis Bay cruise port",
+    "_twostars_tour_itinerary": "Start | Hotel or port pickup | We collect you from Walvis Bay, Swakopmund or the Walvis Bay cruise port.\nStop 1 | Walvis Bay Lagoon | Flamingos and other birdlife, with time to photograph.\nStop 2 | Pink Salt Lake | A photo stop at the salt pans.\nFinish | Drop-off | Back to your hotel or the cruise port.",
+    "_twostars_tour_includes": "Walvis Bay Lagoon stop\nPink Salt Lake stop\nBirdlife and photography-focused pacing\nScenic coastal driving\nHotel and cruise port pickup",
+    "_twostars_tour_meeting_point": "Pickup is available from Walvis Bay hotels, Swakopmund hotels and the Walvis Bay cruise port.",
+    "_twostars_tour_what_to_bring": "Sun hat and sunscreen\nLight layers: coastal mornings can be cool and windy\nClosed, comfortable shoes\nCamera or phone, and a power bank\nSunglasses\nDrinking water",
+    "_yoast_wpseo_title": "Walvis Bay Flamingo & Pink Salt Lake Tour | Two Stars",
+    "_yoast_wpseo_focuskw": "walvis bay flamingos",
+    "_twostars_tour_price_note": "Message us on WhatsApp for the current price. Children under 6 go free and ages 6 to 11 pay half price.",
+    "_twostars_tour_cancellation": "Free cancellation up to 24 hours before",
+    "_twostars_tour_faqs": "Is this a good tour for first-time visitors? | Yes. It is a short, easy outing with few transitions, ideal if you want the Walvis Bay highlights without a long day.\nHow many guests are on each tour? | We take a maximum of 4 guests per vehicle, plus your guide and driver, so there is always room to stop for photos.\nHow much does it cost? | Message us on WhatsApp for the current price of this tour. Children under 6 go free and ages 6 to 11 pay half price.\nCan I cancel? | Yes. You can cancel up to 24 hours before the experience starts for a full refund.\nWhich language is the tour in? | Tours are guided in English.\nWhere do you pick up? | We collect from Walvis Bay hotels, Swakopmund hotels and the Walvis Bay cruise port.",
+    "_yoast_wpseo_metadesc": "Walvis Bay flamingos and the Pink Salt Lake with a women-led local team. Max 4 guests, relaxed pace. Free cancellation up to 24h.",
+    "_twostars_tour_gallery_images": {
+     "_t": "att_list",
+     "files": [
+      "pink-salt-lake-shoreline-walvis-bay.webp",
+      "pink-lagoon-horizon-walvis-bay.webp",
+      "pink-salt-lake-and-blue-sky-walvis-bay.webp",
+      "salt-flats-pink-lagoon-walvis-bay-guests-walking.webp",
+      "guest-at-pink-salt-lake-viewing-platform.webp",
+      "guest-at-the-pink-salt-lake-walvis-bay.webp",
+      "seal-silhouette-on-namibian-coast-golden-light.webp",
+      "whatsapp-image-2026-03-27-at-6.00.45-am-2.jpeg"
+     ]
+    },
+    "_twostars_tour_video_url": "{{home}}/wp-content/uploads/2026/10/flamingos-taking-flight-walvis-bay-lagoon.mp4",
+    "_twostars_tour_video_poster": "{{home}}/wp-content/uploads/2026/10/flamingos-taking-flight-walvis-bay-lagoon-poster.webp",
+    "_thumbnail_id": "@att:flamingos-wading-walvis-bay-lagoon.webp"
+   }
+  },
+  {
+   "type": "tour",
+   "slugs": [
+    "swakopmund-city-tour-dune-7"
+   ],
+   "fields": {
+    "title": "Swakopmund City & Dune 7 Day Tour",
+    "slug": "swakopmund-city-tour-dune-7",
+    "content": "Town and desert in one day. Tuli and her women-led local team take you through Swakopmund's landmarks and history, then on to Dune 7 for a desert stop and photos.\n\nIt is a balanced outing for guests who want both coastal-town character and open sand views. We take a maximum of four guests per vehicle, so the pace stays comfortable and you can ask as many questions as you like.",
+    "excerpt": "Swakopmund landmarks and history, then a desert stop and photos at Dune 7, in a small group of four."
+   },
+   "meta": {
+    "_twostars_tour_booking_notes": "A strong option for guests who want a mix of coastal town character and desert scenery.",
+    "_twostars_tour_hook": "Coastal town character plus a desert stop at Dune 7",
+    "_twostars_tour_group_size": "Max 4 guests",
+    "_twostars_tour_departure_times": "08:45 / 12:45",
+    "_twostars_tour_pickup_location": "Walvis Bay hotels, Swakopmund hotels, Walvis Bay cruise port",
+    "_twostars_tour_itinerary": "Start | Hotel or port pickup | We collect you from Walvis Bay, Swakopmund or the Walvis Bay cruise port.\nStop 1 | Swakopmund | Landmark and history stops in the coastal town.\nStop 2 | Dune 7 | A desert stop with wide sand views and photos.\nFinish | Drop-off | Back to your hotel or the cruise port.",
+    "_twostars_tour_includes": "Swakopmund highlights\nLandmark and history stops\nVisit to Dune 7\nScenic photo opportunities\nHotel and cruise port pickup",
+    "_twostars_tour_meeting_point": "Pickup is available from Walvis Bay hotels, Swakopmund hotels and the Walvis Bay cruise port.",
+    "_twostars_tour_what_to_bring": "Sun hat and sunscreen\nLight layers: coastal mornings can be cool and windy\nClosed, comfortable shoes\nCamera or phone, and a power bank\nSunglasses\nDrinking water",
+    "_yoast_wpseo_title": "Swakopmund City & Dune 7 Tour from Walvis Bay | Two Stars",
+    "_yoast_wpseo_focuskw": "swakopmund dune 7 tour",
+    "_twostars_tour_price_note": "Message us on WhatsApp for the current price. Children under 6 go free and ages 6 to 11 pay half price.",
+    "_twostars_tour_cancellation": "Free cancellation up to 24 hours before",
+    "_twostars_tour_faqs": "What will we see? | Swakopmund's landmarks and history, followed by a desert stop at Dune 7 with time for photos.\nHow many guests are on each tour? | We take a maximum of 4 guests per vehicle, plus your guide and driver, so there is always room to stop for photos.\nHow much does it cost? | Message us on WhatsApp for the current price of this tour. Children under 6 go free and ages 6 to 11 pay half price.\nCan I cancel? | Yes. You can cancel up to 24 hours before the experience starts for a full refund.\nWhich language is the tour in? | Tours are guided in English.\nWhere do you pick up? | We collect from Walvis Bay hotels, Swakopmund hotels and the Walvis Bay cruise port.",
+    "_yoast_wpseo_metadesc": "Swakopmund landmarks and a Dune 7 desert stop in one day. Small group, max 4 guests, pickup included. Free cancellation up to 24h.",
+    "_twostars_tour_gallery_images": {
+     "_t": "att_list",
+     "files": [
+      "whatsapp-image-2026-04-07-at-11.27.20-am.jpeg",
+      "whatsapp-image-2026-04-07-at-11.27.23-am-2.jpeg",
+      "whatsapp-image-2026-04-07-at-11.27.22-am.jpeg",
+      "whatsapp-image-2026-04-07-at-11.27.21-am.jpeg",
+      "guest-on-steep-dune-slope-sandwich-harbour.webp",
+      "guest-posing-on-golden-dune-sandwich-harbour.webp",
+      "guest-standing-on-dune-ridge-sandwich-harbour.webp",
+      "guest-on-sand-dune-blue-sky-sandwich-harbour.webp"
+     ]
+    },
+    "_thumbnail_id": "@att:whatsapp-image-2026-03-27-at-6.00.41-am.jpeg"
+   }
+  },
+  {
+   "type": "tour",
+   "slugs": [
+    "spitzkoppe-day-tour"
+   ],
+   "fields": {
+    "title": "Spitzkoppe Full-Day Tour from Swakopmund",
+    "slug": "spitzkoppe-day-tour",
+    "content": "Spitzkoppe is one of Namibia's most iconic granite landscapes, and this is the full-day option from Two Stars, led by Tuli and her women-led local team.\n\nYou get time to explore the famous rock formations, enjoy wide scenic views and learn about the area at a measured pace. With a maximum of four guests per vehicle, there is no crowd and no rush.",
+    "excerpt": "A full day among Spitzkoppe's granite formations and wide Namib views, in a small group of four."
+   },
+   "meta": {
+    "_twostars_tour_booking_notes": "Best for guests who want a longer scenic day beyond the coast.",
+    "_twostars_tour_hook": "Granite peaks and wide Namib views, at an unhurried pace",
+    "_twostars_tour_group_size": "Max 4 guests",
+    "_twostars_tour_duration": "Full day",
+    "_twostars_tour_pickup_location": "Walvis Bay hotels, Swakopmund hotels, Walvis Bay cruise port",
+    "_twostars_tour_itinerary": "Start | Hotel pickup | We collect you from Swakopmund or Walvis Bay.\nStop 1 | Scenic drive | Open Namib landscapes on the way, with photo stops.\nStop 2 | Spitzkoppe | Time among the granite formations, with views and local interpretation.\nFinish | Return | Back to your hotel.",
+    "_twostars_tour_includes": "Full-day guided outing\nScenic stops and granite formations\nViews and interpretation of the area\nHotel pickup",
+    "_twostars_tour_meeting_point": "Pickup is available from Walvis Bay hotels, Swakopmund hotels and the Walvis Bay cruise port.",
+    "_twostars_tour_what_to_bring": "Sun hat and sunscreen\nLight layers: coastal mornings can be cool and windy\nClosed, comfortable shoes\nCamera or phone, and a power bank\nSunglasses\nDrinking water",
+    "_yoast_wpseo_title": "Spitzkoppe Day Tour from Swakopmund | Two Stars",
+    "_yoast_wpseo_focuskw": "spitzkoppe day trip from swakopmund",
+    "_twostars_tour_gallery_images": {
+     "_t": "att_list",
+     "files": [
+      "caption-3.jpg",
+      "caption-2.jpg",
+      "caption-1.jpg",
+      "caption.jpg",
+      "caption-6-1.jpg",
+      "caption-5.jpg",
+      "caption-4.jpg"
+     ]
+    },
+    "_twostars_tour_price_note": "Message us on WhatsApp for the current price. Children under 6 go free and ages 6 to 11 pay half price.",
+    "_twostars_tour_cancellation": "Free cancellation up to 24 hours before",
+    "_twostars_tour_faqs": "How long is the Spitzkoppe tour? | It is a full-day tour. Your exact pickup time is confirmed when you book.\nHow many guests are on each tour? | We take a maximum of 4 guests per vehicle, plus your guide and driver, so there is always room to stop for photos.\nHow much does it cost? | Message us on WhatsApp for the current price of this tour. Children under 6 go free and ages 6 to 11 pay half price.\nCan I cancel? | Yes. You can cancel up to 24 hours before the experience starts for a full refund.\nWhich language is the tour in? | Tours are guided in English.\nWhere do you pick up? | We collect from Walvis Bay hotels, Swakopmund hotels and the Walvis Bay cruise port.",
+    "_yoast_wpseo_metadesc": "Full-day Spitzkoppe tour from Swakopmund: granite peaks and wide Namib views in a small group of 4. Free cancellation up to 24h.",
+    "_thumbnail_id": "@att:spitzkoppe-namibia-1.jpg"
+   }
+  },
+  {
+   "type": "tour",
+   "slugs": [
+    "private-namib-coast-tour",
+    "private-tour"
+   ],
+   "fields": {
+    "title": "Private Namib Coast Day: Design Your Own Route",
+    "slug": "private-namib-coast-tour",
+    "content": "Private tours let you shape the day: your own vehicle, your own timing and a route built around what you care about, whether that is photography, birdlife, dunes or a slower family day.\n\nTuli and her women-led local team plan the route with you. It works well for couples, families, photographers and cruise guests who need a day that fits a ship schedule. Tell us your date, group size and interests and we will confirm a plan and price.",
+    "excerpt": "Your own vehicle, route and pace with a women-led local team. Sandwich Harbour, flamingos, Swakopmund, Dune 7 or Spitzkoppe."
+   },
+   "meta": {
+    "_twostars_tour_booking_notes": "Private departures are arranged on request with flexible timing.",
+    "_twostars_tour_availability_status": "on_request",
+    "_twostars_tour_hook": "Fully private, flexible timing, built around you",
+    "_twostars_tour_group_size": "Private group",
+    "_twostars_tour_duration": "Flexible",
+    "_twostars_tour_pickup_location": "Walvis Bay hotels, Swakopmund hotels, Walvis Bay cruise port",
+    "_twostars_tour_itinerary": "Plan | Tell us your day | Share your date, group size, interests and pickup point.\nDay | Your route | Choose from Sandwich Harbour, the flamingos and Pink Salt Lake, Swakopmund and Dune 7, or Spitzkoppe.\nFinish | Drop-off | Back to your hotel or the cruise port.",
+    "_twostars_tour_includes": "Private vehicle\nFlexible timing\nPersonalised route planning\nPickup and drop-off by arrangement",
+    "_twostars_tour_meeting_point": "Pickup is available from Walvis Bay hotels, Swakopmund hotels and the Walvis Bay cruise port.",
+    "_twostars_tour_what_to_bring": "Sun hat and sunscreen\nLight layers: coastal mornings can be cool and windy\nClosed, comfortable shoes\nCamera or phone, and a power bank\nSunglasses\nDrinking water",
+    "_yoast_wpseo_title": "Private Tours in Walvis Bay & Swakopmund | Two Stars",
+    "_yoast_wpseo_metadesc": "Private tours in Walvis Bay & Swakopmund: your own vehicle, route and pace with a women-led local team. Free cancellation.",
+    "_yoast_wpseo_focuskw": "private tours walvis bay",
+    "_twostars_tour_price_note": "Private tours are quoted by route, group size and date.",
+    "_twostars_tour_cancellation": "Free cancellation up to 24 hours before",
+    "_twostars_tour_gallery_images": {
+     "_t": "att_list",
+     "files": [
+      "sunset-picnic-table-sandwich-harbour-dunes-guests.webp",
+      "sunset-picnic-table-on-sand-dune-two-guests.webp",
+      "two-stars-4x4-and-picnic-table-sandwich-harbour-dunes.webp",
+      "whatsapp-image-2026-03-27-at-6.00.41-am.jpeg",
+      "whatsapp-image-2026-03-27-at-6.00.45-am-2.jpeg"
+     ]
+    },
+    "_twostars_tour_faqs": "How does a private tour work? | Send us your date, group size, interests and pickup point. We reply with a plan and a price.\nCan I combine places? | Yes. Combine the coast, lagoon, Swakopmund, Dune 7 or Spitzkoppe in a day that suits you.\nCan you work around a cruise ship schedule? | Yes. Tell us your ship's arrival and departure times and we will plan the day around them.\nCan I cancel? | Yes. You can cancel up to 24 hours before the experience starts for a full refund.\nWhich language is the tour in? | Tours are guided in English.\nWhere do you pick up? | We collect from Walvis Bay hotels, Swakopmund hotels and the Walvis Bay cruise port.",
+    "_thumbnail_id": "@att:guests-celebrating-at-picnic-table-two-stars-4x4.webp"
+   }
+  },
+  {
+   "type": "destination",
+   "slugs": [
+    "sandwich-harbour"
+   ],
+   "meta": {
+    "_thumbnail_id": "@att:whatsapp-image-2026-03-27-at-5.55.41-am-2.jpeg"
+   }
+  },
+  {
+   "type": "destination",
+   "slugs": [
+    "walvis-bay-lagoon"
+   ],
+   "meta": {
+    "_thumbnail_id": "@att:flamingos-wading-walvis-bay-lagoon.webp"
+   }
+  },
+  {
+   "type": "destination",
+   "slugs": [
+    "pink-salt-lake"
+   ],
+   "meta": {
+    "_thumbnail_id": "@att:pink-salt-lake-shoreline-walvis-bay.webp"
+   }
+  },
+  {
+   "type": "faq",
+   "create": true,
+   "status": "publish",
+   "slugs": [
+    "how-much-do-the-tours-cost"
+   ],
+   "title": "How much do the tours cost?",
+   "content": "<p>The Sandwich Harbour tour is US$135 per adult. Children under 6 go free, ages 6 to 11 pay half price, and guests aged 12 and over pay the full adult price. For the other tours, message us on WhatsApp for the current price. Private tours are quoted by route and group size.</p>",
+   "menu_order": 0,
+   "fields": {
+    "title": "How much do the tours cost?",
+    "content": "<p>The Sandwich Harbour tour is US$135 per adult. Children under 6 go free, ages 6 to 11 pay half price, and guests aged 12 and over pay the full adult price. For the other tours, message us on WhatsApp for the current price. Private tours are quoted by route and group size.</p>"
+   },
+   "meta": {}
+  },
+  {
+   "type": "faq",
+   "create": true,
+   "status": "publish",
+   "slugs": [
+    "where-do-the-tours-start-and-end"
+   ],
+   "title": "Where do the tours start and end?",
+   "content": "<p>We collect you from Walvis Bay hotels, Swakopmund hotels or the Walvis Bay cruise port, and drop you back at the same place at the end of the day.</p>",
+   "menu_order": 1,
+   "fields": {
+    "title": "Where do the tours start and end?",
+    "content": "<p>We collect you from Walvis Bay hotels, Swakopmund hotels or the Walvis Bay cruise port, and drop you back at the same place at the end of the day.</p>"
+   },
+   "meta": {}
+  },
+  {
+   "type": "faq",
+   "create": true,
+   "status": "publish",
+   "slugs": [
+    "how-many-people-are-in-each-group"
+   ],
+   "title": "How many people are in each group?",
+   "content": "<p>We take a maximum of four guests per vehicle, plus your guide and driver, so there is room to stop for photos and ask questions.</p>",
+   "menu_order": 1,
+   "fields": {
+    "title": "How many people are in each group?",
+    "content": "<p>We take a maximum of four guests per vehicle, plus your guide and driver, so there is room to stop for photos and ask questions.</p>"
+   },
+   "meta": {}
+  },
+  {
+   "type": "faq",
+   "create": true,
+   "status": "publish",
+   "slugs": [
+    "do-you-offer-private-tours"
+   ],
+   "title": "Do you offer private tours?",
+   "content": "<p>Yes. Private tours are available for guests who want a dedicated vehicle, flexible timing, and a more personalized experience.</p>",
+   "menu_order": 2,
+   "fields": {
+    "title": "Do you offer private tours?",
+    "content": "<p>Yes. Private tours are available for guests who want a dedicated vehicle, flexible timing, and a more personalized experience.</p>"
+   },
+   "meta": {}
+  },
+  {
+   "type": "faq",
+   "create": true,
+   "status": "publish",
+   "slugs": [
+    "can-i-cancel-my-booking"
+   ],
+   "title": "Can I cancel my booking?",
+   "content": "<p>Yes. You can cancel up to 24 hours before the experience starts for a full refund.</p>",
+   "menu_order": 2,
+   "fields": {
+    "title": "Can I cancel my booking?",
+    "content": "<p>Yes. You can cancel up to 24 hours before the experience starts for a full refund.</p>"
+   },
+   "meta": {}
+  },
+  {
+   "type": "faq",
+   "create": true,
+   "status": "publish",
+   "slugs": [
+    "what-is-included-on-the-sandwich-harbour-tour"
+   ],
+   "title": "What is included on the Sandwich Harbour tour?",
+   "content": "<p>The Walvis Bay Lagoon, the Pink Salt Lake, 4x4 dune driving at Sandwich Harbour, scenic photo stops, and light snacks and refreshments along the way.</p>",
+   "menu_order": 3,
+   "fields": {
+    "title": "What is included on the Sandwich Harbour tour?",
+    "content": "<p>The Walvis Bay Lagoon, the Pink Salt Lake, 4x4 dune driving at Sandwich Harbour, scenic photo stops, and light snacks and refreshments along the way.</p>"
+   },
+   "meta": {}
+  },
+  {
+   "type": "faq",
+   "create": true,
+   "status": "publish",
+   "slugs": [
+    "which-language-are-the-tours-in"
+   ],
+   "title": "Which language are the tours in?",
+   "content": "<p>Our tours are guided in English.</p>",
+   "menu_order": 3,
+   "fields": {
+    "title": "Which language are the tours in?",
+    "content": "<p>Our tours are guided in English.</p>"
+   },
+   "meta": {}
+  },
+  {
+   "type": "faq",
+   "create": true,
+   "status": "publish",
+   "slugs": [
+    "which-payment-methods-do-you-accept"
+   ],
+   "title": "Which payment methods do you accept?",
+   "content": "<p>Two Stars accepts cash, EFT, and card payment.</p>",
+   "menu_order": 4,
+   "fields": {
+    "title": "Which payment methods do you accept?",
+    "content": "<p>Two Stars accepts cash, EFT, and card payment.</p>"
+   },
+   "meta": {}
+  },
+  {
+   "type": "faq",
+   "create": true,
+   "status": "publish",
+   "slugs": [
+    "do-you-pick-up-cruise-passengers"
+   ],
+   "title": "Do you pick up cruise passengers?",
+   "content": "<p>Yes. We collect from the Walvis Bay cruise port, and you can ask us to plan the day around your ship's arrival and departure times.</p>",
+   "menu_order": 4,
+   "fields": {
+    "title": "Do you pick up cruise passengers?",
+    "content": "<p>Yes. We collect from the Walvis Bay cruise port, and you can ask us to plan the day around your ship's arrival and departure times.</p>"
+   },
+   "meta": {}
+  },
+  {
+   "type": "faq",
+   "create": true,
+   "status": "publish",
+   "slugs": [
+    "do-you-offer-a-sunset-tour"
+   ],
+   "title": "Do you offer a sunset tour?",
+   "content": "<p>Sunset departures are offered on request, depending on the season and availability. Message us on WhatsApp with your date and we will confirm the timing before you book.</p>",
+   "menu_order": 9,
+   "fields": {
+    "title": "Do you offer a sunset tour?",
+    "content": "<p>Sunset departures are offered on request, depending on the season and availability. Message us on WhatsApp with your date and we will confirm the timing before you book.</p>"
+   },
+   "meta": {}
+  }
+ ],
+ "options": {
+  "twostars_price_currency": "USD"
+ }
+}

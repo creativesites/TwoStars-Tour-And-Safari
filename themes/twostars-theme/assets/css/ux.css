@@ -850,3 +850,31 @@ html body .twostars-destination-planning-strip {
   width: min(90%, 1134px) !important;
   margin-inline: auto !important;
 }
+
+/* ---- Tour page: video and sunset note --------------------------------------- */
+html body .twostars-tour-page__video {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  border-radius: 14px;
+  background: #101c2e;
+  object-fit: cover;
+}
+
+html body .twostars-tour-page__sunset {
+  padding: 1.25rem 1.35rem;
+  border-radius: 14px;
+  background: #fbf3e6;
+  border: 1px solid #ecd9b8;
+}
+
+html body .twostars-tour-page__sunset h2 {
+  margin-bottom: 0.5rem;
+}
+
+html body .twostars-tour-page__sunset .twostars-tour-entry__button--secondary {
+  color: #1b3a6b;
+  border-color: #1b3a6b;
+  background: transparent;
+  margin-top: 0.5rem;
+}

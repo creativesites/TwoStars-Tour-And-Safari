@@ -71,7 +71,7 @@ final class HomeTrustStoryWidget extends BaseWidget
 		$this->add_control('inset_image', ['label' => __('Inset Photo', 'twostars-elementor-widgets'), 'type' => Controls_Manager::MEDIA]);
 		$this->add_control('chip_number', ['label' => __('Chip Number', 'twostars-elementor-widgets'), 'type' => Controls_Manager::TEXT, 'default' => '4']);
 		$this->add_control('chip_text', ['label' => __('Chip Text', 'twostars-elementor-widgets'), 'type' => Controls_Manager::TEXT, 'default' => __('guests per vehicle, plus your guide. Always.', 'twostars-elementor-widgets')]);
-		$this->add_control('pill_text', ['label' => __('Price Pill', 'twostars-elementor-widgets'), 'type' => Controls_Manager::TEXT, 'default' => __('N$2,600 per adult · Free cancellation', 'twostars-elementor-widgets')]);
+		$this->add_control('pill_text', ['label' => __('Price Pill', 'twostars-elementor-widgets'), 'type' => Controls_Manager::TEXT, 'default' => __('From US$135 per adult · Free cancellation up to 24h', 'twostars-elementor-widgets')]);
 		$this->add_control('footnote', ['label' => __('Footnote', 'twostars-elementor-widgets'), 'type' => Controls_Manager::TEXT, 'default' => __('Registered with the Namibia Tourism Board · #TSO01736', 'twostars-elementor-widgets')]);
 		$this->add_control('note_label', ['label' => __('Note Label', 'twostars-elementor-widgets'), 'type' => Controls_Manager::TEXT, 'default' => __(self::DEFAULT_NOTE_LABEL, 'twostars-elementor-widgets')]);
 		$this->add_control('note_title', ['label' => __('Note Title', 'twostars-elementor-widgets'), 'type' => Controls_Manager::TEXT, 'default' => __(self::DEFAULT_NOTE_TITLE, 'twostars-elementor-widgets')]);

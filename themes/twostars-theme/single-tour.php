@@ -5,18 +5,14 @@ use TwoStars\Platform\Support\TourData;
 
 get_header();
 
-$twostars_fx = static function (float $nad): string {
-	$parts = [];
+$twostars_fx = static function (float $amount): string {
+	$rate = (float) get_option('twostars_fx_nad_per_usd', 0);
 
-	foreach (['EUR' => '€', 'USD' => 'US$'] as $code => $symbol) {
-		$rate = (float) get_option('twostars_fx_nad_per_' . strtolower($code), 0);
-
-		if ($rate > 0) {
-			$parts[] = '≈ ' . $symbol . number_format($nad / $rate, 0, '.', ',');
-		}
+	if (TourData::get_currency() !== 'USD' || $rate <= 0) {
+		return '';
 	}
 
-	return implode(' · ', $parts);
+	return '≈ N$' . number_format($amount * $rate, 0, '.', ',');
 };
 ?>
 <section class="twostars-tour-entry twostars-tour-page">
@@ -55,7 +51,9 @@ $twostars_fx = static function (float $nad): string {
 
 		$facts = [];
 		if ($price > 0) {
-			$facts[] = ['label' => __('From', 'twostars-theme'), 'value' => TourData::format_nad($price), 'sub' => $twostars_fx($price)];
+			$facts[] = ['label' => __('From', 'twostars-theme'), 'value' => TourData::format_price($price), 'sub' => $twostars_fx($price)];
+		} else {
+			$facts[] = ['label' => __('Price', 'twostars-theme'), 'value' => TourData::get_no_price_label($tour_id)];
 		}
 		if ($meta['duration'] !== '') {
 			$facts[] = ['label' => __('Duration', 'twostars-theme'), 'value' => $meta['duration']];
@@ -145,12 +143,12 @@ $twostars_fx = static function (float $nad): string {
 							<?php if ($price > 0) : ?>
 								<p class="twostars-tour-page__book-price">
 									<span><?php esc_html_e('From', 'twostars-theme'); ?></span>
-									<strong><?php echo esc_html(TourData::format_nad($price)); ?></strong>
+									<strong><?php echo esc_html(TourData::format_price($price)); ?></strong>
 									<?php esc_html_e('per adult', 'twostars-theme'); ?>
 								</p>
 								<?php if ($twostars_fx($price) !== '') : ?><p class="twostars-tour-page__book-fx"><?php echo esc_html($twostars_fx($price)); ?></p><?php endif; ?>
 							<?php else : ?>
-								<p class="twostars-tour-page__book-price"><strong><?php esc_html_e('Price on request', 'twostars-theme'); ?></strong></p>
+								<p class="twostars-tour-page__book-price"><strong><?php echo esc_html(TourData::get_no_price_label($tour_id)); ?></strong></p>
 							<?php endif; ?>
 							<?php if ($meta['price_note'] !== '') : ?><p class="twostars-tour-page__book-note"><?php echo esc_html($meta['price_note']); ?></p><?php endif; ?>
 
@@ -173,6 +171,15 @@ $twostars_fx = static function (float $nad): string {
 							<h2><?php esc_html_e('Overview', 'twostars-theme'); ?></h2>
 							<div class="twostars-tour-entry__body-content"><?php the_content(); ?></div>
 						</section>
+
+						<?php if ($meta['video_url'] !== '') : ?>
+							<section class="twostars-tour-page__section">
+								<h2><?php esc_html_e('See it on the day', 'twostars-theme'); ?></h2>
+								<video class="twostars-tour-page__video" controls muted playsinline preload="none"<?php echo $meta['video_poster'] !== '' ? ' poster="' . esc_url($meta['video_poster']) . '"' : ''; ?>>
+									<source src="<?php echo esc_url($meta['video_url']); ?>" type="video/mp4">
+								</video>
+							</section>
+						<?php endif; ?>
 
 						<?php if ($itinerary !== []) : ?>
 							<section class="twostars-tour-page__section">
@@ -237,6 +244,15 @@ $twostars_fx = static function (float $nad): string {
 							</section>
 						<?php endif; ?>
 
+						<?php if (trim($meta['sunset_note']) !== '') : ?>
+							<?php $sunset_wa = add_query_arg('text', rawurlencode(sprintf(__('Hello! I would like to ask about a sunset departure for the %s.', 'twostars-theme'), get_the_title())), $whatsapp_url); ?>
+							<section class="twostars-tour-page__section twostars-tour-page__sunset">
+								<h2><?php esc_html_e('Sunset departures', 'twostars-theme'); ?></h2>
+								<p><?php echo esc_html($meta['sunset_note']); ?></p>
+								<a class="twostars-tour-entry__button twostars-tour-entry__button--secondary" href="<?php echo esc_url($sunset_wa); ?>" target="_blank" rel="noopener noreferrer" data-twostars-event="whatsapp_click"><?php esc_html_e('Ask about a sunset departure', 'twostars-theme'); ?></a>
+							</section>
+						<?php endif; ?>
+
 						<section class="twostars-tour-page__section">
 							<h2><?php esc_html_e('Guest reviews', 'twostars-theme'); ?></h2>
 							<?php /* Reviews for this tour: filled once review-to-tour links exist; falls back to the reviews page. */ ?>
@@ -269,7 +285,7 @@ $twostars_fx = static function (float $nad): string {
 										<a class="twostars-tour-page__related-card" href="<?php echo esc_url(get_permalink($other)); ?>">
 											<?php if ($other_img > 0) { echo wp_get_attachment_image($other_img, 'medium_large', false, ['loading' => 'lazy']); } ?>
 											<span><?php echo esc_html(get_the_title($other)); ?></span>
-											<?php if ($other_price > 0) : ?><small><?php echo esc_html(sprintf(__('From %s', 'twostars-theme'), TourData::format_nad($other_price))); ?></small><?php endif; ?>
+											<?php if ($other_price > 0) : ?><small><?php echo esc_html(sprintf(__('From %s', 'twostars-theme'), TourData::format_price($other_price))); ?></small><?php endif; ?>
 										</a>
 									<?php endforeach; ?>
 								</div>
@@ -307,7 +323,7 @@ $twostars_fx = static function (float $nad): string {
 			$schema['@graph'][0]['offers'] = [
 				'@type'         => 'Offer',
 				'price'         => (string) $price,
-				'priceCurrency' => 'NAD',
+				'priceCurrency' => TourData::get_currency(),
 				'availability'  => 'https://schema.org/InStock',
 				'url'           => get_permalink(),
 			];

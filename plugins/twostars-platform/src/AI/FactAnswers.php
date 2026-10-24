@@ -24,11 +24,11 @@ final class FactAnswers
 		$intents = [
 			[
 				'/\b(cruise|ship|port day|shore|disembark|back to the (ship|boat))\b/',
-				'Yes, we collect guests from the Walvis Bay cruise port and plan the day around your ship\'s arrival and departure times. Group tours are N$2,600 per adult with a maximum of 4 guests per vehicle. Send your ship\'s times on WhatsApp (' . $whatsapp . ') and the team will confirm the best tour for your port day: ' . $tours,
+				'Yes, we collect guests from the Walvis Bay cruise port and plan the day around your ship\'s arrival and departure times. Groups are limited to 4 guests per vehicle, and the Sandwich Harbour tour is from US$135 per adult. Send your ship\'s times on WhatsApp (' . $whatsapp . ') and the team will confirm the best tour for your port day: ' . $tours,
 			],
 			[
 				'/\b(price|prices|cost|costs|how much|rate|rates|fee|fees|children|child|kids|kid|infant|half price)\b/',
-				'Group tours are N$2,600 per adult. Children aged 5 and under are free, ages 6 to 11 pay half price (N$1,300), and guests aged 12 and over pay the adult price. A private tour is quoted by route, group size and date. All tours have free cancellation. See each tour here: ' . $tours,
+				'The Sandwich Harbour tour is US$135 per adult. Children under 6 go free, ages 6 to 11 pay half price, and guests aged 12 and over pay the full adult price. Prices for our other tours are confirmed on request, and private tours are quoted by route and group size. You can cancel up to 24 hours before the experience starts for a full refund. See the tours here: ' . $tours,
 			],
 			[
 				'/\b(group size|how many (people|guests|persons)|small group|per vehicle|capacity|seats|fortuner)\b/',
@@ -40,11 +40,15 @@ final class FactAnswers
 			],
 			[
 				'/\b(cancel|cancellation|refund|change my booking|reschedule)\b/',
-				'Cancellation is free. If you want to know the exact notice window for your date, message the team on WhatsApp (' . $whatsapp . ') and they will confirm it.',
+				'Yes. You can cancel up to 24 hours before the experience starts for a full refund. For anything closer than that, message the team on WhatsApp (' . $whatsapp . ') and they will help.',
+			],
+			[
+				'/\bsunset\b/',
+				'We can offer a sunset departure on request, depending on the season and availability. Departures are usually mid-afternoon, and the timing changes through the year, so message the team on WhatsApp (' . $whatsapp . ') with your date and they will confirm before you book.',
 			],
 			[
 				'/\b(what time|departure|depart|leave|start time|sunset|morning|afternoon|when does)\b/',
-				'The morning tour departs at 08:45 and the afternoon tour at 12:45. The sunset tour departs between 14:00 and 15:00. Spitzkoppe is a full-day tour and your pickup time is confirmed when you book.',
+				'The morning tour departs at 08:45 and the afternoon tour at 12:45. Sunset departures are on request in season, subject to availability. Spitzkoppe is a full-day tour and your pickup time is confirmed when you book.',
 			],
 			[
 				'/\b(language|english|german|deutsch|chinese|french|speak)\b/',
@@ -60,19 +64,19 @@ final class FactAnswers
 			],
 			[
 				'/\b(sandwich harbou?r|dunes?|4x4|photo|photograph)/',
-				'For dunes where the desert meets the Atlantic, the Sandwich Harbour 4x4 tour is our strongest fit: small group, long unhurried photo stops, from N$2,600 per adult. ' . self::tour_link('sandwich-harbour-tour', $tours),
+				'For dunes where the desert meets the Atlantic, the Sandwich Harbour 4x4 tour is our strongest fit: small group, long unhurried photo stops, from US$135 per adult. ' . self::tour_link('sandwich-harbour-tour', $tours),
 			],
 			[
 				'/\b(flamingo|flamingos|pink|salt lake|bird)/',
-				'The Flamingo and Pink Salt Lake tour is a shorter, relaxed outing built around birdlife and photography, from N$2,600 per adult. ' . self::tour_link('walvis-bay-flamingo-tour', $tours),
+				'The Flamingo and Pink Salt Lake tour is a shorter, relaxed outing built around birdlife and photography. Ask the team for the current price. ' . self::tour_link('walvis-bay-flamingo-tour', $tours),
 			],
 			[
 				'/\b(spitzkoppe|granite|rock)/',
-				'The Spitzkoppe tour is a full day among the granite formations, from N$2,600 per adult, with a small group of up to 4. ' . self::tour_link('spitzkoppe-day-tour', $tours),
+				'The Spitzkoppe tour is a full day among the granite formations, with a small group of up to 4. Ask the team for the current price. ' . self::tour_link('spitzkoppe-day-tour', $tours),
 			],
 			[
 				'/\b(swakopmund|dune 7|town)/',
-				'The Swakopmund and Dune 7 tour covers the town\'s landmarks and history, then a desert stop at Dune 7 for photos, from N$2,600 per adult. ' . self::tour_link('swakopmund-city-tour-dune-7', $tours),
+				'The Swakopmund and Dune 7 tour covers the town\'s landmarks and history, then a desert stop at Dune 7 for photos. Ask the team for the current price. ' . self::tour_link('swakopmund-city-tour-dune-7', $tours),
 			],
 		];
 

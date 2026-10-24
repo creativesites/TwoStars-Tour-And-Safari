@@ -25,7 +25,7 @@ function twostars_theme_output_business_schema(): void
 		'description' => 'Women-led day tours from Walvis Bay and Swakopmund, Namibia: small groups, unhurried photo stops and cruise passenger pickups.',
 		'address'     => ['@type' => 'PostalAddress', 'addressLocality' => 'Walvis Bay', 'addressCountry' => 'NA'],
 		'areaServed'  => ['Walvis Bay', 'Swakopmund', 'Sandwich Harbour', 'Spitzkoppe'],
-		'priceRange'  => 'N$2,600+',
+		'priceRange'  => '$$',
 		'sameAs'      => [],
 	];
 

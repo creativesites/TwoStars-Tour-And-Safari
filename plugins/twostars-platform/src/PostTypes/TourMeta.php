@@ -278,6 +278,18 @@ final class TourMeta implements Service
 				'label' => __('Google Maps Embed URL', 'twostars-platform'),
 				'type'  => 'url',
 			],
+			'_twostars_tour_sunset_note' => [
+				'label' => __('Sunset Departure Note (leave empty to hide)', 'twostars-platform'),
+				'type'  => 'textarea',
+			],
+			'_twostars_tour_video_url' => [
+				'label' => __('Video URL (MP4 in the media library)', 'twostars-platform'),
+				'type'  => 'url',
+			],
+			'_twostars_tour_video_poster' => [
+				'label' => __('Video Poster Image URL', 'twostars-platform'),
+				'type'  => 'url',
+			],
 			'_twostars_tour_bokun_url' => [
 				'label' => __('Bokun Booking Widget URL (iframe src)', 'twostars-platform'),
 				'type'  => 'url',
@@ -328,6 +340,9 @@ final class TourMeta implements Service
 					'_twostars_tour_faqs',
 					'_twostars_tour_meeting_point',
 					'_twostars_tour_map_embed_url',
+					'_twostars_tour_sunset_note',
+					'_twostars_tour_video_url',
+					'_twostars_tour_video_poster',
 				]
 			)
 		);
