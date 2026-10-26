@@ -529,6 +529,10 @@
       }
 
       setStatus(config.messages.success, 'success');
+
+      if (typeof window.twostarsTrack === 'function') {
+        window.twostarsTrack('booking_complete', { page_path: window.location.pathname });
+      }
     }
 
     function resetSuccessState() {

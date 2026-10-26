@@ -66,6 +66,8 @@ final class LeadForm implements Service
 				'description' => __('Tell us where you want to go, when you want to travel, and how we should reach you.', 'twostars-platform'),
 				'source'      => 'website',
 				'tour_id'     => 0,
+				'variant'     => 'default', // default | private | cruise
+				'submit'      => '',
 			],
 			$atts,
 			'twostars_lead_form'
@@ -134,6 +136,34 @@ final class LeadForm implements Service
 				</label>
 			</div>
 
+			<?php if ($atts['variant'] === 'cruise') : ?>
+				<div class="twostars-lead-form__grid twostars-lead-form__extra">
+					<label>
+						<span><?php esc_html_e('Ship name', 'twostars-platform'); ?></span>
+						<input type="text" name="extra_ship" data-extra-label="Ship" autocomplete="off">
+					</label>
+					<label>
+						<span><?php esc_html_e('Ship arrives at (time)', 'twostars-platform'); ?></span>
+						<input type="text" name="extra_arrival" data-extra-label="Ship arrives" placeholder="<?php esc_attr_e('e.g. 07:00', 'twostars-platform'); ?>" autocomplete="off">
+					</label>
+					<label>
+						<span><?php esc_html_e('All aboard by (time)', 'twostars-platform'); ?></span>
+						<input type="text" name="extra_all_aboard" data-extra-label="All aboard" placeholder="<?php esc_attr_e('e.g. 17:00', 'twostars-platform'); ?>" autocomplete="off">
+					</label>
+				</div>
+			<?php elseif ($atts['variant'] === 'private') : ?>
+				<div class="twostars-lead-form__grid twostars-lead-form__extra">
+					<label>
+						<span><?php esc_html_e('Pickup point', 'twostars-platform'); ?></span>
+						<input type="text" name="extra_pickup" data-extra-label="Pickup point" placeholder="<?php esc_attr_e('Hotel name or cruise port', 'twostars-platform'); ?>" autocomplete="off">
+					</label>
+					<label>
+						<span><?php esc_html_e('What interests you most?', 'twostars-platform'); ?></span>
+						<input type="text" name="extra_interests" data-extra-label="Interests" placeholder="<?php esc_attr_e('Dunes, flamingos, photography, family day...', 'twostars-platform'); ?>" autocomplete="off">
+					</label>
+				</div>
+			<?php endif; ?>
+
 			<label class="twostars-lead-form__consent">
 				<input type="checkbox" name="contact_consent" value="1" required>
 				<span><?php esc_html_e('I agree to be contacted about my Two Stars tour inquiry.', 'twostars-platform'); ?></span>
@@ -145,7 +175,7 @@ final class LeadForm implements Service
 
 			<div class="twostars-lead-form__actions">
 				<button type="submit" class="tour-booking-button">
-					<?php esc_html_e('Send Inquiry', 'twostars-platform'); ?>
+					<?php echo esc_html($atts['submit'] !== '' ? (string) $atts['submit'] : __('Send Inquiry', 'twostars-platform')); ?>
 				</button>
 				<p class="twostars-lead-form__status" data-twostars-lead-form-status aria-live="polite"></p>
 			</div>

@@ -240,7 +240,7 @@ foreach ((array) ($snap['posts'] ?? []) as $item) {
 	if (! empty($item['fields']) && ! $dry) {
 		$fields = ['ID' => $id];
 
-		foreach (['title' => 'post_title', 'slug' => 'post_name', 'content' => 'post_content', 'excerpt' => 'post_excerpt'] as $k => $col) {
+		foreach (['title' => 'post_title', 'slug' => 'post_name', 'content' => 'post_content', 'excerpt' => 'post_excerpt', 'status' => 'post_status'] as $k => $col) {
 			if (array_key_exists($k, (array) $item['fields'])) {
 				$fields[$col] = (string) $item['fields'][$k];
 			}
@@ -249,6 +249,10 @@ foreach ((array) ($snap['posts'] ?? []) as $item) {
 		// Keep the old URL working as a redirect when a slug changes.
 		if (isset($fields['post_name']) && $fields['post_name'] !== $post->post_name) {
 			add_post_meta($id, '_wp_old_slug', $post->post_name);
+		}
+
+		if (isset($fields['post_status']) && $type === 'post') {
+			unset($fields['post_status']); // never publish or unpublish articles automatically
 		}
 
 		wp_update_post(wp_slash($fields));
@@ -269,6 +273,29 @@ foreach ((array) ($snap['posts'] ?? []) as $item) {
 	$say("  ~ updated {$label} (#{$id})");
 }
 
+/* ---------- media the client asked us to remove ---------- */
+
+foreach ((array) ($snap['remove_media'] ?? []) as $file) {
+	$id = $att_map[strtolower((string) $file)] ?? 0;
+
+	if ($id === 0) {
+		continue;
+	}
+
+	$used = (int) $GLOBALS['wpdb']->get_var($GLOBALS['wpdb']->prepare("SELECT COUNT(*) FROM {$GLOBALS['wpdb']->postmeta} WHERE meta_key = '_thumbnail_id' AND meta_value = %d", $id));
+
+	if ($used > 0) {
+		$report['warnings'][] = "Not removed (still a featured image on {$used} item(s)): {$file}";
+		continue;
+	}
+
+	if (! $dry) {
+		wp_delete_attachment($id, true);
+	}
+
+	$say("  - removed media: {$file} (#{$id})");
+}
+
 /* ---------- options ---------- */
 
 foreach ((array) ($snap['options'] ?? []) as $name => $value) {
@@ -277,6 +304,29 @@ foreach ((array) ($snap['options'] ?? []) as $name => $value) {
 	}
 
 	$say("  = option {$name} = " . (is_scalar($value) ? $value : wp_json_encode($value)));
+}
+
+foreach ((array) ($snap['option_page_ids'] ?? []) as $name => $slug) {
+	$page = get_page_by_path((string) $slug, OBJECT, 'page');
+
+	if ($page instanceof WP_Post) {
+		$dry || update_option((string) $name, (int) $page->ID);
+		$say("  = option {$name} = page {$slug} (#{$page->ID})");
+	}
+}
+
+foreach ((array) ($snap['option_merge'] ?? []) as $name => $values) {
+	$current = get_option((string) $name, []);
+	$current = is_array($current) ? $current : [];
+
+	foreach ((array) $values as $k => $v) {
+		if (empty($current[$k])) { // never overwrite a value that is already set
+			$current[$k] = $v;
+		}
+	}
+
+	$dry || update_option((string) $name, $current);
+	$say("  = option {$name} merged (" . implode(', ', array_keys((array) $values)) . ')');
 }
 
 foreach ((array) ($snap['option_att_lists'] ?? []) as $name => $files) {

@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-24 21:37:02",
+ "generated": "2026-10-26 17:06:00",
  "attachments": [
   {
    "file": "hero-sandwich-harbour-dunes-lagoon.webp",
@@ -139,7 +139,6 @@
   "whatsapp-image-2026-03-27-at-60045-am-picsart-aiimageenhancer.jpeg": "Two Stars guests and guides sitting together on a Sandwich Harbour dune with 4x4 vehicles behind them",
   "whatsapp-image-2026-03-27-at-60045-am-2-picsart-aiimageenhancer.jpeg": "Two Stars team and guests smiling in front of the pink salt lake near Walvis Bay",
   "spitzkoppe-namibia-1.jpg": "Granite rock formations at Spitzkoppe in the Namib Desert",
-  "swakopmund.jpg": "Swakopmund seafront on the Namibian coast",
   "whatsapp-image-2026-04-07-at-11.27.20-am.jpeg": "A guest standing on a high dune above the Atlantic shoreline at Sandwich Harbour",
   "whatsapp-image-2026-04-07-at-1.34.33-pm.jpeg": "A guest crouching beside the pink salt pans near Walvis Bay",
   "whatsapp-image-2026-04-07-at-1.34.32-pm-3.jpeg": "A guest crouching at the edge of the pink salt lake near Walvis Bay",
@@ -334,6 +333,25 @@
        },
        "elements": [],
        "widgetType": "twostars-home-signature-collection"
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "cruisebn01",
+     "elType": "container",
+     "settings": {
+      "content_width": "full"
+     },
+     "elements": [
+      {
+       "id": "cruisebn02",
+       "elType": "widget",
+       "widgetType": "shortcode",
+       "settings": {
+        "shortcode": "[twostars_cruise_banner]"
+       },
+       "elements": []
       }
      ],
      "isInner": false
@@ -857,6 +875,26 @@
           "label": "Free cancellation"
          }
         ]
+       },
+       "elements": []
+      }
+     ]
+    },
+    {
+     "id": "teamcont01",
+     "elType": "container",
+     "isInner": false,
+     "settings": {
+      "content_width": "full"
+     },
+     "elements": [
+      {
+       "id": "teamgrid01",
+       "elType": "widget",
+       "widgetType": "twostars-team-grid",
+       "settings": {
+        "heading": "Meet Tuli and the team",
+        "posts_to_show": 6
        },
        "elements": []
       }
@@ -1475,6 +1513,42 @@
        },
        "elements": [],
        "widgetType": "twostars-testimonials-hero"
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "extrev0001",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "margin": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      },
+      "background_background": "classic"
+     },
+     "elements": [
+      {
+       "id": "extrev0002",
+       "elType": "widget",
+       "widgetType": "shortcode",
+       "settings": {
+        "shortcode": "[twostars_external_reviews]"
+       },
+       "elements": []
       }
      ],
      "isInner": false
@@ -2360,6 +2434,176 @@
     "content": "<p>Sunset departures are offered on request, depending on the season and availability. Message us on WhatsApp with your date and we will confirm the timing before you book.</p>"
    },
    "meta": {}
+  },
+  {
+   "type": "page",
+   "create": true,
+   "status": "publish",
+   "slugs": [
+    "terms"
+   ],
+   "title": "Terms and Conditions",
+   "content": "<p><strong>Last updated 26 October 2026.</strong> These terms apply when you book or take a tour with Two Stars Tour &amp; Safari CC (\"Two Stars\", \"we\", \"us\"), a women-led family business based in Walvis Bay, Namibia, registered with the Namibia Tourism Board (#TSO01736).</p>\n<h2>1. Booking</h2>\n<p>You can send a booking request through this website, by WhatsApp or by email (info@twostarstourandsafari.com). A booking is confirmed when we confirm your date, tour and pickup point with you.</p>\n<h2>2. Prices</h2>\n<p>The Sandwich Harbour 4x4 tour is US$135 per adult. Children under 6 go free, children aged 6 to 11 pay half price, and guests aged 12 and over pay the full adult price. Prices for our other tours and for private tours are confirmed when you ask us, and private tours are quoted by route, group size and date. We confirm the price with you before you pay.</p>\n<h2>3. Cancellation and refunds</h2>\n<p>You can cancel up to 24 hours before the experience starts for a full refund. For anything closer than that, please contact us on WhatsApp (+264 81 206 0111) and we will do our best to help.</p>\n<h2>4. Group size and vehicles</h2>\n<p>We take a maximum of 4 guests per vehicle, plus your guide and driver. Private tours use a vehicle for your group only.</p>\n<h2>5. Pickups</h2>\n<p>We collect guests from Walvis Bay hotels, Swakopmund hotels and the Walvis Bay cruise port. Your pickup time and place are confirmed when you book. Please be ready at the agreed time.</p>\n<h2>6. Tides, weather and safety</h2>\n<p>Routes in the dunes and on the coast depend on tides, weather and ground conditions. Your guide may change the timing or route to keep the group safe. If a tour cannot run as planned, we will contact you to agree the next step.</p>\n<h2>7. Cruise passengers</h2>\n<p>We plan cruise-port days around the arrival and all-aboard times you give us and confirm the timings before you book. Please give us accurate ship times when you enquire.</p>\n<h2>8. Children</h2>\n<p>Children must be accompanied by an adult in their group, who stays responsible for them during the tour.</p>\n<h2>9. Your responsibilities</h2>\n<p>Please follow your guide's instructions, tell us about any health condition or mobility need that could affect your tour, and look after your own belongings. We recommend that you hold travel insurance that covers adventure activities.</p>\n<h2>10. Language</h2>\n<p>Our tours are guided in English.</p>\n<h2>11. Privacy</h2>\n<p>We handle your personal information as described in our <a href=\"/privacy/\">privacy policy</a>.</p>\n<h2>12. Governing law</h2>\n<p>These terms are governed by the laws of Namibia.</p>\n<h2>13. Contact</h2>\n<p>Two Stars Tour &amp; Safari CC, Walvis Bay, Namibia. WhatsApp +264 81 206 0111. Email info@twostarstourandsafari.com.</p>",
+   "fields": {
+    "title": "Terms and Conditions",
+    "slug": "terms",
+    "content": "<p><strong>Last updated 26 October 2026.</strong> These terms apply when you book or take a tour with Two Stars Tour &amp; Safari CC (\"Two Stars\", \"we\", \"us\"), a women-led family business based in Walvis Bay, Namibia, registered with the Namibia Tourism Board (#TSO01736).</p>\n<h2>1. Booking</h2>\n<p>You can send a booking request through this website, by WhatsApp or by email (info@twostarstourandsafari.com). A booking is confirmed when we confirm your date, tour and pickup point with you.</p>\n<h2>2. Prices</h2>\n<p>The Sandwich Harbour 4x4 tour is US$135 per adult. Children under 6 go free, children aged 6 to 11 pay half price, and guests aged 12 and over pay the full adult price. Prices for our other tours and for private tours are confirmed when you ask us, and private tours are quoted by route, group size and date. We confirm the price with you before you pay.</p>\n<h2>3. Cancellation and refunds</h2>\n<p>You can cancel up to 24 hours before the experience starts for a full refund. For anything closer than that, please contact us on WhatsApp (+264 81 206 0111) and we will do our best to help.</p>\n<h2>4. Group size and vehicles</h2>\n<p>We take a maximum of 4 guests per vehicle, plus your guide and driver. Private tours use a vehicle for your group only.</p>\n<h2>5. Pickups</h2>\n<p>We collect guests from Walvis Bay hotels, Swakopmund hotels and the Walvis Bay cruise port. Your pickup time and place are confirmed when you book. Please be ready at the agreed time.</p>\n<h2>6. Tides, weather and safety</h2>\n<p>Routes in the dunes and on the coast depend on tides, weather and ground conditions. Your guide may change the timing or route to keep the group safe. If a tour cannot run as planned, we will contact you to agree the next step.</p>\n<h2>7. Cruise passengers</h2>\n<p>We plan cruise-port days around the arrival and all-aboard times you give us and confirm the timings before you book. Please give us accurate ship times when you enquire.</p>\n<h2>8. Children</h2>\n<p>Children must be accompanied by an adult in their group, who stays responsible for them during the tour.</p>\n<h2>9. Your responsibilities</h2>\n<p>Please follow your guide's instructions, tell us about any health condition or mobility need that could affect your tour, and look after your own belongings. We recommend that you hold travel insurance that covers adventure activities.</p>\n<h2>10. Language</h2>\n<p>Our tours are guided in English.</p>\n<h2>11. Privacy</h2>\n<p>We handle your personal information as described in our <a href=\"/privacy/\">privacy policy</a>.</p>\n<h2>12. Governing law</h2>\n<p>These terms are governed by the laws of Namibia.</p>\n<h2>13. Contact</h2>\n<p>Two Stars Tour &amp; Safari CC, Walvis Bay, Namibia. WhatsApp +264 81 206 0111. Email info@twostarstourandsafari.com.</p>",
+    "excerpt": "",
+    "status": "publish"
+   },
+   "meta": {
+    "_yoast_wpseo_title": "Terms and Conditions | Two Stars Tour & Safari",
+    "_yoast_wpseo_metadesc": "Booking, prices, 24-hour refund policy, group size, pickups and safety terms for Two Stars day tours from Walvis Bay."
+   }
+  },
+  {
+   "type": "page",
+   "create": true,
+   "status": "publish",
+   "slugs": [
+    "privacy"
+   ],
+   "title": "Privacy Policy",
+   "content": "<p><strong>Last updated 26 October 2026.</strong> This policy explains what personal information Two Stars Tour &amp; Safari CC (\"Two Stars\", \"we\", \"us\") collects on this website, why, and what choices you have. We are a family business based in Walvis Bay, Namibia.</p>\n<h2>What we collect</h2>\n<h3>When you contact or book with us</h3>\n<p>If you use a form, a booking request, email or WhatsApp, we receive what you choose to tell us: your name, email address, phone number, country, the tour you are interested in, group size, travel dates, pickup point, ship details if you are a cruise passenger, and your message. We use this to reply, plan your tour and confirm your booking.</p>\n<h3>When you chat with our assistant</h3>\n<p>Our on-site assistant stores the conversation so we can continue it and follow up if you ask us to. Your messages are processed by Google's Gemini service to produce replies. Please do not type passwords, payment card numbers or other sensitive information into the chat.</p>\n<h3>If you allow personalization</h3>\n<p>The site asks whether it may remember your planning journey. If you agree, we use a visitor-recognition service (Fingerprint) to recognise your browser and a location service (VisitorAPI) to estimate your country, and we record the pages and tours you view, so the assistant and recommendations make sense. If you decline, we do not do this. We keep this information for up to 180 days.</p>\n<h3>If you accept analytics and advertising cookies</h3>\n<p>A banner asks whether we may use Google Analytics 4 for anonymous visitor statistics and the Meta Pixel to measure our adverts. These load only after you choose Accept. If you choose No thanks, they do not load.</p>\n<h3>Technical information</h3>\n<p>Like most websites, our server records technical details such as your IP address, browser type and the pages requested, mainly for security and to keep the site working. We store your cookie choice in a cookie (ts_consent) and a session identifier in your browser while you browse. Our pages load fonts from Google Fonts, which means your browser contacts Google when a page loads.</p>\n<h2>How we use it</h2>\n<ul><li>To answer your questions and plan and confirm tours.</li><li>To remember your conversation and follow up, if you ask us to.</li><li>To understand how the site is used and improve it, if you accept analytics.</li><li>To measure and improve our advertising, if you accept advertising cookies.</li><li>To keep the site secure and prevent abuse.</li></ul>\n<h2>Who we share it with</h2>\n<p>We do not sell your information. We share it only with services that help us run the website and the business, for example our website hosting, Google (chat replies, analytics, fonts), Meta (if you accept advertising cookies), WhatsApp if you message us there, and the payment and booking providers we use when you book. When you leave this site by a link, the other site's own policy applies.</p>\n<h2>How long we keep it</h2>\n<p>We keep enquiries and booking records for as long as we need them to serve you and to keep business records. Personalization information is kept for up to 180 days. You can ask us to delete your information at any time.</p>\n<h2>Your choices and rights</h2>\n<p>You can ask us to show, correct or delete the personal information we hold about you, and you can withdraw your consent to personalization or cookies at any time by clearing this site's cookies and local storage in your browser, which brings the choices banner back. If you are in the European Union or United Kingdom, you may also have rights under the GDPR, including to complain to your local data protection authority. To exercise any of these, email info@twostarstourandsafari.com.</p>\n<h2>Children</h2>\n<p>This website is for adults planning travel. We do not knowingly collect information from children.</p>\n<h2>Changes</h2>\n<p>We may update this policy. The date at the top shows when it last changed.</p>\n<h2>Contact</h2>\n<p>Two Stars Tour &amp; Safari CC, Walvis Bay, Namibia. Email info@twostarstourandsafari.com. WhatsApp +264 81 206 0111.</p>",
+   "fields": {
+    "title": "Privacy Policy",
+    "slug": "privacy",
+    "content": "<p><strong>Last updated 26 October 2026.</strong> This policy explains what personal information Two Stars Tour &amp; Safari CC (\"Two Stars\", \"we\", \"us\") collects on this website, why, and what choices you have. We are a family business based in Walvis Bay, Namibia.</p>\n<h2>What we collect</h2>\n<h3>When you contact or book with us</h3>\n<p>If you use a form, a booking request, email or WhatsApp, we receive what you choose to tell us: your name, email address, phone number, country, the tour you are interested in, group size, travel dates, pickup point, ship details if you are a cruise passenger, and your message. We use this to reply, plan your tour and confirm your booking.</p>\n<h3>When you chat with our assistant</h3>\n<p>Our on-site assistant stores the conversation so we can continue it and follow up if you ask us to. Your messages are processed by Google's Gemini service to produce replies. Please do not type passwords, payment card numbers or other sensitive information into the chat.</p>\n<h3>If you allow personalization</h3>\n<p>The site asks whether it may remember your planning journey. If you agree, we use a visitor-recognition service (Fingerprint) to recognise your browser and a location service (VisitorAPI) to estimate your country, and we record the pages and tours you view, so the assistant and recommendations make sense. If you decline, we do not do this. We keep this information for up to 180 days.</p>\n<h3>If you accept analytics and advertising cookies</h3>\n<p>A banner asks whether we may use Google Analytics 4 for anonymous visitor statistics and the Meta Pixel to measure our adverts. These load only after you choose Accept. If you choose No thanks, they do not load.</p>\n<h3>Technical information</h3>\n<p>Like most websites, our server records technical details such as your IP address, browser type and the pages requested, mainly for security and to keep the site working. We store your cookie choice in a cookie (ts_consent) and a session identifier in your browser while you browse. Our pages load fonts from Google Fonts, which means your browser contacts Google when a page loads.</p>\n<h2>How we use it</h2>\n<ul><li>To answer your questions and plan and confirm tours.</li><li>To remember your conversation and follow up, if you ask us to.</li><li>To understand how the site is used and improve it, if you accept analytics.</li><li>To measure and improve our advertising, if you accept advertising cookies.</li><li>To keep the site secure and prevent abuse.</li></ul>\n<h2>Who we share it with</h2>\n<p>We do not sell your information. We share it only with services that help us run the website and the business, for example our website hosting, Google (chat replies, analytics, fonts), Meta (if you accept advertising cookies), WhatsApp if you message us there, and the payment and booking providers we use when you book. When you leave this site by a link, the other site's own policy applies.</p>\n<h2>How long we keep it</h2>\n<p>We keep enquiries and booking records for as long as we need them to serve you and to keep business records. Personalization information is kept for up to 180 days. You can ask us to delete your information at any time.</p>\n<h2>Your choices and rights</h2>\n<p>You can ask us to show, correct or delete the personal information we hold about you, and you can withdraw your consent to personalization or cookies at any time by clearing this site's cookies and local storage in your browser, which brings the choices banner back. If you are in the European Union or United Kingdom, you may also have rights under the GDPR, including to complain to your local data protection authority. To exercise any of these, email info@twostarstourandsafari.com.</p>\n<h2>Children</h2>\n<p>This website is for adults planning travel. We do not knowingly collect information from children.</p>\n<h2>Changes</h2>\n<p>We may update this policy. The date at the top shows when it last changed.</p>\n<h2>Contact</h2>\n<p>Two Stars Tour &amp; Safari CC, Walvis Bay, Namibia. Email info@twostarstourandsafari.com. WhatsApp +264 81 206 0111.</p>",
+    "excerpt": "",
+    "status": "publish"
+   },
+   "meta": {
+    "_yoast_wpseo_title": "Privacy Policy | Two Stars Tour & Safari",
+    "_yoast_wpseo_metadesc": "How Two Stars Tour & Safari collects and uses personal information on this website, and the choices you have."
+   }
+  },
+  {
+   "type": "page",
+   "create": true,
+   "status": "publish",
+   "slugs": [
+    "walvis-bay-shore-excursions"
+   ],
+   "title": "Walvis Bay Shore Excursions",
+   "content": "<p>Shore excursions from the Walvis Bay cruise port.</p>",
+   "fields": {
+    "title": "Walvis Bay Shore Excursions",
+    "slug": "walvis-bay-shore-excursions",
+    "content": "<p>Shore excursions from the Walvis Bay cruise port.</p>",
+    "excerpt": "",
+    "status": "publish"
+   },
+   "meta": {
+    "_yoast_wpseo_title": "Walvis Bay Shore Excursions with Port Pickup | Two Stars",
+    "_yoast_wpseo_metadesc": "Small-group Walvis Bay shore excursions for cruise passengers, planned around your ship's schedule. Port pickup, max 4 guests, free cancellation up to 24h.",
+    "_yoast_wpseo_focuskw": "walvis bay shore excursions"
+   }
+  },
+  {
+   "type": "page",
+   "create": true,
+   "status": "publish",
+   "slugs": [
+    "private-tours"
+   ],
+   "title": "Private Tours",
+   "content": "<p>Private tours in Walvis Bay and Swakopmund.</p>",
+   "fields": {
+    "title": "Private Tours",
+    "slug": "private-tours",
+    "content": "<p>Private tours in Walvis Bay and Swakopmund.</p>",
+    "excerpt": "",
+    "status": "publish"
+   },
+   "meta": {
+    "_yoast_wpseo_title": "Private Tours in Walvis Bay & Swakopmund | Two Stars",
+    "_yoast_wpseo_metadesc": "Private day tours from Walvis Bay & Swakopmund: your own 4x4, route and pace with a women-led local team. Free cancellation up to 24h.",
+    "_yoast_wpseo_focuskw": "private tours walvis bay"
+   }
+  },
+  {
+   "type": "page",
+   "create": true,
+   "status": "publish",
+   "slugs": [
+    "guides",
+    "blog"
+   ],
+   "title": "Guides",
+   "content": "<p>Practical guides for planning a day on the Namibian coast.</p>",
+   "fields": {
+    "title": "Guides",
+    "slug": "guides",
+    "content": "<p>Practical guides for planning a day on the Namibian coast.</p>",
+    "excerpt": "Practical guides for planning a day on the Namibian coast: Sandwich Harbour, Walvis Bay, Swakopmund and cruise port days.",
+    "status": "publish"
+   },
+   "meta": {
+    "_yoast_wpseo_title": "Guides: Sandwich Harbour, Walvis Bay & Swakopmund | Two Stars",
+    "_yoast_wpseo_metadesc": "Practical local guides for planning a day on the Namibian coast, from Sandwich Harbour to cruise port days."
+   }
+  },
+  {
+   "type": "team_member",
+   "create": true,
+   "status": "publish",
+   "slugs": [
+    "tulimeke-tuli"
+   ],
+   "title": "Tulimeke (Tuli)",
+   "content": "<p>Tuli runs Two Stars Tour &amp; Safari with her team in Walvis Bay. Guests often mention her by name in their reviews. She keeps every group to four guests per vehicle, so there is always time for the next photo and the next question.</p>",
+   "fields": {
+    "title": "Tulimeke (Tuli)",
+    "slug": "tulimeke-tuli",
+    "content": "<p>Tuli runs Two Stars Tour &amp; Safari with her team in Walvis Bay. Guests often mention her by name in their reviews. She keeps every group to four guests per vehicle, so there is always time for the next photo and the next question.</p>",
+    "excerpt": "Owner and host",
+    "status": "publish"
+   },
+   "meta": {}
+  },
+  {
+   "type": "post",
+   "create": true,
+   "status": "draft",
+   "slugs": [
+    "sandwich-harbour-what-to-wear-and-bring"
+   ],
+   "title": "Sandwich Harbour: What to Wear and Bring",
+   "content": "<p>Sandwich Harbour is where the Namib dunes run straight into the Atlantic, and it is one of the most photographed places on the Namibian coast. A little preparation makes the day more comfortable.</p>\n<h2>What to wear</h2>\n<ul><li><strong>Layers.</strong> Coastal mornings can be cool and windy, and the sun is strong by midday.</li><li><strong>Closed, comfortable shoes</strong> for walking on sand.</li><li><strong>A sun hat and sunglasses.</strong></li></ul>\n<h2>What to bring</h2>\n<ul><li>Sunscreen and drinking water.</li><li>A camera or phone, and a power bank.</li><li>Your own questions. Our guides love them.</li></ul>\n<h2>Why tides and conditions matter</h2>\n<p>At Sandwich Harbour, the tide, weather and ground conditions shape how and when the route can be driven. That is why we confirm your departure time with you instead of publishing one fixed schedule, and why your guide may adjust the route on the day.</p>\n<h2>A small group, an unhurried pace</h2>\n<p>We take a maximum of four guests per vehicle, with long photo stops planned around the light. Tuli and her women-led team run every trip themselves.</p>\n<h2>Ready to go?</h2>\n<p>The <a href=\"/tours/sandwich-harbour-tour/\">Sandwich Harbour small-group 4x4 tour</a> is US$135 per adult, with free cancellation up to 24 hours before the experience starts.</p>",
+   "fields": {
+    "title": "Sandwich Harbour: What to Wear and Bring",
+    "slug": "sandwich-harbour-what-to-wear-and-bring",
+    "content": "<p>Sandwich Harbour is where the Namib dunes run straight into the Atlantic, and it is one of the most photographed places on the Namibian coast. A little preparation makes the day more comfortable.</p>\n<h2>What to wear</h2>\n<ul><li><strong>Layers.</strong> Coastal mornings can be cool and windy, and the sun is strong by midday.</li><li><strong>Closed, comfortable shoes</strong> for walking on sand.</li><li><strong>A sun hat and sunglasses.</strong></li></ul>\n<h2>What to bring</h2>\n<ul><li>Sunscreen and drinking water.</li><li>A camera or phone, and a power bank.</li><li>Your own questions. Our guides love them.</li></ul>\n<h2>Why tides and conditions matter</h2>\n<p>At Sandwich Harbour, the tide, weather and ground conditions shape how and when the route can be driven. That is why we confirm your departure time with you instead of publishing one fixed schedule, and why your guide may adjust the route on the day.</p>\n<h2>A small group, an unhurried pace</h2>\n<p>We take a maximum of four guests per vehicle, with long photo stops planned around the light. Tuli and her women-led team run every trip themselves.</p>\n<h2>Ready to go?</h2>\n<p>The <a href=\"/tours/sandwich-harbour-tour/\">Sandwich Harbour small-group 4x4 tour</a> is US$135 per adult, with free cancellation up to 24 hours before the experience starts.</p>",
+    "excerpt": "What to wear and bring to Sandwich Harbour, and why tides and conditions shape the day.",
+    "status": "draft"
+   },
+   "meta": {
+    "_yoast_wpseo_title": "Sandwich Harbour: What to Wear and Bring | Two Stars",
+    "_yoast_wpseo_metadesc": "What to wear and bring to Sandwich Harbour, and why tides and ground conditions shape your day on the dunes.",
+    "_thumbnail_id": "@att:two-stars-4x4-parked-on-sandwich-harbour-dune.webp"
+   }
+  },
+  {
+   "type": "post",
+   "create": true,
+   "status": "draft",
+   "slugs": [
+    "walvis-bay-cruise-passengers-port-day"
+   ],
+   "title": "Walvis Bay for Cruise Passengers: Planning a Port Day",
+   "content": "<p>A cruise day in Walvis Bay is short, so it helps to decide early what matters most. Here is how we suggest planning it.</p>\n<h2>1. Start with your ship's times</h2>\n<p>Note your arrival time and your all-aboard time. Those two times decide which tours fit. Send them to us on WhatsApp or through our <a href=\"/walvis-bay-shore-excursions/\">shore excursions page</a> and we will tell you what works.</p>\n<h2>2. Choose by the kind of day you want</h2>\n<ul><li><strong>Dunes and the Atlantic:</strong> the <a href=\"/tours/sandwich-harbour-tour/\">Sandwich Harbour 4x4 tour</a>.</li><li><strong>A relaxed outing for birds and photos:</strong> the <a href=\"/tours/walvis-bay-flamingo-tour/\">flamingo and Pink Salt Lake tour</a>.</li><li><strong>Town and desert:</strong> the <a href=\"/tours/swakopmund-city-tour-dune-7/\">Swakopmund and Dune 7 tour</a>.</li></ul>\n<h2>3. Meeting at the port</h2>\n<p>We collect cruise guests from the Walvis Bay cruise port. The exact meeting point is confirmed with you when you book.</p>\n<h2>4. Keep it unhurried</h2>\n<p>A small group of up to four guests per vehicle means we are not herding a crowd. We plan the day around your all-aboard time and confirm the timings with you before you book.</p>\n<h2>Questions?</h2>\n<p>Message us on WhatsApp with your ship and dates. You can cancel up to 24 hours before the experience starts for a full refund.</p>",
+   "fields": {
+    "title": "Walvis Bay for Cruise Passengers: Planning a Port Day",
+    "slug": "walvis-bay-cruise-passengers-port-day",
+    "content": "<p>A cruise day in Walvis Bay is short, so it helps to decide early what matters most. Here is how we suggest planning it.</p>\n<h2>1. Start with your ship's times</h2>\n<p>Note your arrival time and your all-aboard time. Those two times decide which tours fit. Send them to us on WhatsApp or through our <a href=\"/walvis-bay-shore-excursions/\">shore excursions page</a> and we will tell you what works.</p>\n<h2>2. Choose by the kind of day you want</h2>\n<ul><li><strong>Dunes and the Atlantic:</strong> the <a href=\"/tours/sandwich-harbour-tour/\">Sandwich Harbour 4x4 tour</a>.</li><li><strong>A relaxed outing for birds and photos:</strong> the <a href=\"/tours/walvis-bay-flamingo-tour/\">flamingo and Pink Salt Lake tour</a>.</li><li><strong>Town and desert:</strong> the <a href=\"/tours/swakopmund-city-tour-dune-7/\">Swakopmund and Dune 7 tour</a>.</li></ul>\n<h2>3. Meeting at the port</h2>\n<p>We collect cruise guests from the Walvis Bay cruise port. The exact meeting point is confirmed with you when you book.</p>\n<h2>4. Keep it unhurried</h2>\n<p>A small group of up to four guests per vehicle means we are not herding a crowd. We plan the day around your all-aboard time and confirm the timings with you before you book.</p>\n<h2>Questions?</h2>\n<p>Message us on WhatsApp with your ship and dates. You can cancel up to 24 hours before the experience starts for a full refund.</p>",
+    "excerpt": "How to choose a tour and plan a cruise port day in Walvis Bay around your ship times.",
+    "status": "draft"
+   },
+   "meta": {
+    "_yoast_wpseo_title": "Walvis Bay for Cruise Passengers: Planning a Port Day | Two Stars",
+    "_yoast_wpseo_metadesc": "How to plan a cruise port day in Walvis Bay: ship times, choosing a tour and meeting at the port.",
+    "_thumbnail_id": "@att:flamingos-wading-walvis-bay-lagoon.webp"
+   }
   }
  ],
  "options": {
@@ -2396,5 +2640,16 @@
    "caption-4.jpg",
    "caption-5.jpg"
   ]
+ },
+ "remove_media": [
+  "swakopmund.jpg"
+ ],
+ "option_page_ids": {
+  "page_for_posts": "guides"
+ },
+ "option_merge": {
+  "twostars_tracking": {
+   "google_profile_url": "https://share.google/Htz6pMs4mSZQ2CXJm"
+  }
  }
 }

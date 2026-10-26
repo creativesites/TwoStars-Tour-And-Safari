@@ -21,6 +21,23 @@
       payload[key] = value;
     });
 
+    /* Extra fields (ship times, pickup point...) are folded into the message so no backend change is needed. */
+    var extraLines = [];
+
+    form.querySelectorAll('[name^="extra_"]').forEach(function (input) {
+      var value = (input.value || '').trim();
+
+      if (value) {
+        extraLines.push((input.getAttribute('data-extra-label') || input.name) + ': ' + value);
+      }
+
+      delete payload[input.name];
+    });
+
+    if (extraLines.length) {
+      payload.message = extraLines.join('\n') + (payload.message ? '\n\n' + payload.message : '');
+    }
+
     if (!data.get('contact_consent')) {
       payload.contact_consent = '';
     }

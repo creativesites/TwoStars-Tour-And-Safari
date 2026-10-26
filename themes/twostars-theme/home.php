@@ -30,7 +30,7 @@ get_header();
 						<?php endif; ?>
 
 						<div class="twostars-editorial-card__body">
-							<p class="twostars-editorial-card__type"><?php esc_html_e('Journal Entry', 'twostars-theme'); ?></p>
+							<p class="twostars-editorial-card__type"><?php esc_html_e('Guide', 'twostars-theme'); ?></p>
 							<h2 class="twostars-editorial-card__title">
 								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 							</h2>

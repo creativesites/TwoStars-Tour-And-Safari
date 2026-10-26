@@ -140,6 +140,40 @@ opt = sql("select option_value from wp_options where option_name='twostars_galle
 gal_ids = [int(n) for n in re.findall(r"i:\d+;i:(\d+);", opt)] or [int(n) for n in re.findall(r"\d+", opt)]
 snap["option_att_lists"] = {"twostars_gallery_library_images": [os.path.basename(att_file[i]).lower() for i in gal_ids if i in att_file]}
 
+# new pages, team and guides (created on the target site if missing)
+def export_created(ptype, slugs, status="publish", thumb=True):
+    pid = sql(f"select ID from wp_posts where post_type='{ptype}' and post_name='{slugs[0]}' limit 1")
+    if not pid:
+        return
+    item = {
+        "type": ptype, "create": True, "status": status, "slugs": slugs,
+        "title": sql(f"select post_title from wp_posts where ID={pid}"),
+        "content": sql(f"select post_content from wp_posts where ID={pid}"),
+        "fields": {
+            "title": sql(f"select post_title from wp_posts where ID={pid}"),
+            "slug": slugs[0],
+            "content": sql(f"select post_content from wp_posts where ID={pid}"),
+            "excerpt": sql(f"select post_excerpt from wp_posts where ID={pid}"),
+            "status": status,
+        },
+        "meta": {k: meta(pid, k) for k in YOAST if meta(pid, k)},
+    }
+    t = meta(pid, "_thumbnail_id")
+    if thumb and t and int(t) in att_file:
+        item["meta"]["_thumbnail_id"] = att_token(t)
+    snap["posts"].append(item)
+
+
+for slug, alt in [("terms", []), ("privacy", []), ("walvis-bay-shore-excursions", []), ("private-tours", []), ("guides", ["blog"])]:
+    export_created("page", [slug] + alt)
+export_created("team_member", ["tulimeke-tuli"])
+for slug in ("sandwich-harbour-what-to-wear-and-bring", "walvis-bay-cruise-passengers-port-day"):
+    export_created("post", [slug], status="draft")
+
+snap["remove_media"] = ["swakopmund.jpg"]  # Tuli asked for this photo to be removed
+snap["option_page_ids"] = {"page_for_posts": "guides"}
+snap["option_merge"] = {"twostars_tracking": {"google_profile_url": "https://share.google/Htz6pMs4mSZQ2CXJm"}}
+
 with open(OUT, "w") as fh:
     json.dump(snap, fh, ensure_ascii=False, indent=1)
 text = open(OUT).read()

@@ -1,0 +1,420 @@
+/* Landing pages: shore excursions, private tours, legal. Uses the site tokens, compact type scale. */
+.ts-landing,
+.ts-legal {
+  --ts-navy: #1b3a6b;
+  --ts-deep: #101c2e;
+  --ts-cream: #f5efe6;
+  --ts-orange: #a9501f;
+  color: #10213f;
+  font-family: var(--font-body, "Montserrat", sans-serif);
+}
+
+.ts-wrap {
+  width: min(100% - 2rem, 1100px);
+  margin-inline: auto;
+}
+
+.ts-wrap--narrow {
+  width: min(100% - 2rem, 760px);
+}
+
+/* Hero */
+.ts-landing__hero {
+  position: relative;
+  isolation: isolate;
+  background: var(--ts-deep) var(--ts-hero, none) center 60% / cover no-repeat;
+  color: #fff;
+}
+
+.ts-landing__hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to top, rgba(16, 28, 46, 0.88), rgba(16, 28, 46, 0.45) 55%, rgba(16, 28, 46, 0.25));
+}
+
+.ts-landing__hero-copy {
+  padding: clamp(3rem, 8vw, 5.5rem) 0 clamp(2rem, 5vw, 3rem);
+}
+
+.ts-landing__hero h1 {
+  max-width: 22ch;
+  margin: 0.5rem 0 0.75rem;
+  font-family: var(--font-display, "Cormorant Garamond", serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.08;
+  font-weight: 600;
+  color: #fff;
+}
+
+.ts-landing__hero p {
+  max-width: 38rem;
+  margin: 0;
+  font-size: clamp(1rem, 1.3vw, 1.1rem);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.ts-crumbs {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.ts-crumbs a {
+  color: inherit;
+  text-underline-offset: 3px;
+}
+
+.ts-landing__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.ts-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 1.4rem;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.ts-btn:hover,
+.ts-btn:focus-visible {
+  transform: translateY(-2px);
+}
+
+.ts-btn--primary {
+  background: var(--ts-orange);
+  color: #fff;
+}
+
+.ts-btn--ghost {
+  border-color: rgba(255, 255, 255, 0.75);
+  color: #fff;
+}
+
+/* Trust strip */
+.ts-trust {
+  list-style: none;
+  margin: 0;
+  padding: 0.9rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem 2rem;
+  background: #fbf7f0;
+  color: var(--ts-navy);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.ts-trust li::before {
+  content: "✓";
+  margin-right: 0.45rem;
+  color: #2d6b76;
+}
+
+/* Sections */
+.ts-section {
+  padding: clamp(2.5rem, 5vw, 4rem) 0;
+}
+
+.ts-section--cream {
+  background: var(--ts-cream);
+}
+
+.ts-section--navy {
+  background: linear-gradient(135deg, var(--ts-navy), var(--ts-deep));
+}
+
+.ts-eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #a04c1d;
+}
+
+.ts-section h2 {
+  margin: 0 0 1rem;
+  font-family: var(--font-display, "Cormorant Garamond", serif);
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  line-height: 1.15;
+  font-weight: 600;
+  color: var(--ts-navy);
+}
+
+.ts-section h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+  color: var(--ts-navy);
+}
+
+.ts-section p {
+  line-height: 1.7;
+}
+
+.ts-lead {
+  max-width: 40rem;
+  margin: 0 0 1.5rem;
+  color: #3b4a66;
+}
+
+.ts-note {
+  margin: 1.5rem 0 0;
+  padding: 0.9rem 1.1rem;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #e3d6c0;
+  font-size: 0.92rem;
+}
+
+/* Steps */
+.ts-steps {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.ts-steps li {
+  padding: 1.25rem;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid #e3d6c0;
+}
+
+.ts-steps__n {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 0.6rem;
+  border-radius: 50%;
+  background: var(--ts-navy);
+  color: #fff;
+  font-weight: 700;
+}
+
+.ts-steps p {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+/* Columns and ideas */
+.ts-cols,
+.ts-ideas {
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.ts-ideas {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ts-ideas li {
+  padding: 1.1rem 1.25rem;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid #e3d6c0;
+}
+
+.ts-ideas p,
+.ts-cols p {
+  margin: 0 0 0.5rem;
+  font-size: 0.92rem;
+}
+
+.ts-ideas a {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2d6b76;
+}
+
+/* Tour mini cards */
+.ts-minis {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.ts-mini {
+  display: flex;
+  flex-direction: column;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e3d6c0;
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ts-mini:hover,
+.ts-mini:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(16, 28, 46, 0.12);
+}
+
+.ts-mini__media {
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #d9c7a8;
+}
+
+.ts-mini__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ts-mini__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1rem 1.1rem 1.15rem;
+}
+
+.ts-mini__body strong {
+  font-family: var(--font-display, "Cormorant Garamond", serif);
+  font-size: 1.15rem;
+  line-height: 1.2;
+  color: var(--ts-navy);
+}
+
+.ts-mini__hook {
+  font-size: 0.85rem;
+  color: #4a5873;
+}
+
+.ts-mini__price {
+  margin-top: 0.2rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #8f3f17;
+}
+
+/* FAQ */
+.ts-faq details {
+  border-bottom: 1px solid rgba(27, 58, 107, 0.16);
+}
+
+.ts-faq summary {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--ts-navy);
+}
+
+.ts-faq p {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+}
+
+/* Form on navy: a white card so labels stay readable */
+.ts-section--navy .twostars-lead-form {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border-radius: 18px;
+  background: #fff;
+  color: #10213f;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+}
+
+.ts-section--navy .twostars-lead-form h2 {
+  font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+}
+
+.ts-section--navy .twostars-lead-form label span {
+  color: #3b4a66;
+}
+
+/* Legal pages */
+.ts-legal__head {
+  padding: clamp(2.25rem, 5vw, 3.5rem) 0 1.5rem;
+  background: var(--ts-cream);
+}
+
+.ts-legal__head h1 {
+  margin: 0.25rem 0 0;
+  font-family: var(--font-display, "Cormorant Garamond", serif);
+  font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+  font-weight: 600;
+  color: var(--ts-navy);
+}
+
+.ts-legal__body {
+  padding: 2rem 0 4rem;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.ts-legal__body h2 {
+  margin: 2rem 0 0.5rem;
+  font-family: var(--font-display, "Cormorant Garamond", serif);
+  font-size: 1.5rem;
+  color: var(--ts-navy);
+}
+
+.ts-legal__body h3 {
+  margin: 1.25rem 0 0.25rem;
+  font-size: 1.05rem;
+  color: var(--ts-navy);
+}
+
+.ts-legal__body a {
+  color: #2d6b76;
+}
+
+@media (max-width: 900px) {
+  .ts-steps,
+  .ts-cols,
+  .ts-minis {
+    grid-template-columns: 1fr;
+  }
+
+  .ts-ideas {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .ts-btn {
+    flex: 1 1 100%;
+  }
+
+  .ts-trust {
+    justify-content: flex-start;
+    font-size: 0.8rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ts-btn,
+  .ts-mini {
+    transition: none;
+  }
+}

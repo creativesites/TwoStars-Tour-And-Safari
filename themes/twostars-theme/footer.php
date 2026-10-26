@@ -65,7 +65,15 @@ if (! defined('ABSPATH')) {
 						);
 						?>
 					</p>
-					<p class="site-footer__legal"><?php esc_html_e('Day tours from Walvis Bay and Swakopmund · Sandwich Harbour · Shore excursions · Private tours', 'twostars-theme'); ?></p>
+					<ul class="site-footer__legal-links">
+						<li><a href="<?php echo esc_url(home_url('/walvis-bay-shore-excursions/')); ?>"><?php esc_html_e('Shore excursions', 'twostars-theme'); ?></a></li>
+						<li><a href="<?php echo esc_url(home_url('/private-tours/')); ?>"><?php esc_html_e('Private tours', 'twostars-theme'); ?></a></li>
+						<li><a href="<?php echo esc_url(home_url('/guides/')); ?>"><?php esc_html_e('Guides', 'twostars-theme'); ?></a></li>
+						<?php $ts_google = twostars_theme_tracking_value('google_profile_url'); ?>
+						<?php if ($ts_google !== '') : ?><li><a href="<?php echo esc_url($ts_google); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Find us on Google', 'twostars-theme'); ?></a></li><?php endif; ?>
+						<li><a href="<?php echo esc_url(home_url('/terms/')); ?>"><?php esc_html_e('Terms', 'twostars-theme'); ?></a></li>
+						<li><a href="<?php echo esc_url(home_url('/privacy/')); ?>"><?php esc_html_e('Privacy', 'twostars-theme'); ?></a></li>
+					</ul>
 				</div>
 			</div>
 		</footer>

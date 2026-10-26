@@ -26,7 +26,7 @@ function twostars_theme_output_business_schema(): void
 		'address'     => ['@type' => 'PostalAddress', 'addressLocality' => 'Walvis Bay', 'addressCountry' => 'NA'],
 		'areaServed'  => ['Walvis Bay', 'Swakopmund', 'Sandwich Harbour', 'Spitzkoppe'],
 		'priceRange'  => '$$',
-		'sameAs'      => [],
+		'sameAs'      => array_values(array_filter([twostars_theme_tracking_value('google_profile_url'), twostars_theme_tracking_value('tripadvisor_url')])),
 	];
 
 	printf("<script type=\"application/ld+json\">%s</script>\n", wp_json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE));

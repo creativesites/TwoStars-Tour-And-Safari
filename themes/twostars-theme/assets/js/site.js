@@ -173,12 +173,14 @@
       }
 
       var name = target.getAttribute('data-twostars-event');
+
+      if (typeof window.twostarsTrack === 'function') {
+        window.twostarsTrack(name, { page_path: window.location.pathname });
+        return;
+      }
+
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ event: name, page_path: window.location.pathname });
-
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', name, { page_path: window.location.pathname });
-      }
     });
   }
 
