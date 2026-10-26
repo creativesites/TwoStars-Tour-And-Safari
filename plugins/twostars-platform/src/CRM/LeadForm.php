@@ -125,19 +125,8 @@ final class LeadForm implements Service
 					<input type="number" name="guest_count" min="1" step="1">
 				</label>
 
-				<label class="twostars-lead-form__full">
-					<span><?php esc_html_e('Preferred Travel Dates', 'twostars-platform'); ?></span>
-					<input type="text" name="travel_dates" placeholder="<?php esc_attr_e('Example: August 2026 or 12-18 August', 'twostars-platform'); ?>">
-				</label>
-
-				<label class="twostars-lead-form__full">
-					<span><?php esc_html_e('Message', 'twostars-platform'); ?></span>
-					<textarea name="message" rows="5" placeholder="<?php esc_attr_e('Share your itinerary ideas, budget range, group details, or questions.', 'twostars-platform'); ?>"></textarea>
-				</label>
-			</div>
-
 			<?php if ($atts['variant'] === 'cruise') : ?>
-				<div class="twostars-lead-form__grid twostars-lead-form__extra">
+				
 					<label>
 						<span><?php esc_html_e('Ship name', 'twostars-platform'); ?></span>
 						<input type="text" name="extra_ship" data-extra-label="Ship" autocomplete="off">
@@ -150,9 +139,8 @@ final class LeadForm implements Service
 						<span><?php esc_html_e('All aboard by (time)', 'twostars-platform'); ?></span>
 						<input type="text" name="extra_all_aboard" data-extra-label="All aboard" placeholder="<?php esc_attr_e('e.g. 17:00', 'twostars-platform'); ?>" autocomplete="off">
 					</label>
-				</div>
 			<?php elseif ($atts['variant'] === 'private') : ?>
-				<div class="twostars-lead-form__grid twostars-lead-form__extra">
+				
 					<label>
 						<span><?php esc_html_e('Pickup point', 'twostars-platform'); ?></span>
 						<input type="text" name="extra_pickup" data-extra-label="Pickup point" placeholder="<?php esc_attr_e('Hotel name or cruise port', 'twostars-platform'); ?>" autocomplete="off">
@@ -161,8 +149,18 @@ final class LeadForm implements Service
 						<span><?php esc_html_e('What interests you most?', 'twostars-platform'); ?></span>
 						<input type="text" name="extra_interests" data-extra-label="Interests" placeholder="<?php esc_attr_e('Dunes, flamingos, photography, family day...', 'twostars-platform'); ?>" autocomplete="off">
 					</label>
-				</div>
 			<?php endif; ?>
+
+				<label class="twostars-lead-form__full">
+					<span><?php esc_html_e('Preferred Travel Dates', 'twostars-platform'); ?></span>
+					<input type="text" name="travel_dates" placeholder="<?php esc_attr_e('Example: August 2026 or 12-18 August', 'twostars-platform'); ?>">
+				</label>
+
+				<label class="twostars-lead-form__full">
+					<span><?php esc_html_e('Message', 'twostars-platform'); ?></span>
+					<textarea name="message" rows="5" placeholder="<?php esc_attr_e('Tell us about your group and any questions.', 'twostars-platform'); ?>"></textarea>
+				</label>
+			</div>
 
 			<label class="twostars-lead-form__consent">
 				<input type="checkbox" name="contact_consent" value="1" required>

@@ -8,7 +8,7 @@ get_header();
 <section class="twostars-editorial-archive twostars-editorial-archive--blog">
 	<div class="site-shell">
 		<header class="twostars-editorial-archive__hero">
-			<p class="twostars-editorial-archive__eyebrow"><?php echo esc_html(twostars_theme_get_archive_eyebrow_text('post')); ?></p>
+			<p class="twostars-editorial-archive__eyebrow"><?php esc_html_e('Local guides', 'twostars-theme'); ?></p>
 			<h1 class="twostars-editorial-archive__title">
 				<?php echo esc_html($blog_page ? get_the_title($blog_page) : twostars_theme_get_archive_title_text('post')); ?>
 			</h1>
@@ -61,8 +61,14 @@ get_header();
 				?>
 			</div>
 		<?php else : ?>
-			<div class="site-stack">
-				<?php get_template_part('template-parts/content', 'none'); ?>
+			<div class="ts-guides-empty">
+				<h2><?php esc_html_e('Our first guides are on the way', 'twostars-theme'); ?></h2>
+				<p><?php esc_html_e('We are writing practical guides to help you plan a day on the Namibian coast. In the meantime, here is where to start.', 'twostars-theme'); ?></p>
+				<div class="ts-guides-empty__links">
+					<a href="<?php echo esc_url(home_url('/tours/')); ?>"><?php esc_html_e('See our tours', 'twostars-theme'); ?></a>
+					<a href="<?php echo esc_url(home_url('/walvis-bay-shore-excursions/')); ?>"><?php esc_html_e('Cruise passengers', 'twostars-theme'); ?></a>
+					<a href="<?php echo esc_url(twostars_theme_get_whatsapp_url()); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Ask us on WhatsApp', 'twostars-theme'); ?></a>
+				</div>
 			</div>
 		<?php endif; ?>
 	</div>

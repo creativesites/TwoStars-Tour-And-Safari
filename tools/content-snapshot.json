@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-26 17:06:00",
+ "generated": "2026-10-26 17:12:42",
  "attachments": [
   {
    "file": "hero-sandwich-harbour-dunes-lagoon.webp",
@@ -894,7 +894,15 @@
        "widgetType": "twostars-team-grid",
        "settings": {
         "heading": "Meet Tuli and the team",
-        "posts_to_show": 6
+        "posts_to_show": 6,
+        "group_image": {
+         "url": "{{home}}/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-60045-AM-Picsart-AiImageEnhancer.jpeg",
+         "id": "@att:whatsapp-image-2026-03-27-at-60045-am-picsart-aiimageenhancer.jpeg",
+         "size": "",
+         "alt": "",
+         "source": "library"
+        },
+        "group_caption": "On the dunes at Sandwich Harbour"
        },
        "elements": []
       }

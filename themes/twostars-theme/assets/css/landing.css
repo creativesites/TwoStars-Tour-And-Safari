@@ -418,3 +418,42 @@
     transition: none;
   }
 }
+
+.ts-ideas li {
+  overflow: hidden;
+  padding: 0;
+}
+
+.ts-ideas li > h3,
+.ts-ideas li > p,
+.ts-ideas li > a {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+.ts-ideas li > h3 {
+  margin-top: 1rem;
+}
+
+.ts-ideas li > a {
+  display: inline-block;
+  margin-bottom: 1.1rem;
+}
+
+.ts-ideas li > p:last-child {
+  margin-bottom: 1.1rem;
+}
+
+.ts-ideas__media {
+  display: block;
+  aspect-ratio: 16 / 8;
+  overflow: hidden;
+  background: #d9c7a8;
+}
+
+.ts-ideas__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

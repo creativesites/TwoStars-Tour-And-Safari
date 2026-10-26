@@ -1126,3 +1126,133 @@ html body .twostars-tour-page__sunset .twostars-tour-entry__button--secondary {
     justify-content: center;
   }
 }
+
+/* ---- Team grid: one person (until portraits arrive) -------------------------- */
+html body .twostars-team-grid__title {
+  text-align: center;
+}
+
+html body .twostars-team-grid--solo .twostars-team-grid__cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  align-items: center;
+  max-width: 980px;
+  margin-inline: auto;
+}
+
+html body .twostars-team-grid--solo .twostars-team-grid__cards:not(:has(.twostars-team-grid__group)) {
+  grid-template-columns: minmax(0, 560px);
+  justify-content: center;
+}
+
+html body .twostars-team-grid__group {
+  margin: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 22px 50px rgba(16, 28, 46, 0.18);
+}
+
+html body .twostars-team-grid__group img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+html body .twostars-team-grid__group figcaption {
+  padding: 0.6rem 0.9rem;
+  background: #fff;
+  font-size: 0.8rem;
+  color: #3b4a66;
+}
+
+html body .twostars-team-grid--solo .twostars-team-grid__card {
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+html body .twostars-team-grid--solo .twostars-team-grid__body p:not(.twostars-team-grid__role) {
+  display: block;
+  -webkit-line-clamp: unset;
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+html body .twostars-team-grid__monogram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 0.75rem;
+  border-radius: 50%;
+  background: #1b3a6b;
+  color: #e3c69e;
+  font-family: var(--font-display, "Cormorant Garamond", serif);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  html body .twostars-team-grid--solo .twostars-team-grid__cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Decorative "scroll" cue overlaps the buttons on short heroes: remove everywhere */
+html body [class*="-hero__scroll"] {
+  display: none !important;
+}
+
+/* ---- Guides: empty state ---------------------------------------------------------- */
+.ts-guides-empty {
+  max-width: 640px;
+  margin: 2rem auto 3rem;
+  padding: 2rem;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid #e3d6c0;
+  text-align: center;
+}
+
+.ts-guides-empty h2 {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-display, "Cormorant Garamond", serif);
+  font-size: 1.6rem;
+  color: #1b3a6b;
+}
+
+.ts-guides-empty p {
+  margin: 0 0 1.25rem;
+  line-height: 1.7;
+  color: #3b4a66;
+}
+
+.ts-guides-empty__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.ts-guides-empty__links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 1.1rem;
+  border-radius: 10px;
+  background: #1b3a6b;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .ts-cruise-banner__media {
+    display: none;
+  }
+}

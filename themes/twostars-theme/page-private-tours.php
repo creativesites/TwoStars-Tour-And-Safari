@@ -61,6 +61,9 @@ $ideas = [
 				<?php foreach ($ideas as [$title, $text, $slug]) : ?>
 					<?php $tour = get_page_by_path($slug, OBJECT, 'tour'); ?>
 					<li>
+						<?php if ($tour instanceof WP_Post && get_post_thumbnail_id($tour->ID)) : ?>
+							<span class="ts-ideas__media"><?php echo wp_get_attachment_image(get_post_thumbnail_id($tour->ID), 'medium_large', false, ['loading' => 'lazy', 'decoding' => 'async', 'alt' => $title]); ?></span>
+						<?php endif; ?>
 						<h3><?php echo esc_html($title); ?></h3>
 						<p><?php echo esc_html($text); ?></p>
 						<?php if ($tour instanceof WP_Post) : ?><a href="<?php echo esc_url(get_permalink($tour)); ?>">See the group tour</a><?php endif; ?>
